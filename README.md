@@ -1,6 +1,6 @@
 # Site: moderator.wiki
 
-This repository contains the source for the [moderator.wiki](https://moderator.wiki) site, built as a static site
+This repository contains the source for the [moderator.wiki](https://moderation.wiki) site, built as a static site
 using [SvelteKit](https://kit.svelte.dev/) and [shadcn-svelte](https://www.shadcn-svelte.com/).
 
 This website (and its content) are licensed under the 
