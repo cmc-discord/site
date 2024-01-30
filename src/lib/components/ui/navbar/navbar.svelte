@@ -1,7 +1,7 @@
 <script lang="ts">
 
 import { Button } from "$lib/components/ui/button";
-import { Menu, SeparatorVertical } from "lucide-svelte";
+import { Menu } from "lucide-svelte";
 import GitHub from "virtual:icons/simple-icons/github"
 import { NavbarLink, NavbarIconLink } from "$lib/components/ui/navbar/index";
 
@@ -13,7 +13,7 @@ import { Separator } from "$lib/components/ui/separator";
 <div class="border-b">
 	<div class="flex justify-between h-16 items-center px-4">
 		<!-- Add navigation items -->
-		<div>
+		<div class="flex">
 			<Button variant="ghost" class="md:hidden">
 				<Menu />
 			</Button>
