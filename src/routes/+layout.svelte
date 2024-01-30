@@ -2,10 +2,15 @@
 	import "../app.pcss";
 
 	import { ModeWatcher } from "mode-watcher";
-	import Navbar from "$lib/components/ui/navbar/index";
+	import Containers from "$lib/components/ui/containers";
+	import Navbar from "$lib/components/ui/navbar";
+	import Sidebar from "$lib/components/ui/sidebar"
 </script>
 
-<ModeWatcher />
 <Navbar.Base />
+<ModeWatcher />
 
-<slot></slot>
+<Containers.Sidebar>
+	<Sidebar.Base slot="sidebar"></Sidebar.Base>
+	<slot></slot>
+</Containers.Sidebar>
