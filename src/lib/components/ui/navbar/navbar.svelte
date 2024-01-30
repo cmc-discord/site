@@ -5,15 +5,39 @@
 	import { Sun, Menu, Moon } from "lucide-svelte";
 	import { toggleMode } from "mode-watcher";
 
+	import { Drawer } from "vaul-svelte"
 	import GitHub from "virtual:icons/simple-icons/github";
 	import Navbar from "$lib/components/ui/navbar/index";
+	import Sidebar from "$lib/components/ui/sidebar/index";
+
+	let drawer0pen = false;
 </script>
+
+<Drawer.Root direction="left" bind:open={drawer0pen}>
+	<Drawer.Portal class="fixed left-0 z-20" style="top: calc(4rem + 1px)">
+		<Drawer.Content>
+			<div role="presentation"
+			     class="bg-background"
+			     style="width: 75vw; height: calc(100vh - (4rem + 1px));"
+			     on:click|stopPropagation
+			>
+				<Sidebar.Base />
+			</div>
+		</Drawer.Content>
+	</Drawer.Portal>
+</Drawer.Root>
+
+<div role="presentation"
+     class="fixed left-0 bg-black/40 dark:bg-white/20 z-10 transition-opacity {drawer0pen ? 'opacity-100' : 'opacity-0'}"
+     style="width: 100vw; height: calc(100vh - (4rem + 1px)); top: calc(4rem + 1px)"
+     on:click={() => (drawer0pen = false)}
+></div>
 
 <div class="border-b">
 	<div class="flex justify-between h-16 items-center px-4">
 		<!-- Add navigation items -->
 		<div class="flex">
-			<Button variant="ghost" class="md:hidden">
+			<Button variant="ghost" class="md:hidden" on:click={() => (drawer0pen = !drawer0pen)}>
 				<Menu />
 			</Button>
 
