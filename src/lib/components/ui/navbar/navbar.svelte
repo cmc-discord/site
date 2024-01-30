@@ -24,7 +24,9 @@ import { Separator } from "$lib/components/ui/separator";
 		</div>
 
 		<div class="flex items-center space-x-1">
-			<NavbarIconLink href="/"><GitHub /></NavbarIconLink>
+			<NavbarIconLink href="https://github.com/cmc-discord/">
+				<GitHub />
+			</NavbarIconLink>
 
 			<Separator orientation="vertical" class="h-7 !mr-2 !ml-1" />
 
