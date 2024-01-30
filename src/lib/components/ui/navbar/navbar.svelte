@@ -1,13 +1,12 @@
 <script lang="ts">
-
 	import { Button } from "$lib/components/ui/button";
-	import { Menu } from "lucide-svelte";
+	import { Separator } from "$lib/components/ui/separator";
+
+	import { Sun, Menu, Moon } from "lucide-svelte";
+	import { toggleMode } from "mode-watcher";
+
 	import GitHub from "virtual:icons/simple-icons/github";
 	import Navbar from "$lib/components/ui/navbar/index";
-
-	import { Sun, Moon } from "lucide-svelte";
-	import { toggleMode } from "mode-watcher";
-	import { Separator } from "$lib/components/ui/separator";
 </script>
 
 <div class="border-b">
