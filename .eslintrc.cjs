@@ -35,7 +35,7 @@ module.exports = {
 	],
 
 	rules: {
-		quotes: ["warn", "double", { avoidEscape: false }],
+		quotes: ["warn", "double", { avoidEscape: true }],
 
 		"no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
 	},
