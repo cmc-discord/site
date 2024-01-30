@@ -1,9 +1,9 @@
-import Navbar from "./navbar.svelte"
-import NavbarLink from "./navbar-link.svelte"
-import NavbarIconLink from "./navbar-link-icon.svelte"
+import Base from "./navbar.svelte"
+import Link from "./navbar-link.svelte"
+import IconLink from "./navbar-link-icon.svelte"
 
-export {
-	Navbar,
-	NavbarLink,
-	NavbarIconLink,
+export default {
+	Base,
+	Link,
+	IconLink,
 };

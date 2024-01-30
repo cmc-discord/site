@@ -1,13 +1,13 @@
 <script lang="ts">
 
-import { Button } from "$lib/components/ui/button";
-import { Menu } from "lucide-svelte";
-import GitHub from "virtual:icons/simple-icons/github"
-import { NavbarLink, NavbarIconLink } from "$lib/components/ui/navbar/index";
+	import { Button } from "$lib/components/ui/button";
+	import { Menu } from "lucide-svelte";
+	import GitHub from "virtual:icons/simple-icons/github";
+	import Navbar from "$lib/components/ui/navbar/index";
 
-import { Sun, Moon } from "lucide-svelte";
-import { toggleMode } from "mode-watcher";
-import { Separator } from "$lib/components/ui/separator";
+	import { Sun, Moon } from "lucide-svelte";
+	import { toggleMode } from "mode-watcher";
+	import { Separator } from "$lib/components/ui/separator";
 </script>
 
 <div class="border-b">
@@ -19,14 +19,14 @@ import { Separator } from "$lib/components/ui/separator";
 			</Button>
 
 			<div class="flex items-center space-x-1 mr-6 invisible md:visible">
-				<NavbarLink href="/">Home</NavbarLink>
+				<Navbar.Link href="/">Home</Navbar.Link>
 			</div>
 		</div>
 
 		<div class="flex items-center space-x-1">
-			<NavbarIconLink href="https://github.com/cmc-discord/">
+			<Navbar.IconLink href="https://github.com/cmc-discord/">
 				<GitHub />
-			</NavbarIconLink>
+			</Navbar.IconLink>
 
 			<Separator orientation="vertical" class="h-7 !mr-2 !ml-1" />
 
