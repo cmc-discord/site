@@ -28,7 +28,7 @@
 </Drawer.Root>
 
 <div role="presentation"
-     class="fixed left-0 bg-black/40 dark:bg-white/20 z-10 transition-opacity {drawer0pen ? 'opacity-100' : 'opacity-0'}"
+     class="fixed left-0 bg-black/40 dark:bg-white/20 z-10 transition-opacity {drawer0pen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}"
      style="width: 100vw; height: calc(100vh - (4rem + 1px)); top: calc(4rem + 1px)"
      on:click={() => (drawer0pen = false)}
 ></div>
