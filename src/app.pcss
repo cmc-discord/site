@@ -74,7 +74,11 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-border text-foreground;
+  }
+
+  body > .page-content {
+    @apply bg-background;
   }
 
   @media screen and (min-width: 1920px) {
