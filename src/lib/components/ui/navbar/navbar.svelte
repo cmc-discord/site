@@ -41,8 +41,8 @@
 				<Menu />
 			</Button>
 
-			<div class="flex items-center space-x-1 mr-6 invisible md:visible">
-				<Navbar.Link href="/">Home</Navbar.Link>
+			<div class="flex items-center space-x-1 mr-6">
+				<Navbar.Link href="/">Moderation Wiki</Navbar.Link>
 			</div>
 		</div>
 
