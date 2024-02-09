@@ -4,12 +4,13 @@
 	export let emphasis: boolean = false;
 
 	export let href: string;
+	export let target: string = "_self"
 </script>
 
-<Button variant={emphasis ? "secondary" : "ghost"} size="icon">
-	<a href={href}
-	   class="font-medium text-lg transition-colors"
-	>
+<a href={href}
+   {target}
+>
+<Button variant={emphasis ? "secondary" : "ghost"} size="icon" class="font-medium text-lg transition-colors">
 		<slot />
-	</a>
 </Button>
+	</a>

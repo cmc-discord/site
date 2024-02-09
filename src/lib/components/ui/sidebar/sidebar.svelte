@@ -11,7 +11,7 @@
 		Home
 	</Sidebar.SectionPickerItem>
 
-	<Sidebar.SectionPickerItem href="/">
+	<Sidebar.SectionPickerItem href="#">
 		<Wrench size="1.5rem" slot="icon" />
 
 		Tools

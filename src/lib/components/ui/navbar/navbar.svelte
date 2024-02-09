@@ -14,7 +14,7 @@
 </script>
 
 <Drawer.Root direction="left" bind:open={drawer0pen}>
-	<Drawer.Portal class="fixed left-0 z-20" style="top: calc(4rem + 1px)">
+	<Drawer.Portal class="fixed left-0 z-20" style="top: calc(-3px + 4rem)">
 		<Drawer.Content>
 			<div role="presentation"
 			     class="bg-background"
@@ -47,7 +47,7 @@
 		</div>
 
 		<div class="flex items-center space-x-1">
-			<Navbar.IconLink href="https://github.com/cmc-discord/">
+			<Navbar.IconLink target="_blank" href="https://github.com/cmc-discord/">
 				<GitHub />
 			</Navbar.IconLink>
 
