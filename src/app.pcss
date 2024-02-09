@@ -72,8 +72,18 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  @media screen and (min-width: 1920px) {
+    body {
+      margin: auto;
+      width: 1920px;
+
+      @apply border-l border-r;
+    }
   }
 }
 
