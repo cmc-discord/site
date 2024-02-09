@@ -10,7 +10,7 @@
 		Home
 	</Sidebar.Link>
 
-	<Separator class="!my-1" />
+	<Separator class="!my-1 !mb-3" />
 
 	<Sidebar.Link href="#">
 		Content 1
