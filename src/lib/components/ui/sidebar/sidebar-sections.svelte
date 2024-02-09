@@ -39,25 +39,3 @@
 </div>
 
 <Separator class="!my-3" />
-
-<style>
-	.section-picker {
-		max-height: 39px;
-		/*transition: max-height 0.15s ease-out;*/
-
-		overflow: hidden;
-	}
-
-	.section-picker.open {
-		max-height: 153px;
-	}
-
-	.section-picker-arrow {
-	  margin-right: 0.7rem;
-	  transition: transform 0.15s linear;
-	}
-
-	.section-picker.open .section-picker-arrow {
-		transform: rotate(90deg)
-	}
-</style>

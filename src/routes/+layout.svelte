@@ -12,5 +12,8 @@
 
 <Containers.Sidebar>
 	<Sidebar.Base slot="sidebar"></Sidebar.Base>
-	<slot></slot>
+
+	<div class="prose dark:prose-invert">
+		<slot></slot>
+	</div>
 </Containers.Sidebar>

@@ -21,11 +21,11 @@
 
 	<slot name="content"/>
 
-	<Sidebar.Link root={true} href="#">
+	<Sidebar.Link href="#">
 		Content 1
 	</Sidebar.Link>
 
-	<Sidebar.Link root={true} href="#">
+	<Sidebar.Link href="#">
 		Content 2
 
 		<svelte:fragment slot="children">
@@ -53,7 +53,7 @@
 		</svelte:fragment>
 	</Sidebar.Link>
 
-	<Sidebar.Link root={true} href="#">
+	<Sidebar.Link href="#">
 		Content 8
 	</Sidebar.Link>
 </div>

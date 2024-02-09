@@ -2,7 +2,6 @@
 	import { Button } from "$lib/components/ui/button";
 
 	export let emphasis: boolean = false;
-	export let root: boolean = false;
 
 	export let href: string;
 </script>
@@ -20,20 +19,3 @@
 	<slot name="children"></slot>
 </div>
 
-<style>
-	.sidebar-children {
-	  margin-bottom: 8px;
-	}
-
-	.sidebar-children:empty {
-	  display: none;
-	}
-
-	.sidebar-link-icon {
-		margin-right: 0.7rem;
-	}
-
-	.sidebar-link-icon:empty {
-		display: none;
-	}
-</style>

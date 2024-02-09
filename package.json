@@ -41,9 +41,11 @@
   "dependencies": {
     "@iconify/json": "^2.2.176",
     "@sveltejs/adapter-static": "^3.0.1",
+    "@tailwindcss/typography": "^0.5.10",
     "bits-ui": "^0.16.0",
     "clsx": "^2.1.0",
     "lucide-svelte": "^0.316.0",
+    "mdsvex": "^0.11.0",
     "mode-watcher": "^0.1.2",
     "svelte-legos": "^0.2.2",
     "tailwind-merge": "^2.2.1",
