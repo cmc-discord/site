@@ -1,22 +1,31 @@
 <script lang="ts">
 	import Sidebar from "./"
-	import { Home } from "lucide-svelte"
 	import { Separator } from "$lib/components/ui/separator";
+	import { Home, Wrench } from "lucide-svelte";
 </script>
 
-<div class="flex flex-col p-2">
-	<Sidebar.Link href="/">
+<div class="flex flex-col p-2 mt-1">
+	<Sidebar.SectionPickerItem href="/">
 		<Home size="1.5rem" slot="icon" />
+
 		Home
-	</Sidebar.Link>
+	</Sidebar.SectionPickerItem>
 
-	<Separator class="!my-1 !mb-3" />
+	<Sidebar.SectionPickerItem href="/">
+		<Wrench size="1.5rem" slot="icon" />
 
-	<Sidebar.Link href="#">
+		Tools
+	</Sidebar.SectionPickerItem>
+
+	<Separator class="!my-3" />
+
+	<slot name="content"/>
+
+	<Sidebar.Link root={true} href="#">
 		Content 1
 	</Sidebar.Link>
 
-	<Sidebar.Link href="#">
+	<Sidebar.Link root={true} href="#">
 		Content 2
 
 		<svelte:fragment slot="children">
@@ -37,6 +46,14 @@
 					</Sidebar.Link>
 				</svelte:fragment>
 			</Sidebar.Link>
+
+			<Sidebar.Link href="#">
+				Content 7
+			</Sidebar.Link>
 		</svelte:fragment>
+	</Sidebar.Link>
+
+	<Sidebar.Link root={true} href="#">
+		Content 8
 	</Sidebar.Link>
 </div>
