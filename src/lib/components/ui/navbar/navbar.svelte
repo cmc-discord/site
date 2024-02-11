@@ -46,12 +46,10 @@
 			</div>
 		</div>
 
-		<div class="flex items-center space-x-1">
+		<div class="flex items-center space-x-2">
 			<Navbar.IconLink target="_blank" href="https://github.com/cmc-discord/">
 				<GitHub />
 			</Navbar.IconLink>
-
-			<Separator orientation="vertical" class="h-7 !mr-2 !ml-1" />
 
 			<Button on:click={toggleMode} variant="outline" size="icon">
 				<Sun
