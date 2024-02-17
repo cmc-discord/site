@@ -3,7 +3,7 @@ tags: [
 	"one", "two"
 ]
 
-title: "Welcome to SvetleKit!"
+title: "Welcome to SvelteKit!"
 ---
 
 Visit [kit.svelte.dev](https://kit.svelte.dev) to read the documentation.
