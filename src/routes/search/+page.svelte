@@ -104,7 +104,13 @@
 		}
 
 		if (browser) {
-			window.history.pushState(null, null, "?" + queryParams.toString())
+			let queryString: string | null = queryParams.toString()
+
+			if (queryString.length > 0) {
+				queryString = "?" + queryString
+			}
+
+			window.history.pushState(null, "", "/search" + queryString)
 		}
 
 		return results
