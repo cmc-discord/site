@@ -19,7 +19,11 @@
 	type SearchResult = { url: string, title: string, description: string }
 	type SearchResults = Array<SearchResult>
 
-	let queryParams: URLSearchParams = $page.url.searchParams
+	let queryParams: URLSearchParams = new URLSearchParams()
+
+	if (browser) {
+		queryParams = $page.url.searchParams
+	}
 
 	let pagefind;
 	let tags: Array<string> = [];
