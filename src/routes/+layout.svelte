@@ -14,7 +14,7 @@
 	<Sidebar.Base slot="sidebar"></Sidebar.Base>
 
 <!-- class="prose dark:prose-invert" -->
-	<div data-pagefind-body>
+	<div>
 		<slot></slot>
 	</div>
 </Containers.Sidebar>
