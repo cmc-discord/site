@@ -3,11 +3,11 @@
 </script>
 
 <div class="flex flex-row items-stretch h-full">
-	<div class="border-r hidden md:block" style="width: {width}">
+	<div class="border-r hidden md:block md:w-72" style="width: {width}">
 		<slot name="sidebar" />
 	</div>
 
-	<div class="flex-grow pt-2 !mx-4">
+	<div class="flex-grow w-full pt-2 !mx-4">
 		<slot />
 	</div>
 </div>
