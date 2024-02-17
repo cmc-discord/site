@@ -28,6 +28,7 @@
 	let pagefind;
 	let tags: Array<string> = [];
 	let tagToggles: {[key: string]: boolean} = {}
+	let accordionValue = ""
 
 	let tagAnyToggle = false
 
@@ -115,7 +116,15 @@
 		pagefind.init()
 
 		const filters = await pagefind.filters()
-		tags = filters?.tags?.keys() || []
+
+		console.log({
+			filters: filters,
+			tags: Object.keys(filters.tag)
+		})
+
+		if (filters?.tag !== undefined) {
+			tags = Object.keys(filters.tag)
+		}
 
 		tags.forEach((tag: string) => {
 			tagToggles[tag] = false
@@ -132,17 +141,20 @@
 		if (queryParams.has("tags")) {
 			const queryTags = queryParams.get("tags")!.split(",")
 
-			queryTags.forEach((v) => {
-				if (v in tags) {
-					tagToggles[v] = true
+			queryTags.forEach((tag) => {
+				if (tags.includes(tag)) {
+					tagToggles[tag] = true
 
 					doSearch = true
+					accordionValue = "tags"
 				}
 			})
 		}
 
 		if (queryParams.has("anyTags")) {
 			tagAnyToggle = queryParams.get("anyTags")! !== "false"
+
+			accordionValue = "tags"
 		}
 
 		if (doSearch) {
@@ -156,7 +168,7 @@
 		<form class="flex flex-col w-full space-y-2">
 			<Input type="search" placeholder="Search" bind:value={searchQuery} class="mb-2" />
 
-			<Accordion.Root>
+			<Accordion.Root bind:value={accordionValue}>
 				{#if tags.length > 0}
 					<Accordion.Item value="tags">
 						<Accordion.Trigger>Tags</Accordion.Trigger>
