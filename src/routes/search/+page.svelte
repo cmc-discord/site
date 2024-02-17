@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+	import { browser } from '$app/environment'
+	import { page } from '$app/stores';
+	import { onMount } from "svelte"
 
 	import * as Accordion from "$lib/components/ui/accordion";
 	import * as DropdownMenu from "$lib//components/ui/dropdown-menu";
@@ -11,15 +13,16 @@
 	import { Separator } from "$lib/components/ui/separator"
 	import { Switch } from "$lib/components/ui/switch"
 
-	import { ChevronDown, Tag, Search } from "lucide-svelte"
-	import { goto } from '$app/navigation';
+	import { Tag, Search } from "lucide-svelte"
 
 	type Filters = { tag?: { any: Array<string>} | Array<string> }
 	type SearchResult = { url: string, title: string, description: string }
 	type SearchResults = Array<SearchResult>
 
+	let queryParams: URLSearchParams = $page.url.searchParams
+
 	let pagefind;
-	let tags: Array<string>;
+	let tags: Array<string> = [];
 	let tagToggles: {[key: string]: boolean} = {}
 
 	let tagAnyToggle = false
@@ -77,6 +80,28 @@
 			})
 		}
 
+		if (searchQuery.length > 0) {
+			queryParams.set("q", searchQuery)
+		} else {
+			queryParams.delete("q")
+		}
+
+		if (tags.length > 0) {
+			queryParams.set("tags", tags.join(","))
+		} else {
+			queryParams.delete("tags")
+		}
+
+		if (tagAnyToggle) {
+			queryParams.set("anyTags", "true")
+		} else {
+			queryParams.delete("anyTags")
+		}
+
+		if (browser) {
+			window.history.pushState(null, null, "?" + queryParams.toString())
+		}
+
 		return results
 	}
 
@@ -86,11 +111,39 @@
 		pagefind.init()
 
 		const filters = await pagefind.filters()
-		tags = filters?.tags?.keys() || ["one", "two"]
+		tags = filters?.tags?.keys() || []
 
 		tags.forEach((tag: string) => {
 			tagToggles[tag] = false
 		})
+
+		let doSearch = false
+
+		if (queryParams.has("q")) {
+			searchQuery = queryParams.get("q")!
+
+			doSearch = true
+		}
+
+		if (queryParams.has("tags")) {
+			const queryTags = queryParams.get("tags")!.split(",")
+
+			queryTags.forEach((v) => {
+				if (v in tags) {
+					tagToggles[v] = true
+
+					doSearch = true
+				}
+			})
+		}
+
+		if (queryParams.has("anyTags")) {
+			tagAnyToggle = queryParams.get("anyTags")! !== "false"
+		}
+
+		if (doSearch) {
+			promise = search()
+		}
 	})
 </script>
 
@@ -100,26 +153,28 @@
 			<Input type="search" placeholder="Search" bind:value={searchQuery} class="mb-2" />
 
 			<Accordion.Root>
-				<Accordion.Item value="tags">
-					<Accordion.Trigger>Tags</Accordion.Trigger>
-					<Accordion.Content>
-						{#each tags as tag}
-							<div class="my-1 flex items-center space-x-2">
-								<Checkbox id="tag-{tag}" bind:checked={tagToggles[tag]} />
-								<Label for="tag-{tag}" class="flex-grow w-full capitalize">{tag}</Label>
+				{#if tags.length > 0}
+					<Accordion.Item value="tags">
+						<Accordion.Trigger>Tags</Accordion.Trigger>
+						<Accordion.Content>
+							{#each tags as tag}
+								<div class="my-1 flex items-center space-x-2">
+									<Checkbox id="tag-{tag}" bind:checked={tagToggles[tag]} />
+									<Label for="tag-{tag}" class="flex-grow w-full capitalize">{tag}</Label>
+								</div>
+							{/each}
+
+							<div class="mt-4 flex items-center space-x-2 pt-2">
+								<Label class="flex-grow" for="tag-any-toggle">Match Any</Label>
+								<Switch id="tag-any-toggle" bind:checked={tagAnyToggle} />
 							</div>
-						{/each}
+						</Accordion.Content>
 
-						<div class="mt-4 flex items-center space-x-2 pt-2">
-							<Label class="flex-grow" for="tag-any-toggle">Match Any</Label>
-							<Switch id="tag-any-toggle" bind:checked={tagAnyToggle} />
-						</div>
-					</Accordion.Content>
-
-				</Accordion.Item>
+					</Accordion.Item>
+				{/if}
 			</Accordion.Root>
 
-			<Button class="order-last" type="submit" on:click={() => {promise = search()}}>
+			<Button class="order-last" type="submit" on:click={(e) => {promise = search(); e.preventDefault()}}>
 				<Search class="mr-2" />
 
 				Search
