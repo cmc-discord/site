@@ -1,9 +1,10 @@
 <script lang="ts">
+	import * as DropdownMenu from "$lib/components/ui/dropdown-menu"
 	import { Button } from "$lib/components/ui/button";
 	import { Separator } from "$lib/components/ui/separator";
 
-	import { Sun, Menu, Moon } from "lucide-svelte";
-	import { toggleMode } from "mode-watcher";
+	import { Menu, Moon, RefreshCw, Search, Sun, } from "lucide-svelte";
+	import { setMode } from "mode-watcher";
 
 	import { Drawer } from "vaul-svelte"
 	import GitHub from "virtual:icons/simple-icons/github";
@@ -47,21 +48,49 @@
 		</div>
 
 		<div class="flex items-center space-x-2">
+			<Navbar.IconLink href="/search">
+				<Search />
+			</Navbar.IconLink>
+
 			<Navbar.IconLink target="_blank" href="https://github.com/cmc-discord/">
 				<GitHub />
 			</Navbar.IconLink>
 
-			<Button on:click={toggleMode} variant="outline" size="icon">
-				<Sun
-					class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
-				/>
+			<DropdownMenu.Root>
+				<DropdownMenu.Trigger asChild let:builder>
+					<Button builders={[builder]} variant="outline" size="icon">
+						<Sun
+							class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+						/>
 
-				<Moon
-					class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
-				/>
+						<Moon
+							class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+						/>
 
-				<span class="sr-only">Toggle theme</span>
-			</Button>
+						<span class="sr-only">Change theme</span>
+					</Button>
+				</DropdownMenu.Trigger>
+
+				<DropdownMenu.Content align="end">
+					<DropdownMenu.Item class="cursor-pointer" on:click={() => setMode("light")}>
+						<Sun class="mr-2 h-[1.2rem] w-[1.2rem]" />
+
+						Light
+					</DropdownMenu.Item>
+
+					<DropdownMenu.Item class="cursor-pointer" on:click={() => setMode("dark")}>
+						<Moon class="mr-2 h-[1.2rem] w-[1.2rem]" />
+
+						Dark
+					</DropdownMenu.Item>
+
+					<DropdownMenu.Item class="cursor-pointer" on:click={() => setMode("system")}>
+						<RefreshCw class="mr-2 h-[1.2rem] w-[1.2rem]" />
+
+						System
+					</DropdownMenu.Item>
+				</DropdownMenu.Content>
+			</DropdownMenu.Root>
 		</div>
 	</div>
 </div>

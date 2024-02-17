@@ -2,12 +2,12 @@
 	export let width: string = "17rem";
 </script>
 
-<div class="flex flex-row space-x-4 items-stretch h-full">
+<div class="flex flex-row items-stretch h-full">
 	<div class="border-r hidden md:block" style="width: {width}">
 		<slot name="sidebar" />
 	</div>
 
-	<div class="flex-grow pt-2">
+	<div class="flex-grow pt-2 !mx-4">
 		<slot />
 	</div>
 </div>

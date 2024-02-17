@@ -6,14 +6,14 @@
 	export let href: string;
 </script>
 
-<Button variant={emphasis ? "secondary" : "ghost"} class="w-full self-start justify-start">
-	<a href={href}
-	   class="font-medium text-left transition-colors flex flex-row items-center content-center"
-	>
+<a href={href}
+   class="font-medium text-left transition-colors flex flex-row items-center content-center"
+>
+	<Button variant={emphasis ? "secondary" : "ghost"} class="w-full self-start justify-start">
 		<span class="sidebar-link-icon"><slot name="icon"></slot></span>
 		<span><slot /></span>
-	</a>
-</Button>
+	</Button>
+</a>
 
 <style>
 	.sidebar-link-icon {

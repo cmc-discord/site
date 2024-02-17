@@ -1,15 +1,10 @@
 <script lang="ts">
 	import Sidebar from "./"
-	import Search from "$lib/components/ui/search"
 	import { Separator } from "$lib/components/ui/separator";
 	import { Home, Wrench } from "lucide-svelte";
 </script>
 
 <div class="flex flex-col p-2 mt-1">
-	<Search.Bar />
-
-	<Separator class="!my-3" />
-
 	<Sidebar.SectionPickerItem href="/">
 		<Home size="1.5rem" slot="icon" />
 
