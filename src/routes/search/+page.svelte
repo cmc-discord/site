@@ -225,7 +225,7 @@
 			<Accordion.Root bind:value={accordionValue}>
 				{#if tags.length > 0}
 					<Accordion.Item value="tags">
-						<Accordion.Trigger>Tags</Accordion.Trigger>
+						<Accordion.Trigger><div class="flex flex-row flex-grow"><Tag size="1.5rem" class="mr-2" /> Tags</div></Accordion.Trigger>
 						<Accordion.Content>
 							{#each tags as tag}
 								<div class="my-1 flex items-center space-x-2">
