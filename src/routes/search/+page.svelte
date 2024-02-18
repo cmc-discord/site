@@ -265,11 +265,11 @@
 					{#each resultsForPage(results) as r, index}
 						<div class="flex flex-col space-y-2">
 							{#await r.data()}
-								Loading result {index + 1}...
+								Loading result...
 							{:then data}
 								<a href={data.url}>
 									<div class="flex flex-col space-y-2 p-3 rounded hover:bg-secondary">
-										<span class="text-lg font-medium">{index + 1}. {data.meta.title}</span>
+										<span class="text-lg font-medium">{data.meta.title}</span>
 
 										<span>
 								<!-- eslint-disable-next-line svelte/no-at-html-tags -->
@@ -278,7 +278,7 @@
 									</div>
 								</a>
 
-								{#if index < (results.length - 1)}
+								{#if index < (r.length - 1)}
 									<Separator class="!mt-4" />
 								{/if}
 							{/await}
