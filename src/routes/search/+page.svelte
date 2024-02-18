@@ -2,9 +2,11 @@
 	import { browser } from '$app/environment'
 	import { page } from '$app/stores';
 	import { onMount } from "svelte"
+	import { mediaQuery } from "svelte-legos";
 
 	import * as Accordion from "$lib/components/ui/accordion";
 	import * as DropdownMenu from "$lib//components/ui/dropdown-menu";
+	import * as Pagination from "$lib/components/ui/pagination";
 
 	import { Button } from "$lib/components/ui/button"
 	import { Checkbox } from "$lib/components/ui/checkbox"
@@ -13,7 +15,9 @@
 	import { Separator } from "$lib/components/ui/separator"
 	import { Switch } from "$lib/components/ui/switch"
 
-	import { Tag, Search } from "lucide-svelte"
+	import { ChevronLeft, ChevronRight, Tag, Search } from "lucide-svelte"
+
+	const isDesktop = mediaQuery("(min-width: 768px)");
 
 	type Filters = { tag?: { any: Array<string>} | Array<string> }
 	type SearchResult = { url: string, title: string, description: string }
@@ -26,18 +30,54 @@
 	}
 
 	let pagefind;
+
 	let tags: Array<string> = [];
 	let tagToggles: {[key: string]: boolean} = {}
-	let accordionValue = ""
-
 	let tagAnyToggle = false
 
+	let accordionValue = ""
 	let searchQuery: string = ""
 
 	let promise: Promise<any> | null = null
 
-	async function search(): Promise<any> {
+	let count = 0
+	let pageNumber = 1
+
+	$: perPage = $isDesktop ? 5 : 3;
+	$: siblingCount = $isDesktop ? 2 : 0;
+
+	$: startIndex = Math.max((pageNumber - 1) * perPage, 0)
+	$: endIndex = Math.min(pageNumber * perPage, count)
+
+	function resultsForPage(results: Array<any>): Array<any> {
+		console.log({
+			count: count,
+			page: pageNumber,
+			perPage: perPage,
+			start: startIndex,
+			end: endIndex,
+		})
+
+		return results.slice(startIndex, endIndex)
+	}
+
+	function updatePageNumber(newPageNumber: number) {
+		queryParams.set("page", String(newPageNumber))
+
+		if (browser) {
+			let queryString: string | null = queryParams.toString()
+
+			if (queryString.length > 0) {
+				queryString = "?" + queryString
+			}
+
+			window.history.pushState(null, "", "/search" + queryString)
+		}
+	}
+
+	async function search(): Promise<Array<any>> {
 		let query: string | null = searchQuery
+		pageNumber = 1
 
 		if (query.length == 0) {
 			query = null
@@ -103,6 +143,8 @@
 			queryParams.delete("anyTags")
 		}
 
+		queryParams.set("page", String(pageNumber))
+
 		if (browser) {
 			let queryString: string | null = queryParams.toString()
 
@@ -112,6 +154,8 @@
 
 			window.history.pushState(null, "", "/search" + queryString)
 		}
+
+		count = searchResults.results.length
 
 		return searchResults.results
 	}
@@ -163,6 +207,10 @@
 			accordionValue = "tags"
 		}
 
+		if (queryParams.has("page")) {
+			pageNumber = Number(queryParams.get("page")!)
+		}
+
 		if (doSearch) {
 			promise = search()
 		}
@@ -211,10 +259,10 @@
 			{#await promise}
 				<div class="text-xl font-bold">Loading...</div>
 			{:then results}
-				<div class="text-xl font-bold">Search Results</div>
+				<div class="text-xl font-bold mb-2">Search Results</div>
 
 				{#if results.length > 0}
-					{#each results as r, index}
+					{#each resultsForPage(results) as r, index}
 						<div class="flex flex-col space-y-2">
 							{#await r.data()}
 								Loading result {index + 1}...
@@ -236,6 +284,44 @@
 							{/await}
 						</div>
 					{/each}
+
+					{#if results.length > siblingCount}
+						<div class="border-t mt-4 pt-4">
+							<Pagination.Root onPageChange={updatePageNumber} count={count} {perPage} {siblingCount} bind:page={pageNumber} let:pages let:currentPage>
+								<Pagination.Content>
+									<Pagination.Item>
+										<Pagination.PrevButton>
+											<ChevronLeft class="h-4 w-4" />
+
+											<span class="hidden sm:block">Previous</span>
+										</Pagination.PrevButton>
+									</Pagination.Item>
+
+									{#each pages as page (page.key)}
+										{#if page.type === "ellipsis"}
+											<Pagination.Item>
+												<Pagination.Ellipsis />
+											</Pagination.Item>
+										{:else}
+											<Pagination.Item>
+												<Pagination.Link {page} isActive={currentPage === page.value}>
+													{page.value}
+												</Pagination.Link>
+											</Pagination.Item>
+										{/if}
+									{/each}
+
+									<Pagination.Item>
+										<Pagination.NextButton>
+											<span class="hidden sm:block">Next</span>
+
+											<ChevronRight class="h-4 w-4" />
+										</Pagination.NextButton>
+									</Pagination.Item>
+								</Pagination.Content>
+							</Pagination.Root>
+						</div>
+					{/if}
 				{:else}
 					<span class="text-lg font-medium">No results.</span>
 				{/if}

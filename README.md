@@ -23,9 +23,9 @@ pnpm run dev -- --open
 During development, the search indices will quickly become out of date.
 To fix this:
 
-- Stop the development server
-- Delete `/static/pagefind`
-- Run the `build` script as mentioned below
+1. Stop the development server
+2. Delete `/static/pagefind`
+3. Run the `build` script as mentioned below
 
 We build the indices from scratch in production, so they should always be correct.
 
