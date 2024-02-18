@@ -17,6 +17,18 @@ pnpm run dev
 pnpm run dev -- --open
 ```
 
+### Pagefind
+
+[Pagefind](https://pagefind.app/) powers the search for this site.
+During development, the search indices will quickly become out of date.
+To fix this:
+
+- Stop the development server
+- Delete `/static/pagefind`
+- Run the `build` script as mentioned below
+
+We build the indices from scratch in production, so they should always be correct.
+
 ## Building
 
 To create a production version of the site:

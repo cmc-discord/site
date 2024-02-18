@@ -34,9 +34,9 @@
 
 	let searchQuery: string = ""
 
-	let promise: Promise<SearchResults> | null = null
+	let promise: Promise<any> | null = null
 
-	async function search(): Promise<SearchResults> {
+	async function search(): Promise<any> {
 		let query: string | null = searchQuery
 
 		if (query.length == 0) {
@@ -113,7 +113,7 @@
 			window.history.pushState(null, "", "/search" + queryString)
 		}
 
-		return results
+		return searchResults.results
 	}
 
 	onMount(async () => {
@@ -216,26 +216,29 @@
 				{#if results.length > 0}
 					{#each results as r, index}
 						<div class="flex flex-col space-y-2">
-							<a href={r.url}>
-								<div class="flex flex-col space-y-2 p-3 rounded hover:bg-secondary">
-									<span class="text-lg font-medium">{index + 1}. {r.title}</span>
+							{#await r.data()}
+								Loading result {index + 1}...
+							{:then data}
+								<a href={data.url}>
+									<div class="flex flex-col space-y-2 p-3 rounded hover:bg-secondary">
+										<span class="text-lg font-medium">{index + 1}. {data.meta.title}</span>
 
-									<span>
-							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-										{@html r.description}
-						</span>
-								</div>
-							</a>
+										<span>
+								<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+											{@html data.excerpt}
+										</span>
+									</div>
+								</a>
 
-							{#if index < (results.length - 1)}
-								<Separator class="!mt-4" />
-							{/if}
+								{#if index < (results.length - 1)}
+									<Separator class="!mt-4" />
+								{/if}
+							{/await}
 						</div>
 					{/each}
 				{:else}
 					<span class="text-lg font-medium">No results.</span>
 				{/if}
-
 			{:catch error}
 				<div class="text-xl font-bold">Error</div>
 
