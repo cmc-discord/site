@@ -1,4 +1,8 @@
 ---
+authors: [
+    "one", "two"
+]
+
 tags: [
 	"one", "two"
 ]
