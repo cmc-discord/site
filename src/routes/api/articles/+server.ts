@@ -10,7 +10,7 @@ async function getArticles(): Promise<Article[]> {
 	);
 
 	for (const path in paths) {
-		const file = paths[path];
+		const file = paths[path] as { metadata: object };
 
 		if (file && typeof file === "object") {
 			const slug = path.split("/").at(-1)?.replace(".svelte.md", "");
