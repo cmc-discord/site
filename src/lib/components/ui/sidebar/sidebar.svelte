@@ -11,7 +11,7 @@
 		Home
 	</Sidebar.SectionPickerItem>
 
-	<Sidebar.SectionPickerItem href="#">
+	<Sidebar.SectionPickerItem href="#" disabled>
 		<Wrench size="1.5rem" slot="icon" />
 
 		Tools
@@ -27,39 +27,39 @@
 
 	<slot name="content"/>
 
-	<Sidebar.Link href="#">
+	<Sidebar.Link href="#" disabled>
 		Content 1
 	</Sidebar.Link>
 
-	<Sidebar.Link href="#">
+	<Sidebar.Link href="#" disabled>
 		Content 2
 
 		<svelte:fragment slot="children">
-			<Sidebar.Link href="#">
+			<Sidebar.Link href="#" disabled>
 				Content 3
 			</Sidebar.Link>
 
-			<Sidebar.Link href="#">
+			<Sidebar.Link href="#" disabled>
 				Content 4
 
 				<svelte:fragment slot="children">
-					<Sidebar.Link href="#">
+					<Sidebar.Link href="#" disabled>
 						Content 5
 					</Sidebar.Link>
 
-					<Sidebar.Link href="#">
+					<Sidebar.Link href="#" disabled>
 						Content 6
 					</Sidebar.Link>
 				</svelte:fragment>
 			</Sidebar.Link>
 
-			<Sidebar.Link href="#">
+			<Sidebar.Link href="#" disabled>
 				Content 7
 			</Sidebar.Link>
 		</svelte:fragment>
 	</Sidebar.Link>
 
-	<Sidebar.Link href="#">
+	<Sidebar.Link href="#" disabled>
 		Content 8
 	</Sidebar.Link>
 </div>
