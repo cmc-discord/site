@@ -2,11 +2,13 @@ import type { Article } from "$lib/types/article";
 import { json } from "@sveltejs/kit";
 import { equalsIgnoringCase } from "$lib/utils";
 
+export const prerender = true;
+
 async function getArticles(tag: string): Promise<Article[]> {
 	const articles: Article[] = [];
 
 	const paths = import.meta.glob(
-		"/src/posts/*.md",
+		"/src/articles/*.svelte.md",
 		{ eager: true },
 	);
 

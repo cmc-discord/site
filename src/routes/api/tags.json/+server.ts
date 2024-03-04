@@ -2,13 +2,15 @@ import type { Article } from "$lib/types/article";
 import { json } from "@sveltejs/kit";
 import type { Tag } from "$lib/types/tag";
 
+export const prerender = true;
+
 const tagInfo: { [key: string]: string } = (await import("$lib/../taginfo.json")).tags;
 
 async function getTags(): Promise<Tag[]> {
 	const tags: { [key: string]: string } = {};
 
 	const paths = import.meta.glob(
-		"/src/posts/*.svelte.md",
+		"/src/articles/*.svelte.md",
 		{ eager: true },
 	);
 
@@ -45,8 +47,6 @@ async function getTags(): Promise<Tag[]> {
 		first.name.localeCompare(second.name),
 	);
 }
-
-export const prerender = true;
 
 export async function GET(): Promise<Response> {
 	const tags = await getTags();

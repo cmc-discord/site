@@ -3,7 +3,7 @@ import type { Article } from "$lib/types/article";
 
 export async function load({ params }) {
 	try {
-		const article = await import(`../../../posts/${params.slug}.svelte.md`)
+		const article = await import(`../../../articles/${params.slug}.svelte.md`)
 
 		return {
 			content: article.default,

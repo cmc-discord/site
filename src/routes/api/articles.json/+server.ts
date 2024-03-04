@@ -1,11 +1,13 @@
 import type { Article } from "$lib/types/article";
 import { json } from "@sveltejs/kit";
 
+export const prerender = true;
+
 async function getArticles(): Promise<Article[]> {
 	const articles: Article[] = [];
 
 	const paths = import.meta.glob(
-		"/src/posts/*.svelte.md",
+		"/src/articles/*.svelte.md",
 		{ eager: true },
 	);
 
@@ -28,8 +30,6 @@ async function getArticles(): Promise<Article[]> {
 		first.title.localeCompare(second.title),
 	);
 }
-
-export const prerender = true;
 
 export async function GET(): Promise<Response> {
 	const articles = await getArticles();

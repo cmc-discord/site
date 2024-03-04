@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+	"1YiB.svelte-bundle",
+	"antfu.vite",
+	"bradlc.vscode-tailwindcss",
+	"christian-kohler.path-intellisense",
+	"csstools.postcss",
+	"davidlday.languagetool-linter",
+	"dbaeumer.vscode-eslint",
+	"esbenp.prettier-vscode",
+	"jacano.vscode-pnpm",
+	"selemondev.vscode-shadcn-svelte"
+  ]
+}
