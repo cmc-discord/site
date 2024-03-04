@@ -29,6 +29,8 @@ async function getArticles(): Promise<Article[]> {
 	);
 }
 
+export const prerender = true;
+
 export async function GET(): Promise<Response> {
 	const articles = await getArticles();
 

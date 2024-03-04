@@ -46,6 +46,8 @@ async function getTags(): Promise<Tag[]> {
 	);
 }
 
+export const prerender = true;
+
 export async function GET(): Promise<Response> {
 	const tags = await getTags();
 
