@@ -1,7 +1,8 @@
 <script lang="ts">
 	export let authors = ["Unknown"]
 	export let tags = ["untagged"]
-	export let title = ""
+	export let title: string
+	export let summary: string
 
 	import { User, Tag } from "lucide-svelte"
 </script>
@@ -9,7 +10,8 @@
 <div class="prose dark:prose-invert"
      data-pagefind-body
 >
-	<h1 class="mb-2">{title}</h1>
+	<h1 class="mb-0">{title}</h1>
+	<h5 class="mb-4">{summary}</h5>
 
 	{#if tags.length > 0 || authors.length > 0}
 		<div class="flex flex-row flex-nowrap overflow-x-auto space-x-2 mb-3 pb-2" data-pagefind-ignore>

@@ -15,11 +15,15 @@
 	import { Separator } from "$lib/components/ui/separator"
 	import { Switch } from "$lib/components/ui/switch"
 
-	import { ChevronLeft, ChevronRight, Tag, Search } from "lucide-svelte"
+	import { ChevronLeft, ChevronRight, Tag, Search, User } from "lucide-svelte";
 
 	const isDesktop = mediaQuery("(min-width: 768px)");
 
-	type Filters = { tag?: { any: Array<string>} | Array<string> }
+	type Filters = {
+		author? : { any: Array<string>} | Array<string>,
+		tag?: { any: Array<string>} | Array<string>
+	}
+
 	type SearchResult = { url: string, title: string, description: string }
 	type SearchResults = Array<SearchResult>
 
@@ -29,15 +33,22 @@
 		queryParams = $page.url.searchParams
 	}
 
-	let pagefind;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let pagefind: any;
+
+	let authors: Array<string> = [];
+	let authorToggles: {[key: string]: boolean} = {}
+	let authorAnyToggle = false
 
 	let tags: Array<string> = [];
 	let tagToggles: {[key: string]: boolean} = {}
 	let tagAnyToggle = false
 
-	let accordionValue = ""
+	let authorsAccordionValue = ""
+	let tagsAccordionValue = ""
 	let searchQuery: string = ""
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let promise: Promise<any> | null = null
 
 	let count = 0
@@ -49,6 +60,7 @@
 	$: startIndex = Math.max((pageNumber - 1) * perPage, 0)
 	$: endIndex = Math.min(pageNumber * perPage, count)
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	function resultsForPage(results: Array<any>): Array<any> {
 		console.log({
 			count: count,
@@ -75,12 +87,21 @@
 		}
 	}
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	async function search(): Promise<Array<any>> {
 		let query: string | null = searchQuery
 		pageNumber = 1
 
 		if (query.length == 0) {
 			query = null
+		}
+
+		let authors = []
+
+		for (const key in authorToggles) {
+			if (authorToggles[key] === true) {
+				authors.push(key)
+			}
 		}
 
 		let tags = []
@@ -92,6 +113,16 @@
 		}
 
 		const filters: Filters = {}
+
+		if (authors.length > 0) {
+			if (authorAnyToggle) {
+				filters["author"] = {
+					any: authors
+				}
+			} else {
+				filters["author"] = authors
+			}
+		}
 
 		if (tags.length > 0) {
 			if (tagAnyToggle) {
@@ -137,10 +168,22 @@
 			queryParams.delete("tags")
 		}
 
+		if (authors.length > 0) {
+			queryParams.set("authors", authors.join(","))
+		} else {
+			queryParams.delete("authors")
+		}
+
 		if (tagAnyToggle) {
 			queryParams.set("anyTags", "true")
 		} else {
 			queryParams.delete("anyTags")
+		}
+
+		if (authorAnyToggle) {
+			queryParams.set("anyAuthors", "true")
+		} else {
+			queryParams.delete("anyAuthors")
 		}
 
 		queryParams.set("page", String(pageNumber))
@@ -169,12 +212,21 @@
 
 		console.log({
 			filters: filters,
-			tags: Object.keys(filters.tag)
+			authors: Object.keys(filters.author),
+			tags: Object.keys(filters.tag),
 		})
+
+		if (filters?.author !== undefined) {
+			authors = Object.keys(filters.author)
+		}
 
 		if (filters?.tag !== undefined) {
 			tags = Object.keys(filters.tag)
 		}
+
+		authors.forEach((author: string) => {
+			authorToggles[author] = false
+		})
 
 		tags.forEach((tag: string) => {
 			tagToggles[tag] = false
@@ -188,6 +240,19 @@
 			doSearch = true
 		}
 
+		if (queryParams.has("authors")) {
+			const authorTags = queryParams.get("authors")!.split(",")
+
+			authorTags.forEach((author) => {
+				if (authors.includes(author)) {
+					authorToggles[author] = true
+
+					doSearch = true
+					authorsAccordionValue = "authors"
+				}
+			})
+		}
+
 		if (queryParams.has("tags")) {
 			const queryTags = queryParams.get("tags")!.split(",")
 
@@ -196,15 +261,21 @@
 					tagToggles[tag] = true
 
 					doSearch = true
-					accordionValue = "tags"
+					tagsAccordionValue = "tags"
 				}
 			})
+		}
+
+		if (queryParams.has("anyAuthors")) {
+			authorAnyToggle = queryParams.get("anyAuthors")! !== "false"
+
+			tagsAccordionValue = "authors"
 		}
 
 		if (queryParams.has("anyTags")) {
 			tagAnyToggle = queryParams.get("anyTags")! !== "false"
 
-			accordionValue = "tags"
+			tagsAccordionValue = "tags"
 		}
 
 		if (queryParams.has("page")) {
@@ -222,8 +293,30 @@
 		<form class="flex flex-col w-full space-y-2">
 			<Input type="search" placeholder="Search" bind:value={searchQuery} class="mb-2" />
 
-			<Accordion.Root bind:value={accordionValue}>
-				{#if tags.length > 0}
+			{#if authors.length > 0}
+				<Accordion.Root bind:value={authorsAccordionValue}>
+					<Accordion.Item value="authors">
+						<Accordion.Trigger><div class="flex flex-row flex-grow"><User size="1.5rem" class="mr-2" /> Authors</div></Accordion.Trigger>
+						<Accordion.Content>
+							{#each authors as author}
+								<div class="my-1 flex items-center space-x-2">
+									<Checkbox id="author-{author}" bind:checked={authorToggles[author]} />
+									<Label for="author-{author}" class="flex-grow w-full">{author}</Label>
+								</div>
+							{/each}
+
+							<div class="mt-4 flex items-center space-x-2 pt-2">
+								<Label class="flex-grow" for="tag-any-toggle">Match Any</Label>
+								<Switch id="tag-any-toggle" bind:checked={authorAnyToggle} />
+							</div>
+						</Accordion.Content>
+
+					</Accordion.Item>
+				</Accordion.Root>
+			{/if}
+
+			{#if tags.length > 0}
+				<Accordion.Root bind:value={tagsAccordionValue}>
 					<Accordion.Item value="tags">
 						<Accordion.Trigger><div class="flex flex-row flex-grow"><Tag size="1.5rem" class="mr-2" /> Tags</div></Accordion.Trigger>
 						<Accordion.Content>
@@ -241,8 +334,8 @@
 						</Accordion.Content>
 
 					</Accordion.Item>
-				{/if}
-			</Accordion.Root>
+				</Accordion.Root>
+			{/if}
 
 			<Button class="order-last" type="submit" on:click={(e) => {promise = search(); e.preventDefault()}}>
 				<Search class="mr-2" />
@@ -252,7 +345,7 @@
 		</form>
 	</div>
 
-	<div class="flex-grow w-full order-1 md:pr-4">
+	<div class="flex-grow w-full order-1 md:pr-4 space-y-2">
 		{#if promise == null}
 			<div class="text-xl font-bold">Please enter a query and press the "Search" button.</div>
 		{:else}
@@ -267,7 +360,7 @@
 							{#await r.data()}
 								Loading result...
 							{:then data}
-								<a href={data.url}>
+								<a href={data.url.replace(".html", "")}>
 									<div class="flex flex-col space-y-2 p-3 rounded hover:bg-secondary">
 										<span class="text-lg font-medium">{data.meta.title}</span>
 
