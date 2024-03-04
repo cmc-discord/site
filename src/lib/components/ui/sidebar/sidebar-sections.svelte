@@ -2,7 +2,7 @@
 	import Sidebar from "./"
 
 	import { Button } from "$lib/components/ui/button";
-	import { ChevronRight, Home, Wrench } from "lucide-svelte";
+	import { ChevronRight, Home, Tag, Wrench } from "lucide-svelte";
 	import { Separator } from "$lib/components/ui/separator";
 
 	let open = false;
@@ -35,6 +35,12 @@
 		<Wrench size="1.5rem" slot="icon" />
 
 		Tools
+	</Sidebar.SectionPickerItem>
+
+	<Sidebar.SectionPickerItem href="/tags">
+		<Tag size="1.5rem" slot="icon" />
+
+		All Tags
 	</Sidebar.SectionPickerItem>
 </div>
 

@@ -6,5 +6,8 @@ export async function load({ fetch, params }) {
 
 	console.log(`Loaded ${articles.length} articles tagged with "${params.tag}".`)
 
-	return { articles }
+	return {
+		articles,
+		tag: params.tag
+	}
 }
