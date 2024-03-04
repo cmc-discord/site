@@ -34,7 +34,7 @@
      on:click={() => (drawer0pen = false)}
 ></div>
 
-<div class="border-b">
+<div class="border-b sticky top-0 bg-background">
 	<div class="flex justify-between h-16 items-center px-4">
 		<!-- Add navigation items -->
 		<div class="flex">

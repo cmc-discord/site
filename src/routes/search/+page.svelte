@@ -378,7 +378,7 @@
 						</div>
 					{/each}
 
-					{#if results.length > siblingCount}
+					{#if results.length > perPage}
 						<div class="border-t mt-4 pt-4">
 							<Pagination.Root onPageChange={updatePageNumber} count={count} {perPage} {siblingCount} bind:page={pageNumber} let:pages let:currentPage>
 								<Pagination.Content>

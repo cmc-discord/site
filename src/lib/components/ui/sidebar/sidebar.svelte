@@ -4,7 +4,7 @@
 	import { Home, Tag, Wrench } from "lucide-svelte";
 </script>
 
-<div class="flex flex-col p-2 mt-1">
+<div class="flex flex-col p-2 mt-1 overflow-y-auto h-full">
 	<Sidebar.SectionPickerItem href="/">
 		<Home size="1.5rem" slot="icon" />
 
