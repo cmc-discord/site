@@ -1,8 +1,8 @@
 <script lang="ts">
 	export let authors = ["Unknown"]
 	export let tags = ["untagged"]
-	export let title: string
-	export let summary: string
+	export let title = ""
+	export let summary = ""
 
 	import { User, Tag } from "lucide-svelte"
 </script>
