@@ -7,7 +7,8 @@ async function getArticles(): Promise<Article[]> {
 	const articles: Article[] = [];
 
 	const paths = import.meta.glob(
-		"/src/articles/*.svelte.md",
+		"/src/articles/**/*.svelte.md",
+
 		{ eager: true },
 	);
 
@@ -15,7 +16,9 @@ async function getArticles(): Promise<Article[]> {
 		const file = paths[path] as { metadata: object };
 
 		if (file && typeof file === "object") {
-			const slug = path.split("/").at(-1)?.replace(".svelte.md", "");
+			const slug = path
+				.replace("/src/articles/", "")
+				.replace(".svelte.md", "");
 
 			if (slug && "title" in file.metadata && "summary" in file.metadata) {
 				const data = file.metadata as Omit<Article, "slug">;

@@ -13,7 +13,7 @@
 		{#each data.tags as tag}
 			<li class="list-item">
 				<div class="flex flex-col">
-					<a class="capitalize anchor-link underline text-blue-500" href="/tag/{tag.name}">{tag.name}</a>
+					<a class="capitalize anchor-link underline text-blue-500" href="/t/{tag.name}">{tag.name}</a>
 					<span>{tag.description}</span>
 				</div>
 			</li>
