@@ -48,7 +48,7 @@ export default defineMDSveXConfig({
 
 	remarkPlugins: [
 		// Link embedding
-		remarkOembed,
+		[remarkOembed, { syncWidget: true }],
 
 		// Markdown linting
 		remarkPresetLintConsistent,

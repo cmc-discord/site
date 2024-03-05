@@ -19,7 +19,7 @@
 		<Drawer.Content>
 			<div role="presentation"
 			     class="bg-background"
-			     style="width: 75vw; height: calc(100vh - (4rem + 1px));"
+			     style="width: 75%; height: calc(100vh - (4rem + 1px));"
 			     on:click|stopPropagation
 			>
 				<Sidebar.Base />
@@ -30,7 +30,7 @@
 
 <div role="presentation"
      class="fixed left-0 bg-black/40 dark:bg-white/20 z-10 transition-opacity {drawer0pen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}"
-     style="width: 100vw; height: calc(100vh - (4rem + 1px)); top: calc(4rem + 1px)"
+     style="width: 100%; height: calc(100vh - (4rem + 1px)); top: calc(4rem + 1px)"
      on:click={() => (drawer0pen = false)}
 ></div>
 
