@@ -15,11 +15,11 @@
 </script>
 
 <Drawer.Root direction="left" bind:open={drawer0pen}>
-	<Drawer.Portal class="fixed left-0 z-20" style="top: calc(-3px + 4rem)">
+	<Drawer.Portal class="fixed left-0 z-20" style="top: calc(-4px + 4rem)">
 		<Drawer.Content>
 			<div role="presentation"
 			     class="bg-background"
-			     style="width: 75%; height: calc(100vh - (4rem + 1px));"
+			     style="width: 75vw; height: calc(100vh - (4rem + 1px));"
 			     on:click|stopPropagation
 			>
 				<Sidebar.Base />
@@ -29,12 +29,12 @@
 </Drawer.Root>
 
 <div role="presentation"
-     class="fixed left-0 bg-black/40 dark:bg-white/20 z-10 transition-opacity {drawer0pen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}"
-     style="width: 100%; height: calc(100vh - (4rem + 1px)); top: calc(4rem + 1px)"
+     class="fixed left-0 bg-black/40 dark:bg-white/20 z-20 transition-opacity {drawer0pen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}"
+     style="width: 100vw; height: calc(100vh - (4rem + 1px)); top: calc(4rem + 1px)"
      on:click={() => (drawer0pen = false)}
 ></div>
 
-<div class="border-b sticky top-0 bg-background">
+<div class="border-b sticky top-0 bg-background z-50">
 	<div class="flex justify-between h-16 items-center px-4">
 		<!-- Add navigation items -->
 		<div class="flex">

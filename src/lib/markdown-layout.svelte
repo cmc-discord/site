@@ -10,7 +10,7 @@
 <div class="prose dark:prose-invert"
      data-pagefind-body
 >
-	<h1 class="mb-0">{title}</h1>
+	<h1 class="mb-0 font-semibold">{title}</h1>
 	<h5 class="mb-4">{summary}</h5>
 
 	{#if tags.length > 0 || authors.length > 0}

@@ -602,6 +602,8 @@
 }
 
 .prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  z-index: 10;
+
   &:not([class*="language-"]) {
     padding: 6px 10px;
     border-radius: 6px;
