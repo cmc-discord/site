@@ -64,3 +64,11 @@ export const flyAndScale = (
 export function equalsIgnoringCase(left: string, right: string): boolean {
 	return left.localeCompare(right, undefined, { sensitivity: "accent" }) === 0;
 }
+
+export function truncateString(input: string, size: number = 100): string {
+	if (input.length < size) {
+		return input
+	} else {
+		return input.slice(0, size - 3) + "..."
+	}
+}
