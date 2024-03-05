@@ -29,6 +29,9 @@ dependencies:
   mdsvex:
     specifier: ^0.11.0
     version: 0.11.0(svelte@4.2.9)
+  mdsvex-excerpt:
+    specifier: ^0.1.1
+    version: 0.1.1
   mode-watcher:
     specifier: ^0.1.2
     version: 0.1.2(svelte@4.2.9)
@@ -2417,6 +2420,12 @@ packages:
 
   /mdn-data@2.0.30:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
+
+  /mdsvex-excerpt@0.1.1:
+    resolution: {integrity: sha512-GmCDAzrZjPjd4cECfb59GCF+45w4NG5OKGTslXinD6mg96rLlYmPlwgigk5gC85PnvZVJh0xGcYLALqoJIoBjg==}
+    dependencies:
+      unist-util-visit: 3.1.0
+    dev: false
 
   /mdsvex@0.11.0(svelte@4.2.9):
     resolution: {integrity: sha512-gJF1s0N2nCmdxcKn8HDn0LKrN8poStqAicp6bBcsKFd/zkUBGLP5e7vnxu+g0pjBbDFOscUyI1mtHz+YK2TCDw==}

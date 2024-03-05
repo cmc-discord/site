@@ -1,6 +1,8 @@
 import { h } from "hastscript";
 import { defineMDSveXConfig } from "mdsvex";
 
+import remarkExcerpt from "mdsvex-excerpt";
+
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeColorChips from "rehype-color-chips";
 // import rehypePrism from "rehype-prism-plus"
@@ -51,5 +53,8 @@ export default defineMDSveXConfig({
 		// Markdown linting
 		remarkPresetLintConsistent,
 		remarkPresetLintRecommended,
+
+		// Excertps
+		remarkExcerpt,
 	],
 });

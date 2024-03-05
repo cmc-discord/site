@@ -361,7 +361,7 @@
 								Loading result...
 							{:then data}
 								<a href={data.url.replace(".html", "")}>
-									<div class="flex flex-col space-y-2 p-3 rounded hover:bg-secondary">
+									<div class="flex flex-col space-y-2 p-4 rounded-md hover:bg-secondary">
 										<span class="text-lg font-medium">{data.meta.title}</span>
 
 										<span>

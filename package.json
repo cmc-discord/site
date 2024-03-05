@@ -47,6 +47,7 @@
     "hastscript": "^9.0.0",
     "lucide-svelte": "^0.316.0",
     "mdsvex": "^0.11.0",
+    "mdsvex-excerpt": "^0.1.1",
     "mode-watcher": "^0.1.2",
     "pagefind": "^1.0.4",
     "postcss-import": "^16.0.1",

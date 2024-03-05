@@ -7,14 +7,16 @@
 	export let data: { tags: Tag[] };
 </script>
 
-<h1 class="title text-3xl">
+<h1 class="title font-semibold text-3xl">
 	All Tags
 </h1>
 
-<p class="my-1 mb-6">
+<p class="mt-1 mb-6">
 	Select a tag to view all relevant articles, or <a class="underline" href="/search">head to the search page</a>
 	for more advanced queries.
 </p>
+
+<hr class="mb-2" />
 
 <div class="m-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 grid-flow-row gap-4">
 	{#each data.tags as tag}
@@ -22,7 +24,8 @@
 			<div class="rounded-lg border bg-card text-card-foreground shadow-sm w-full h-full">
 				<div class="m-6">
 					<h3 class="text-lg font-semibold leading-none tracking-tight flex flex-row mb-2">
-						<TagIcon size="1em" class="mr-2" /> <span class="capitalize">{tag.name}</span>
+						<TagIcon size="1em" class="mr-2" />
+						<span class="capitalize">{tag.name}</span>
 					</h3>
 
 					<div class="text-sm text-muted-foreground h-16 overflow-y-hidden">
