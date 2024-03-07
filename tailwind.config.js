@@ -61,7 +61,9 @@ const config = {
 	},
 
 	plugins: [
-		require("@tailwindcss/typography")
+		require("@tailwindcss/typography"),
+		// eslint-disable-next-line @typescript-eslint/no-var-requires
+		require("tailwind-scrollbar")({ nocompatible: true, preferredStrategy: "pseudoelements"})
 	]
 };
 
