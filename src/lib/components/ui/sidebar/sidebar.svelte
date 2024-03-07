@@ -17,7 +17,7 @@
 	})
 </script>
 
-<div class="flex flex-col p-2 mt-1 overflow-y-auto h-full">
+<div class="p-2 mt-1 overflow-y-auto" style="height: calc(100vh - (4em + 6px))">
 	<Sidebar.SectionPickerItem href="/">
 		<Home size="1.5rem" slot="icon" />
 

@@ -15,10 +15,14 @@
 </script>
 
 <Drawer.Root direction="left" bind:open={drawer0pen}>
-	<Drawer.Portal class="fixed left-0 z-20" style="top: calc(-4px + 4rem)">
+	<Drawer.Portal class="fixed left-0 z-20 overflow-y-auto" style="top: calc(-4px + 4rem)">
 		<Drawer.Content>
+			<!--
+				TODO: This menu is not scrollable on mobile, but it is on desktop
+							for some reason. Needs investigation.
+			-->
 			<div role="presentation"
-			     class="bg-background"
+			     class="bg-background flex flex-col h-full overflow-hidden"
 			     style="width: 75vw; height: calc(100vh - (4rem + 1px));"
 			     on:click|stopPropagation
 			>
