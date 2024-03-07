@@ -10,7 +10,9 @@
 
 	import { Home, Info, MoreHorizontal, Tag } from "lucide-svelte";
 
-	let headings: Heading[] = []
+	export let open: boolean = false;
+
+	let headings: Heading[] = [];
 
 	TocStore.store.subscribe((value) => {
 		headings = value
@@ -18,19 +20,19 @@
 </script>
 
 <div class="p-2 mt-1 overflow-y-auto" style="height: calc(100vh - (4em + 6px))">
-	<Sidebar.SectionPickerItem href="/">
+	<Sidebar.SectionPickerItem href="/" bind:open>
 		<Home size="1.5rem" slot="icon" />
 
 		Home
 	</Sidebar.SectionPickerItem>
 
-	<Sidebar.SectionPickerItem href="/tags">
+	<Sidebar.SectionPickerItem href="/tags" bind:open>
 		<Tag size="1.5rem" slot="icon" />
 
 		All Tags
 	</Sidebar.SectionPickerItem>
 
-	<Sidebar.SectionPickerItem href="/info">
+	<Sidebar.SectionPickerItem href="/info" bind:open>
 		<Info size="1.5rem" slot="icon" />
 
 		Site Information
@@ -44,7 +46,7 @@
 	</Sidebar.SectionPickerItem>
 	-->
 
-	<Sidebar.SectionPickerItem href="#" disabled>
+	<Sidebar.SectionPickerItem href="#" bind:open disabled>
 		<MoreHorizontal size="1.5rem" slot="icon" />
 
 		Coming Soon...
@@ -54,7 +56,7 @@
 
 	<slot name="content"/>
 
-	<Sidebar.Link href="#" disabled>
+	<Sidebar.Link href="#" bind:open disabled>
 		Coming Soon...
 	</Sidebar.Link>
 
@@ -64,7 +66,7 @@
 		<Sidebar.Header>Page Contents</Sidebar.Header>
 
 		{#each $store as heading}
-			<Sidebar.PageHeading {heading} />
+			<Sidebar.PageHeading {heading} bind:open />
 		{/each}
 	{/if}
 </div>

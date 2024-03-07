@@ -12,6 +12,8 @@
 	let className: Props["class"] = undefined;
 
 	export let heading: Heading;
+	export let open: boolean = false;
+
 	export { className as class };
 </script>
 
@@ -21,14 +23,17 @@
 	class={cn(
 		"font-medium text-left transition-colors flex flex-row items-center content-center w-full self-start justify-start",
 		className
-	)}>
+	)}
+
+	on:click={() => open = false}
+>
 	<span class="sidebar-link-icon"><ChevronRight size="1.5em" /></span>
 	<span>{ heading.title }</span>
 </Button>
 
 <div class="flex flex-col pl-3 sidebar-children">
 	{#each heading.children as child}
-		<svelte:self heading={child} class={className} />
+		<svelte:self heading={child} class={className} bind:open />
 	{/each}
 </div>
 

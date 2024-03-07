@@ -3,10 +3,10 @@
 	import { Button } from "$lib/components/ui/button";
 	import { Separator } from "$lib/components/ui/separator";
 
-	import { Menu, Moon, RefreshCw, Search, Sun, } from "lucide-svelte";
+	import { X, Menu, Moon, RefreshCw, Search, Sun } from "lucide-svelte";
 	import { setMode } from "mode-watcher";
 
-	import { Drawer } from "vaul-svelte"
+	import * as Drawer from "$lib/components/ui/drawer"
 	import GitHub from "virtual:icons/simple-icons/github";
 	import Navbar from "$lib/components/ui/navbar/index";
 	import Sidebar from "$lib/components/ui/sidebar/index";
@@ -14,29 +14,29 @@
 	let drawer0pen = false;
 </script>
 
-<Drawer.Root dismissible={false} direction="left" bind:open={drawer0pen} preventScroll={true}>
-	<Drawer.Portal class="fixed left-0 z-20 h-full" style="top: calc(-4px + 4rem)">
-		<Drawer.Content>
-			<!--
-				TODO: This menu is not scrollable on mobile, but it is on desktop
-							for some reason. Needs investigation.
-			-->
+<Drawer.Root direction="bottom" bind:open={drawer0pen}>
+	<Drawer.Portal>
+		<Drawer.Content style="top: 4em;">
 			<div role="presentation"
-			     class="bg-background flex flex-col h-full"
-			     style="width: 75vw; height: calc(100vh - (4rem + 1px));"
+			     class="flex flex-col h-full"
+			     style="padding-bottom: 1em;"
 			     on:click|stopPropagation
 			>
-				<Sidebar.Base />
+				<div class="flex flex-row justify-between m-2 mt-0 items-center">
+					<p class="p-2 ml-2 text-lg font-semibold">Main Menu</p>
+
+					<Drawer.Close class="p-2 pr-3 mr-2 flex flex-row justify-between space-x-2 rounded border hover:bg-border">
+						<X size="1.5em" />
+						<span>Close</span>
+					</Drawer.Close>
+				</div>
+				<Separator class="mt-2" />
+
+				<Sidebar.Base bind:open={drawer0pen} />
 			</div>
 		</Drawer.Content>
 	</Drawer.Portal>
 </Drawer.Root>
-
-<div role="presentation"
-     class="fixed left-0 bg-black/40 dark:bg-white/20 z-10 transition-opacity {drawer0pen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}"
-     style="width: 100vw; height: calc(100vh - (4rem + 1px)); top: calc(4rem + 1px)"
-     on:click={() => (drawer0pen = false)}
-></div>
 
 <div class="border-b sticky top-0 bg-background z-50">
 	<div class="flex justify-between h-16 items-center px-4">
