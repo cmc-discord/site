@@ -94,7 +94,7 @@
 	})
 </script>
 
-<div class="fixed right-10 bottom-10">
+<div class="fixed right-10 bottom-10 z-50">
 	<Tooltip.Root>
 		<Tooltip.Trigger>
 			<button on:click={() => scroll({top: 0})}
