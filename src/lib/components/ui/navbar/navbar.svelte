@@ -14,15 +14,15 @@
 	let drawer0pen = false;
 </script>
 
-<Drawer.Root direction="left" bind:open={drawer0pen}>
-	<Drawer.Portal class="fixed left-0 z-20 overflow-y-auto" style="top: calc(-4px + 4rem)">
+<Drawer.Root dismissible={false} direction="left" bind:open={drawer0pen} preventScroll={true}>
+	<Drawer.Portal class="fixed left-0 z-20 h-full" style="top: calc(-4px + 4rem)">
 		<Drawer.Content>
 			<!--
 				TODO: This menu is not scrollable on mobile, but it is on desktop
 							for some reason. Needs investigation.
 			-->
 			<div role="presentation"
-			     class="bg-background flex flex-col h-full overflow-hidden"
+			     class="bg-background flex flex-col h-full"
 			     style="width: 75vw; height: calc(100vh - (4rem + 1px));"
 			     on:click|stopPropagation
 			>
@@ -33,7 +33,7 @@
 </Drawer.Root>
 
 <div role="presentation"
-     class="fixed left-0 bg-black/40 dark:bg-white/20 z-20 transition-opacity {drawer0pen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}"
+     class="fixed left-0 bg-black/40 dark:bg-white/20 z-10 transition-opacity {drawer0pen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}"
      style="width: 100vw; height: calc(100vh - (4rem + 1px)); top: calc(4rem + 1px)"
      on:click={() => (drawer0pen = false)}
 ></div>
