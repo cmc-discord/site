@@ -6,7 +6,7 @@
 	import type { Heading } from "$lib/stores/tocStore"
 
 	import type { HTMLAttributes } from "svelte/elements";
-	import { ChevronRight } from "lucide-svelte";
+	import { Dot } from "lucide-svelte";
 
 	type Props = HTMLAttributes<HTMLDivElement>;
 	let className: Props["class"] = undefined;
@@ -27,7 +27,7 @@
 
 	on:click={() => open = false}
 >
-	<span class="sidebar-link-icon"><ChevronRight size="1.5em" /></span>
+	<span class="sidebar-link-icon"><Dot size="1.5em" /></span>
 	<span>{ heading.title }</span>
 </Button>
 
