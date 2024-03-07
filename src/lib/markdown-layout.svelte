@@ -7,11 +7,11 @@
 	import { User, Tag } from "lucide-svelte"
 </script>
 
-<div class="prose dark:prose-invert"
+<article class="prose dark:prose-invert"
      data-pagefind-body
 >
 	<h1 class="mb-0 font-semibold">{title}</h1>
-	<h5 class="mb-4">{summary}</h5>
+	<h5 class="mb-4 text-muted-foreground">{summary}</h5>
 
 	{#if tags.length > 0 || authors.length > 0}
 		<div class="flex flex-row flex-nowrap overflow-x-auto space-x-2 mb-3 pb-2" data-pagefind-ignore>
@@ -38,4 +38,4 @@
 	{/if}
 
 	<slot />
-</div>
+</article>

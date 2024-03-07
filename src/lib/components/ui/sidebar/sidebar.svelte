@@ -1,7 +1,20 @@
 <script lang="ts">
 	import Sidebar from "./"
+
+	import { Divider } from "$lib/components/ui/divider"
 	import { Separator } from "$lib/components/ui/separator";
-	import { Home, MoreHorizontal, Tag, Wrench } from "lucide-svelte";
+
+	import type { Heading } from "$lib/stores/tocStore";
+	import * as TocStore from "$lib/stores/tocStore"
+	import { store } from "$lib/stores/tocStore"
+
+	import { Home, Info, MoreHorizontal, Tag } from "lucide-svelte";
+
+	let headings: Heading[] = []
+
+	TocStore.store.subscribe((value) => {
+		headings = value
+	})
 </script>
 
 <div class="flex flex-col p-2 mt-1 overflow-y-auto h-full">
@@ -15,6 +28,12 @@
 		<Tag size="1.5rem" slot="icon" />
 
 		All Tags
+	</Sidebar.SectionPickerItem>
+
+	<Sidebar.SectionPickerItem href="/info">
+		<Info size="1.5rem" slot="icon" />
+
+		Site Information
 	</Sidebar.SectionPickerItem>
 
 	<!-- TODO: Make some tools!
@@ -39,41 +58,13 @@
 		Coming Soon...
 	</Sidebar.Link>
 
-	<!-- TODO: We have no content to put here yet.
-	<Sidebar.Link href="#" disabled>
-		Content 1
-	</Sidebar.Link>
+	{#if headings.length > 0}
+		<Separator class="!my-3" />
 
-	<Sidebar.Link href="#" disabled>
-		Content 2
+		<Sidebar.Header>Page Contents</Sidebar.Header>
 
-		<svelte:fragment slot="children">
-			<Sidebar.Link href="#" disabled>
-				Content 3
-			</Sidebar.Link>
-
-			<Sidebar.Link href="#" disabled>
-				Content 4
-
-				<svelte:fragment slot="children">
-					<Sidebar.Link href="#" disabled>
-						Content 5
-					</Sidebar.Link>
-
-					<Sidebar.Link href="#" disabled>
-						Content 6
-					</Sidebar.Link>
-				</svelte:fragment>
-			</Sidebar.Link>
-
-			<Sidebar.Link href="#" disabled>
-				Content 7
-			</Sidebar.Link>
-		</svelte:fragment>
-	</Sidebar.Link>
-
-	<Sidebar.Link href="#" disabled>
-		Content 8
-	</Sidebar.Link>
-	-->
+		{#each $store as heading}
+			<Sidebar.PageHeading {heading} />
+		{/each}
+	{/if}
 </div>
