@@ -3,14 +3,20 @@ import type { Article } from "$lib/types/article";
 
 export async function load({ params }) {
 	try {
-		const article = await import(
-			// TODO: Figure out how to support subdirectories, Vite requires that the import start with "./" or "../".
-			`../../../articles/${params.slug}.svelte.md`
-			);
+		// This is ludicrous, but it works around Vite's vile dynamic import requirements.
+		const paths = import.meta.glob(
+			"/src/articles/**/*.svelte.md",
+			{ eager: true },
+		);
+
+		const article = paths[`/src/articles/${params.slug}.svelte.md`];
 
 		return {
+			// @ts-expect-error This is not properly typed.
 			content: article.default,
-			article: article as Article,
+
+			// @ts-expect-error This is not properly typed.
+			article: article.metadata as Article,
 		};
 	} catch (e) {
 		error(404, `Could not find ${params.slug}`);
