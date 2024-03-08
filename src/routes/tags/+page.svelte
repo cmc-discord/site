@@ -18,7 +18,7 @@
 
 <hr class="mb-2" />
 
-<div class="m-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 grid-flow-row gap-4">
+<div class="my-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 grid-flow-row gap-4">
 	{#each data.tags as tag}
 		<a class="h-32 w-full " href="/t/{tag.name}">
 			<div class="rounded-lg border bg-card text-card-foreground shadow-sm w-full h-full p-6">

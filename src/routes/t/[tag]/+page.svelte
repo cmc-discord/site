@@ -23,7 +23,7 @@
 
 <hr class="mb-2" />
 
-<div class="flex flex-col space-y-4">
+<div class="flex flex-col space-y-4 mb-2">
 	{#each data.articles as article}
 		<a class="p-4 rounded-md hover:bg-secondary" href="/a/{article.slug}">
 			<svelte:component this={article.content} />
