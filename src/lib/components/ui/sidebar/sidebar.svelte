@@ -20,7 +20,7 @@
 </script>
 
 <div
-	class="p-2 mt-1 overflow-y-auto scrollbar-w-2 scrollbar scrollbar-thumb-rounded scrollbar-thumb-secondary scrollbar-track-background"
+	class="p-2 mt-1 overflow-y-auto scrollbar-w-2 scrollbar scrollbar-thumb-rounded scrollbar-thumb-secondary scrollbar-track-background w-full"
 	style="height: calc(100vh - (4em + 6px))">
 	<Sidebar.SectionPickerItem href="/" bind:open>
 		<Home size="1.5rem" slot="icon" />

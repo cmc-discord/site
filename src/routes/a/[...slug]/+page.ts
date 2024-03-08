@@ -11,12 +11,23 @@ export async function load({ params }) {
 
 		const article = paths[`/src/articles/${params.slug}.svelte.md`];
 
+		// @ts-expect-error This is not properly typed.
+		const metadata = article.metadata
+
+		if (metadata.prev) {
+			// @ts-expect-error This is not properly typed.
+			metadata.prev_article = paths[`/src/articles/${metadata.prev}.svelte.md`].metadata as Article;
+		}
+
+		if (metadata.next) {
+			// @ts-expect-error This is not properly typed.
+			metadata.next_article = paths[`/src/articles/${metadata.next}.svelte.md`].metadata as Article;
+		}
+
 		return {
 			// @ts-expect-error This is not properly typed.
 			content: article.default,
-
-			// @ts-expect-error This is not properly typed.
-			article: article.metadata as Article,
+			article: metadata,
 		};
 	} catch (e) {
 		error(404, `Could not find ${params.slug}`);

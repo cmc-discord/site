@@ -89,12 +89,11 @@
 			previous = current
 		})
 
-		console.log(headings)
 		TocStore.set(headings)
 	})
 </script>
 
-<div class="fixed right-10 bottom-10 z-50">
+<div class="fixed right-4 top-20 z-50">
 	<Tooltip.Root>
 		<Tooltip.Trigger>
 			<button on:click={() => scroll({top: 0})}
@@ -103,7 +102,8 @@
 				<ArrowUp class="m-auto" />
 			</button>
 		</Tooltip.Trigger>
-		<Tooltip.Content side="top" align="center">
+
+		<Tooltip.Content side="left" align="center">
 			<p>Scroll to top</p>
 		</Tooltip.Content>
 	</Tooltip.Root>

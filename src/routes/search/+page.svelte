@@ -62,14 +62,6 @@
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	function resultsForPage(results: Array<any>): Array<any> {
-		console.log({
-			count: count,
-			page: pageNumber,
-			perPage: perPage,
-			start: startIndex,
-			end: endIndex,
-		})
-
 		return results.slice(startIndex, endIndex)
 	}
 
@@ -133,11 +125,6 @@
 				filters["tag"] = tags
 			}
 		}
-
-		console.log({
-			filters: filters,
-			query: query,
-		})
 
 		const searchResults = await pagefind.search(
 			query,
@@ -209,12 +196,6 @@
 		pagefind.init()
 
 		const filters = await pagefind.filters()
-
-		console.log({
-			filters: filters,
-			authors: Object.keys(filters.author),
-			tags: Object.keys(filters.tag),
-		})
 
 		if (filters?.author !== undefined) {
 			authors = Object.keys(filters.author)

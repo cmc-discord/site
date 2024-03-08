@@ -7,10 +7,10 @@
 	export let target: string = "_self"
 </script>
 
-<a href={href}
-   {target}
+<Button {href} {target}
+	variant={emphasis ? "secondary" : "ghost"}
+	size="icon"
+	class="font-medium text-lg transition-colors hidden sm:flex"
 >
-<Button variant={emphasis ? "secondary" : "ghost"} size="icon" class="font-medium text-lg transition-colors">
 		<slot />
 </Button>
-	</a>
