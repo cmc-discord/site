@@ -52,7 +52,7 @@
 				href="/a/{prev_article.slug}"
 				class="rounded-lg border bg-card text-card-foreground shadow-sm p-6 mx-2 mb-2 sm:mr-0 sm:mb-0 sm:w-60"
 			>
-				<div class="flex flex-row sm:block space-x-2 justify-between">
+				<div class="flex flex-row sm:block space-x-2 sm:space-x-0 justify-between">
 					<p class="sm:text-lg font-semibold leading-none tracking-tight flex flex-row items-center sm:mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap">
 						<ArrowLeft size="1em" class="mr-2" />
 						<span>Back</span>
@@ -78,7 +78,7 @@
 				href="/a/{next_article.slug}"
 				class="rounded-lg border bg-card text-card-foreground shadow-sm p-6 mx-2 mb-2 sm:mr-0 sm:mb-0 sm:w-60"
 			>
-				<div class="flex flex-row sm:block space-x-2 justify-between">
+				<div class="flex flex-row sm:block space-x-2 sm:space-x-0 justify-between">
 					<p class="order-last sm:text-lg font-semibold leading-none tracking-tight justify-end text-right flex flex-row items-center mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap">
 						<span>Next</span>
 						<ArrowRight size="1em" class="ml-2" />
