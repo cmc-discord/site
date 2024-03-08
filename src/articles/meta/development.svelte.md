@@ -4,8 +4,8 @@ tags:
 
 authors: []
 
-title: Site Information
-summary: Learn about the site
+title: Development
+summary: Improve the site's structure, style and substance
 ---
 
 <script lang="ts">

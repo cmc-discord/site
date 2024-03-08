@@ -34,7 +34,7 @@
 		All Tags
 	</Sidebar.SectionPickerItem>
 
-	<Sidebar.SectionPickerItem href="/info" bind:open>
+	<Sidebar.SectionPickerItem href="/a/meta" bind:open>
 		<Info size="1.5rem" slot="icon" />
 
 		Site Information

@@ -1,11 +1,11 @@
 ---
-tags: 
+tags:
 - meta
 
 authors: []
 
 title: Writing
-summary: Contribute articles and other content
+summary: "Contribute articles and other content"
 ---
 
 <script lang="ts">
