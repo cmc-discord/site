@@ -15,4 +15,10 @@ next: meta/writing
 
 </script>
 
-Text go here
+# Basic Information
+
+This website aims to be a one-stop shop for anyone who helps to maintain a community space, 
+whether their focus is on community management, moderation, or advising other members of their staff team.
+
+
+ 

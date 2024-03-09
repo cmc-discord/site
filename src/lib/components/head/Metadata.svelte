@@ -5,11 +5,11 @@
 	export let pageTitle: string;
 	export let description: string;
 
-	export let article: Article | undefined;
-	export let image: string | undefined;
-	export let imageAlt: string | undefined;
+	export let article: Article | undefined = undefined;
+	export let image: string | undefined = undefined;
+	export let imageAlt: string | undefined = undefined;
 
-	export let type: string | undefined;
+	export let type: string | undefined = undefined;
 
 	let fullPageTitle = `Moderation Wiki | ${pageTitle}`;
 
@@ -39,6 +39,14 @@
 			{#each article.tags as tag}
 				<meta property="og:article:tag" content={tag} />
 			{/each}
+		{/if}
+
+		{#if article.createdDate}
+			<meta property="og:article:published_time" content={article.createdDate.toISOString()} />
+		{/if}
+
+		{#if article.modifiedDate}
+			<meta property="og:article:modified_time" content={article.modifiedDate.toISOString()} />
 		{/if}
 	{/if}
 

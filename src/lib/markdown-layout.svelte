@@ -4,6 +4,7 @@
 	import Time from "svelte-time";
 
 	import { truncateString } from "$lib/utils";
+	import Metadata from "$lib/components/head/Metadata.svelte"
 	import { Separator } from "$lib/components/ui/separator";
 
 	export let authors = ["Unknown"]
@@ -20,11 +21,16 @@
 	// @ts-expect-error See note in source code
 	export let next_article = article?.next_article
 
-	console.log(article);
-
 	// Whether we're rendering the excerpt embedded in another page.
 	let excerptMode = getContext("SHOW_ONLY_EXCERPT")
 </script>
+
+<Metadata
+	pageTitle={title}
+	description={summary}
+
+	{article}
+/>
 
 <div
 	class={excerptMode ? undefined : "flex flex-col box-border"}
@@ -140,14 +146,14 @@
 						<div class="text-muted-foreground flex flex-row items-center">
 							<CalendarPlus size="1rem" class="mr-1" />
 							<span class="font-medium mr-1">Created:</span>
-							<Time timestamp={article.createdDate} format="MMMM D, YYYY [at] hh:mm [(UTC)]" />
+							<Time timestamp={article.createdDate} format="MMMM D, YYYY [at] HH:mm [(UTC)]" />
 						</div>
 
 						{#if article.modifiedDate && !(article.createdDate === article.modifiedDate)}
 							<div class="text-muted-foreground flex flex-row items-center">
 								<CalendarClock size="1rem" class="mr-1" />
 								<span class="font-medium mr-1">Last edited:</span>
-								<Time timestamp={article.modifiedDate} format="MMMM D, YYYY [at] hh:mm [(UTC)]" />
+								<Time timestamp={article.modifiedDate} format="MMMM D, YYYY [at] HH:mm [(UTC)]" />
 							</div>
 						{:else}
 							<div class="text-muted-foreground">

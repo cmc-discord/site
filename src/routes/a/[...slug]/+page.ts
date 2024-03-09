@@ -17,6 +17,20 @@ export async function load({ params, fetch }) {
 		// @ts-expect-error This is not properly typed.
 		const metadata = serverMetadata || article.metadata
 
+		if (
+			metadata.createdDate &&
+			(metadata.createdDate instanceof String || typeof metadata.createdDate === "string")
+		) {
+			metadata.createdDate = new Date(metadata.createdDate)
+		}
+
+		if (
+			metadata.modifiedDate &&
+			(metadata.modifiedDate instanceof String || typeof metadata.modifiedDate === "string")
+		) {
+			metadata.modifiedDate = new Date(metadata.modifiedDate)
+		}
+
 		if (metadata.prev) {
 			// @ts-expect-error This is not properly typed.
 			metadata.prev_article = paths[`/src/articles/${metadata.prev}.svelte.md`].metadata as Article;
