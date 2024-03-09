@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { User, Tag, ArrowLeft, ArrowRight } from "lucide-svelte";
+	import { User, Tag, ArrowLeft, ArrowRight, CalendarPlus, Scale, CalendarClock } from "lucide-svelte";
 	import { getContext } from "svelte"
 	import Time from "svelte-time";
 
@@ -65,7 +65,7 @@
 		<slot />
 	</article>
 
-	<div class="mb-1 w-full sm:w-auto grow-0 shrink-0">
+	<footer class="mb-1 w-full sm:w-auto grow-0 shrink-0">
 		{#if prev_article || next_article}
 			<div class="flex flex-col sm:flex-row sm:justify-center mx-auto sm:space-x-4 left-0 right-0 mb-2">
 				{#if prev_article}
@@ -91,7 +91,12 @@
 						</div>
 					</a>
 				{:else}
-					<div class="w-52">&nbsp;</div>
+					<div class="rounded-lg border bg-muted text-muted-foreground shadow-sm p-6 mx-2 mb-4 sm:mr-0 sm:mb-0 sm:w-60 cursor-not-allowed">
+						<p class="sm:text-lg font-semibold leading-none tracking-tight flex flex-row items-center sm:mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap">
+							<ArrowLeft size="1em" class="mr-2" />
+							<span>Back</span>
+						</p>
+					</div>
 				{/if}
 
 				{#if next_article}
@@ -117,25 +122,51 @@
 						</div>
 					</a>
 				{:else}
-					<div class="w-52">&nbsp;</div>
-				{/if}
-			</div>
-		{/if}
-
-		{#if article && (article.createdDate)}
-			<div class="ml-4 mb-2">
-				<Separator class="mb-2 mt-4" />
-				<div class="text-muted-foreground">
-					<span class="font-medium">Created:</span>
-					<Time timestamp={article.createdDate} format="MMM D, YYYY [at] hh:mm [(UTC)]" />
-				</div>
-				{#if article.modifiedDate && !(article.createdDate === article.modifiedDate)}
-					<div class="text-muted-foreground">
-						<span class="font-medium">Last edited:</span>
-						<Time timestamp={article.modifiedDate} format="MMM D, YYYY [at] hh:mm [(UTC)]" />
+					<div class="rounded-lg border bg-muted text-muted-foreground shadow-sm p-6 mx-2 mb-0 sm:mr-0 sm:w-60 cursor-not-allowed">
+						<p class="order-last sm:text-lg font-semibold leading-none tracking-tight justify-end text-right flex flex-row items-center mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap">
+							<span>Next</span>
+							<ArrowRight size="1em" class="ml-2" />
+						</p>
 					</div>
 				{/if}
 			</div>
 		{/if}
-	</div>
+
+			<div class="ml-4 mb-2">
+				<Separator class="mb-2 mt-4" />
+
+				{#if article && (article.createdDate)}
+					<div class="text-muted-foreground flex flex-row items-center">
+						<CalendarPlus size="1rem" class="mr-1" />
+						<span class="font-medium mr-1">Created:</span>
+						<Time timestamp={article.createdDate} format="MMMM D, YYYY [at] hh:mm [(UTC)]" />
+					</div>
+
+					{#if article.modifiedDate && !(article.createdDate === article.modifiedDate)}
+						<div class="text-muted-foreground flex flex-row items-center">
+							<CalendarClock size="1rem" class="mr-1" />
+							<span class="font-medium mr-1">Last edited:</span>
+							<Time timestamp={article.modifiedDate} format="MMMM D, YYYY [at] hh:mm [(UTC)]" />
+						</div>
+					{:else}
+						<div class="text-muted-foreground">
+							&nbsp;
+						</div>
+					{/if}
+				{:else}
+					<div class="text-muted-foreground">
+						&nbsp;
+					</div>
+				{/if}
+
+
+				<div class="text-muted-foreground flex flex-row items-center">
+					<Scale size="1rem" class="mr-1"></Scale>
+					<span class="font-medium mr-1">License:</span>
+					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+						Creative Commons BY-NC-SA 4.0
+					</a>
+				</div>
+			</div>
+	</footer>
 </div>
