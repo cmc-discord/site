@@ -20,6 +20,8 @@
 	// @ts-expect-error See note in source code
 	export let next_article = article?.next_article
 
+	console.log(article);
+
 	// Whether we're rendering the excerpt embedded in another page.
 	let excerptMode = getContext("SHOW_ONLY_EXCERPT")
 </script>
@@ -63,13 +65,13 @@
 		<slot />
 	</article>
 
-	<div class="mb-1 w-full sm:w-auto sm:mb-4 grow-0 shrink-0">
+	<div class="mb-1 w-full sm:w-auto grow-0 shrink-0">
 		{#if prev_article || next_article}
-			<div class="flex flex-col sm:flex-row sm:justify-center mx-auto sm:space-x-4 left-0 right-0 mb-2 ">
+			<div class="flex flex-col sm:flex-row sm:justify-center mx-auto sm:space-x-4 left-0 right-0 mb-2">
 				{#if prev_article}
 					<a
 						href="/a/{prev_article.slug}"
-						class="rounded-lg border bg-card text-card-foreground shadow-sm p-6 mx-2 mb-2 sm:mr-0 sm:mb-0 sm:w-60"
+						class="rounded-lg border bg-card text-card-foreground shadow-sm p-6 mx-2 mb-4 sm:mr-0 sm:mb-0 sm:w-60"
 					>
 						<div class="flex flex-row sm:block space-x-2 sm:space-x-0 justify-between">
 							<p class="sm:text-lg font-semibold leading-none tracking-tight flex flex-row items-center sm:mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap">
@@ -95,7 +97,7 @@
 				{#if next_article}
 					<a
 						href="/a/{next_article.slug}"
-						class="rounded-lg border bg-card text-card-foreground shadow-sm p-6 mx-2 mb-2 sm:mr-0 sm:mb-0 sm:w-60"
+						class="rounded-lg border bg-card text-card-foreground shadow-sm p-6 mx-2 mb-0 sm:mr-0 sm:w-60"
 					>
 						<div class="flex flex-row sm:block space-x-2 sm:space-x-0 justify-between">
 							<p class="order-last sm:text-lg font-semibold leading-none tracking-tight justify-end text-right flex flex-row items-center mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap">
@@ -121,7 +123,7 @@
 		{/if}
 
 		{#if article && (article.createdDate)}
-			<div class="ml-4">
+			<div class="ml-4 mb-2">
 				<Separator class="mb-2 mt-4" />
 				<div class="text-muted-foreground">
 					<span class="font-medium">Created:</span>

@@ -20,11 +20,13 @@ export async function load({ params, fetch }) {
 		if (metadata.prev) {
 			// @ts-expect-error This is not properly typed.
 			metadata.prev_article = paths[`/src/articles/${metadata.prev}.svelte.md`].metadata as Article;
+			metadata.prev_article.slug = metadata.prev
 		}
 
 		if (metadata.next) {
 			// @ts-expect-error This is not properly typed.
 			metadata.next_article = paths[`/src/articles/${metadata.next}.svelte.md`].metadata as Article;
+			metadata.next_article.slug = metadata.next
 		}
 
 		return {
