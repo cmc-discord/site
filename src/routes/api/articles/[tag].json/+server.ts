@@ -1,6 +1,8 @@
 import type { Article } from "$lib/types/article";
-import { json } from "@sveltejs/kit";
 import { equalsIgnoringCase } from "$lib/utils";
+import { getGitTimes } from "$lib/utils-server";
+
+import { json } from "@sveltejs/kit";
 
 export const prerender = true;
 
@@ -22,7 +24,8 @@ async function getArticles(tag: string): Promise<Article[]> {
 
 			if (slug && "title" in file.metadata && "summary" in file.metadata) {
 				const data = file.metadata as Omit<Article, "slug">;
-				const article = { ...data, slug } satisfies Article;
+				const times = await getGitTimes(path)
+				const article = { ...data, ...times, slug } satisfies Article;
 
 				const hasTag = (value: string) => equalsIgnoringCase(value, tag);
 
@@ -34,7 +37,7 @@ async function getArticles(tag: string): Promise<Article[]> {
 	}
 
 	return articles.sort((first, second) =>
-		first.title.localeCompare(second.title),
+		first.slug.localeCompare(second.slug),
 	);
 }
 

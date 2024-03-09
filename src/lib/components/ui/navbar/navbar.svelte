@@ -25,11 +25,22 @@
 				<div class="flex flex-row justify-between m-2 mt-0 items-center">
 					<p class="p-2 ml-2 text-lg font-semibold">Main Menu</p>
 
-					<Drawer.Close class="p-2 pr-3 mr-2 flex flex-row justify-between space-x-2 rounded border hover:bg-border">
-						<X size="1.5em" />
-						<span>Close</span>
-					</Drawer.Close>
+					<div class="flex flex-row space-x-2 mr-2">
+						<Navbar.IconLink href="/search">
+							<Search />
+						</Navbar.IconLink>
+
+						<Navbar.IconLink target="_blank" href="https://github.com/cmc-discord/">
+							<GitHub />
+						</Navbar.IconLink>
+
+						<Drawer.Close class="sm:ml-0 p-2 pr-3 mr-2 flex flex-row justify-between space-x-2 rounded border hover:bg-border">
+							<X size="1.5em" />
+							<span>Close</span>
+						</Drawer.Close>
+					</div>
 				</div>
+
 				<Separator class="mt-2" />
 
 				<Sidebar.Base bind:open={drawer0pen} />
@@ -52,11 +63,11 @@
 		</div>
 
 		<div class="flex items-center space-x-2">
-			<Navbar.IconLink href="/search">
+			<Navbar.IconLink hideOnTinyScreens href="/search">
 				<Search />
 			</Navbar.IconLink>
 
-			<Navbar.IconLink target="_blank" href="https://github.com/cmc-discord/">
+			<Navbar.IconLink hideOnTinyScreens target="_blank" href="https://github.com/cmc-discord/">
 				<GitHub />
 			</Navbar.IconLink>
 

@@ -68,6 +68,9 @@ dependencies:
   svelte-legos:
     specifier: ^0.2.2
     version: 0.2.2(svelte@4.2.12)
+  svelte-time:
+    specifier: ^0.8.2
+    version: 0.8.2
   tailwind-merge:
     specifier: ^2.2.1
     version: 2.2.1
@@ -1381,6 +1384,10 @@ packages:
   /d3-color@3.1.0:
     resolution: {integrity: sha512-zg/chbXyeBtMQ1LbD/WSoW2DpC3I0mpmPdW+ynRTj/x2DAWYrIY7qeZIHidozwV24m4iavr15lNwIwLxRmOxhA==}
     engines: {node: '>=12'}
+    dev: false
+
+  /dayjs@1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
     dev: false
 
   /debug@4.3.4:
@@ -4018,6 +4025,12 @@ packages:
       svelte: 4.2.12
       typescript: 5.4.2
     dev: true
+
+  /svelte-time@0.8.2:
+    resolution: {integrity: sha512-sBLLrWMMInx5iidGlbtlCBAu8CzSixdqOkbhizdalULXBvYMPACp0GtzmyBLEa77hbaMVySZzApIaNG4B4OVmg==}
+    dependencies:
+      dayjs: 1.11.10
+    dev: false
 
   /svelte@4.2.12:
     resolution: {integrity: sha512-d8+wsh5TfPwqVzbm4/HCXC783/KPHV60NvwitJnyTA5lWn1elhXMNWhXGCJ7PwPa8qFUnyJNIyuIRt2mT0WMug==}

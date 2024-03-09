@@ -1,7 +1,10 @@
 <script lang="ts">
 	import type { Article } from "$lib/types/article";
-	import { Tag, User } from "lucide-svelte";
+	import { tags as _tagInfo } from "$lib/../taginfo.json"
+
 	import { setContext } from "svelte";
+
+	let tagInfo = _tagInfo as {[key: string] : string | undefined}
 
 	setContext("SHOW_ONLY_EXCERPT", true);
 
@@ -13,7 +16,11 @@
 </h1>
 
 <p class="mt-1">
-	All articles with the <span class="font-semibold capitalize">"{data.tag}"</span> tag.
+	{#if tagInfo[data.tag]}
+		{tagInfo[data.tag]}
+	{:else}
+		No tag description found.
+	{/if}
 </p>
 
 <p class="mt-1 mb-6">

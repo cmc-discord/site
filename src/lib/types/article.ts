@@ -4,6 +4,9 @@ export type Article = {
 	previous: string | undefined,
 	next: string | undefined,
 
+	createdDate: Date | undefined,
+	modifiedDate: Date | undefined,
+
 	summary: string,
 	slug: string,
 	title: string,

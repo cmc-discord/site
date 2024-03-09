@@ -8,4 +8,4 @@
 	}
 </script>
 
-<svelte:component this={data.content} />
+<svelte:component this={data.content} article={data.article} />
