@@ -5,7 +5,7 @@ tags:
 authors: []
 
 title: Writing
-summary: "Contribute articles and other content"
+summary: Contribute articles and other content.
 
 prev: meta
 next: meta/development

@@ -23,6 +23,8 @@
 
 	// Whether we're rendering the excerpt embedded in another page.
 	let excerptMode = getContext("SHOW_ONLY_EXCERPT")
+
+	let usePagefind = excerptMode ? undefined : true
 </script>
 
 <Metadata
@@ -38,7 +40,7 @@
 >
 	<header class="grow-0 shrink-0">
 		<h1 class="mb-0 font-semibold text-3xl">{title}</h1>
-		<h5 class="mb-4 text-muted-foreground">{summary}</h5>
+		<h5 class="mb-4 text-muted-foreground" data-toc-ignore>{summary}</h5>
 
 		{#if tags.length > 0 || authors.length > 0}
 			<div class="flex flex-row flex-nowrap overflow-x-auto space-x-2 mb-3 pb-2" data-pagefind-ignore>
@@ -46,7 +48,13 @@
 					{#each authors as author}
 						<a href="/search?authors={author}" class="!decoration-0 !no-underline border rounded-md">
 							<div class="flex flex-row text-sm items-center rounded bg-accent text-accent-foreground capitalize p-2">
-								<User size="1rem" class="mr-2" /> <span data-pagefind-filter="author">{author}</span>
+								<User size="1rem" class="mr-2" />
+
+								{#if excerptMode}
+									<span data-pagefind-ignore>{author}</span>
+								{:else}
+									<span data-pagefind-filter="author">{author}</span>
+								{/if}
 							</div>
 						</a>
 					{/each}
@@ -54,9 +62,15 @@
 
 				{#if tags.length > 0 }
 					{#each tags as tag}
-						<a href="/search?tags={tag}" class="!decoration-0 !no-underline border rounded-md">
+						<a href="/t/{tag}" class="!decoration-0 !no-underline border rounded-md">
 							<div class="flex flex-row text-sm items-center rounded bg-secondary capitalize p-2">
-								<Tag size="1rem" class="mr-2" /> <span data-pagefind-filter="tag">{tag}</span>
+								<Tag size="1rem" class="mr-2" />
+
+								{#if excerptMode}
+									<span data-pagefind-ignore>{tag}</span>
+								{:else}
+									<span data-pagefind-filter="tag">{tag}</span>
+								{/if}
 							</div>
 						</a>
 					{/each}
@@ -66,7 +80,7 @@
 	</header>
 
 	<article class="prose dark:prose-invert grow"
-	     data-pagefind-body
+	     data-pagefind-body={usePagefind}
 	>
 		<slot />
 	</article>

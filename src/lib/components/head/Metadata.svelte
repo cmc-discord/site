@@ -11,7 +11,7 @@
 
 	export let type: string | undefined = undefined;
 
-	let fullPageTitle = `Moderation Wiki | ${pageTitle}`;
+	let fullPageTitle = `${pageTitle}`;
 
 	let pageType = type
 		? type
@@ -22,6 +22,7 @@
 
 <svelte:head>
 	<title>{fullPageTitle}</title>
+	<meta property="og:site_name" content="Moderation Wiki" />
 
 	<meta property="og:title" content={fullPageTitle} />
 	<meta property="og:description" content={description} />

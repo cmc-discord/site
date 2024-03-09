@@ -5,5 +5,7 @@
 </script>
 
 {#if !onlyExcerpt}
+<div class="article-more m-0 p-0 border-none">
 	<slot />
+</div>
 {/if}

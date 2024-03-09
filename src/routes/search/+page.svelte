@@ -269,7 +269,7 @@
 	})
 </script>
 
-<div class="m-4 md:flex md:flex-row md:h-full md:items-stretch">
+<div class="m-4 md:flex md:flex-row md:h-full md:items-stretch" data-pagefind-ignore="all">
 	<div class="flex flex-col space-y-2 order-10 border-b pb-2 md:w-72 md:sticky md:border-b-0 md:pb-0 mb-4 md:mb-0 md:h-full md:items-stretch md:border-l md:pl-4">
 		<form class="flex flex-col w-full space-y-2">
 			<Input type="search" placeholder="Search" bind:value={searchQuery} class="mb-2" />

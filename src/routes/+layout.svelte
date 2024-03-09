@@ -13,6 +13,7 @@
 
 	import { ModeWatcher } from "mode-watcher";
 	import { ArrowUp } from "lucide-svelte";
+	import { getContext } from "svelte";
 
 	let mainElement: HTMLElement | undefined;
 
@@ -25,8 +26,13 @@
 			return
 		}
 
+		// Whether we're rendering the excerpt embedded in another page.
+		const excerptMode = getContext("SHOW_ONLY_EXCERPT")
 		const headings: Heading[] = []
-		const elements = mainElement.querySelectorAll("h2, h3, h4, h5, h6")
+
+		const elements = excerptMode
+			? mainElement.querySelectorAll("h2, h3, h4, h5, h6")
+			: mainElement.querySelectorAll("h1")
 
 		let previous: Heading | undefined
 

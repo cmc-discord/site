@@ -5,7 +5,7 @@ tags:
 authors: []
 
 title: Development
-summary: Improve the site's structure, style and substance
+summary: Improve the site's structure, style and substance.
 
 prev: meta/writing
 

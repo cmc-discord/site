@@ -5,7 +5,7 @@ tags:
 authors: []
 
 title: Site Information
-summary: Learn about the site
+summary: Learn about the site, why it exists and how to navigate it.
 
 next: meta/writing
 
@@ -21,6 +21,8 @@ This website aims to be a one-stop shop for anyone who helps to maintain a commu
 whether their focus is on community management, moderation, or advising other members of their staff team.
 The Community Management Community (_The CMC_), a group of moderators and community managers with a wish to improve how 
 everyone runs their community spaces, maintains the site.
+
+<!--more-->
 
 The CMC believes in the strength of diverse viewpoints, and prioritises the safety of minority groups in its work.
 We believe it is impossible to run a truly healthy community without catering for a diverse member base, and we aim
@@ -43,6 +45,7 @@ was intended for.
 For this reason, we provide multiple ways to find what you're looking for:
 
 - The [All Tags page](/tags), which you can use to browse all of this site's content.
+  You can also click on the tags shown in an article's header to navigate to that tag's listing page.
 - The [search page](/search), which you can use to filter the site's articles and find exactly what you're looking for.
 - The [home page](/), which provides a selection of recommended tags and articles for your reading.
 
