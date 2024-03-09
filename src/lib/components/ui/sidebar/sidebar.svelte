@@ -54,13 +54,7 @@
 		Coming Soon...
 	</Sidebar.SectionPickerItem>
 
-	<Separator class="!my-3" />
-
 	<slot name="content"/>
-
-	<Sidebar.Link href="#" bind:open disabled>
-		Coming Soon...
-	</Sidebar.Link>
 
 	{#if headings.length > 0}
 		<Separator class="!my-3" />

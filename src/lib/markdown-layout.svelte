@@ -72,7 +72,7 @@
 	</article>
 
 	{#if !excerptMode}
-		<footer class="mb-1 w-full sm:w-auto grow-0 shrink-0">
+		<footer class="mb-1 mt-4 w-full sm:w-auto grow-0 shrink-0">
 			{#if prev_article || next_article}
 				<div class="flex flex-col sm:flex-row sm:justify-center mx-auto sm:space-x-4 left-0 right-0 mb-2">
 					{#if prev_article}
