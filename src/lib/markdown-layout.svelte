@@ -163,7 +163,7 @@
 				<div class="text-muted-foreground flex flex-row items-center">
 					<Scale size="1rem" class="mr-1"></Scale>
 					<span class="font-medium mr-1">License:</span>
-					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+					<a class="underline" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
 						Creative Commons BY-NC-SA 4.0
 					</a>
 				</div>
