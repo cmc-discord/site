@@ -54,30 +54,30 @@ Before getting started, please ensure the following:
 
 The project follows the following structure:
 
-- `📁 /` - Configuration files, misc project files.
+- `📁 /` Configuration files, misc project files.
 
-  - `📁 .run/` - Intellij platform run configurations.
-  - `📁 .vscode/` - Recommended Visual Studio Code configurations.
-  - `📁 build/` - Project build output folder.
-  - `📁 src/` - The project's source code.
+  - `📁 .run/` Intellij platform run configurations.
+  - `📁 .vscode/` Recommended Visual Studio Code configurations.
+  - `📁 build/` Project build output folder.
+  - `📁 src/` The project's source code.
 
-    - `📁 arcticles/` - Article source code, in the form of Markdown-based Svelte components.
-    - `📁 lib/` - Project libraries and components, imported using the `$lib` alias.
+    - `📁 arcticles/` Article source code, in the form of Markdown-based Svelte components.
+    - `📁 lib/` Project libraries and components, imported using the `$lib` alias.
 
-      - `📁 components/` - General-purpose svelte components that don't fit into the subfolders.
+      - `📁 components/` General-purpose svelte components that don't fit into the subfolders.
 
-        - `📁 head/` - Component wrapped with `<svelte:head>` tags, which modify the generated pages' `<head>`.
-        - `📁 ui/` - Components that make up this site's UI, mostly based on 
+        - `📁 head/` Component wrapped with `<svelte:head>` tags, which modify the generated pages' `<head>`.
+        - `📁 ui/` Components that make up this site's UI, mostly based on 
           [shadcn-svelte](https://www.shadcn-svelte.com/).
-        - `📄 markdown-layout.svelte` - Layout file applied to all Markdown-based Svelte components.
+        - `📄 markdown-layout.svelte` Layout file applied to all Markdown-based Svelte components.
 
-      - `📁 stores/` - Svelte store definitions and their corresponding APIs.
-      - `📁 types/` - TypeScript type definitions.
+      - `📁 stores/` Svelte store definitions and their corresponding APIs.
+      - `📁 types/` TypeScript type definitions.
 
-    - `📁 routes/` - Svelte API and page routes.
-    - `📄 taginfo.json` - JSON file containing descriptions for article tags.
+    - `📁 routes/` Svelte API and page routes.
+    - `📄 taginfo.json` JSON file containing descriptions for article tags.
 
-  - `📁 static/` - Static files to bundle with the project.
+  - `📁 static/` Static files to bundle with the project.
 
 # Development Notes
 
