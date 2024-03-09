@@ -1,6 +1,7 @@
 <script lang="ts">
 	import "../app.pcss";
 
+	import { page } from "$app/stores"
 	import { afterNavigate } from "$app/navigation";
 
 	import Containers from "$lib/components/ui/containers";
@@ -16,6 +17,11 @@
 	import { getContext } from "svelte";
 
 	let mainElement: HTMLElement | undefined;
+	let excerptMode: boolean = false;
+
+	page.subscribe((it) => {
+		excerptMode = !it.url.pathname.startsWith("/a/")
+	})
 
 	/**
 	 * Inspired by Skeleton.
@@ -26,13 +32,13 @@
 			return
 		}
 
-		// Whether we're rendering the excerpt embedded in another page.
-		const excerptMode = getContext("SHOW_ONLY_EXCERPT")
 		const headings: Heading[] = []
 
 		const elements = excerptMode
-			? mainElement.querySelectorAll("h2, h3, h4, h5, h6")
-			: mainElement.querySelectorAll("h1")
+			? mainElement.querySelectorAll("h1")
+			: mainElement.querySelectorAll("h2, h3, h4, h5, h6")
+
+		console.log(elements)
 
 		let previous: Heading | undefined
 
@@ -53,6 +59,9 @@
 				id: id,
 				title: elem.firstChild?.textContent?.trim() || "",
 			}
+
+			console.log(current)
+			console.log(previous)
 
 			if (previous) {
 				if (current.level > previous.level) {
@@ -84,16 +93,19 @@
 						previous.children.push(current)
 					} else {
 						// current level == previous level; we're at the top, do nothing
+						previous.children.push(current)
 					}
 				}
 			}
 
-			if (current.level == 2) {
+			if ((excerptMode && current.level == 1) || current.level == 2) {
 				headings.push(current)
 			}
 
 			previous = current
 		})
+
+		console.log(headings)
 
 		TocStore.set(headings)
 	})

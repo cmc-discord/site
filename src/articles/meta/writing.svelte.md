@@ -17,3 +17,5 @@ next: meta/development
 </script>
 
 Text go here
+
+<!--more-->
