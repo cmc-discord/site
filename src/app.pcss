@@ -770,6 +770,20 @@ html {
 	@apply my-4;
 }
 
-.prose li, .prose li p {
-	@apply my-0;
+.prose li {
+	@apply my-2;
+
+	p {
+		@apply my-0;
+	}
+}
+
+.emoji {
+	height: 1.1em;
+
+	@apply my-0 self-center;
+}
+
+.prose code:has(.emoji):not(:has(pre)) {
+	@apply inline-flex whitespace-pre flex-row items-baseline space-x-2 pr-[26px] mr-1;
 }

@@ -2,10 +2,12 @@
 	import { User, Tag, ArrowLeft, ArrowRight, CalendarPlus, Scale, CalendarClock } from "lucide-svelte";
 	import { getContext } from "svelte"
 	import Time from "svelte-time";
+	import twemoji from "twemoji";
 
 	import { truncateString } from "$lib/utils";
 	import Metadata from "$lib/components/head/Metadata.svelte"
 	import { Separator } from "$lib/components/ui/separator";
+	import { afterNavigate } from "$app/navigation";
 
 	export let authors = ["Unknown"]
 	export let tags = ["untagged"]
@@ -24,7 +26,17 @@
 	// Whether we're rendering the excerpt embedded in another page.
 	let excerptMode = getContext("SHOW_ONLY_EXCERPT")
 
+	let mainElement;
 	let usePagefind = excerptMode ? undefined : true
+
+	afterNavigate(() => {
+		twemoji.parse(mainElement, {
+			ext: ".svg",
+			folder: "svg",
+			className: "emoji",
+			size: "1em",
+		})
+	})
 </script>
 
 <Metadata
@@ -37,6 +49,7 @@
 <div
 	class={excerptMode ? undefined : "flex flex-col box-border"}
 	style={excerptMode ? undefined : "min-height: calc(100vh - (4em + 9px))"}
+	bind:this={mainElement}
 >
 	<header class="grow-0 shrink-0">
 		<h1 class="mb-0 font-semibold text-3xl">{title}</h1>

@@ -12,7 +12,7 @@ prev: meta/writing
 ---
 
 <script lang="ts">
-
+  import { Folder, File } from "lucide-svelte";
 </script>
 
 This website was primarily built using [SvelteKit](https://kit.svelte.dev/), itself built using [Svelte](https://svelte.dev/).
@@ -44,14 +44,40 @@ Before you can work on the site, you'll need the following:
 
 ## Preparation
 
-Before getting started, please ensure to do the following:
+Before getting started, please ensure the following:
 
-- Install the project's dependencies using `pnpm install`.
-- Ensure you're able to build a copy of this site using `pnpm build`.
-- Ensure that the development server starts correctly using `pnpm dev`.
+1. The project's dependencies are installed, using `pnpm install`.
+2. You're able to build a copy of this site, using `pnpm build`.
+3. The development server starts correctly, using `pnpm dev`.
 
 # Project Structure
 
+The project follows the following structure:
+
+- `📁 /` - Configuration files, misc project files.
+
+  - `📁 .run/` - Intellij platform run configurations.
+  - `📁 .vscode/` - Recommended Visual Studio Code configurations.
+  - `📁 build/` - Project build output folder.
+  - `📁 src/` - The project's source code.
+
+    - `📁 arcticles/` - Article source code, in the form of Markdown-based Svelte components.
+    - `📁 lib/` - Project libraries and components, imported using the `$lib` alias.
+
+      - `📁 components/` - General-purpose svelte components that don't fit into the subfolders.
+
+        - `📁 head/` - Component wrapped with `<svelte:head>` tags, which modify the generated pages' `<head>`.
+        - `📁 ui/` - Components that make up this site's UI, mostly based on 
+          [shadcn-svelte](https://www.shadcn-svelte.com/).
+        - `📄 markdown-layout.svelte` - Layout file applied to all Markdown-based Svelte components.
+
+      - `📁 stores/` - Svelte store definitions and their corresponding APIs.
+      - `📁 types/` - TypeScript type definitions.
+
+    - `📁 routes/` - Svelte API and page routes.
+    - `📄 taginfo.json` - JSON file containing descriptions for article tags.
+
+  - `📁 static/` - Static files to bundle with the project.
 
 # Development Notes
 

@@ -9,9 +9,9 @@ import rehypeColorChips from "rehype-color-chips";
 import rehypeShiftHeading from "rehype-shift-heading";
 import rehypeSlug from "rehype-slug";
 
-import remarkOembed from "remark-oembed";
 import remarkPresetLintConsistent from "remark-preset-lint-consistent";
 import remarkPresetLintRecommended from "remark-preset-lint-recommended";
+import remarkOembed from "remark-oembed";
 
 export default defineMDSveXConfig({
 	extensions: [".svelte.md", ".md", ".svx"],
