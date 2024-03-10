@@ -23,7 +23,7 @@ async function getArticles(): Promise<Article[]> {
 
 			if (slug && "title" in file.metadata && "summary" in file.metadata) {
 				const data = file.metadata as Omit<Article, "slug">;
-				const times = await getGitTimes(path)
+				const times = await getGitTimes(path);
 				const article = { ...data, ...times, slug } satisfies Article;
 
 				articles.push(article);

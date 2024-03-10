@@ -1,33 +1,33 @@
 <script lang="ts">
 	import { User, Tag, ArrowLeft, ArrowRight, CalendarPlus, Scale, CalendarClock } from "lucide-svelte";
-	import { getContext } from "svelte"
+	import { getContext } from "svelte";
 	import Time from "svelte-time";
 	import twemoji from "twemoji";
 
 	import { truncateString } from "$lib/utils";
-	import Metadata from "$lib/components/head/Metadata.svelte"
+	import Metadata from "$lib/components/head/Metadata.svelte";
 	import { Separator } from "$lib/components/ui/separator";
 	import { afterNavigate } from "$app/navigation";
 
-	export let authors = ["Unknown"]
-	export let tags = ["untagged"]
-	export let title = ""
-	export let summary = ""
+	export let authors = ["Unknown"];
+	export let tags = ["untagged"];
+	export let title = "";
+	export let summary = "";
 
 	// Note: mdsvex breaks typescript parsing, we can't specify types nor `import type { ... } from "..."`
 
 	// @ts-expect-error See note in source code
-	export let article = undefined
+	export let article = undefined;
 	// @ts-expect-error See note in source code
-	export let prev_article = article?.prev_article
+	export let prev_article = article?.prev_article;
 	// @ts-expect-error See note in source code
-	export let next_article = article?.next_article
+	export let next_article = article?.next_article;
 
 	// Whether we're rendering the excerpt embedded in another page.
-	let excerptMode = getContext("SHOW_ONLY_EXCERPT")
+	let excerptMode = getContext("SHOW_ONLY_EXCERPT");
 
 	let mainElement;
-	let usePagefind = excerptMode ? undefined : true
+	let usePagefind = excerptMode ? undefined : true;
 
 	afterNavigate(() => {
 		twemoji.parse(mainElement, {
@@ -35,8 +35,8 @@
 			folder: "svg",
 			className: "emoji",
 			size: "1em",
-		})
-	})
+		});
+	});
 </script>
 
 <Metadata
@@ -93,7 +93,7 @@
 	</header>
 
 	<article class="prose dark:prose-invert grow"
-	     data-pagefind-body={usePagefind}
+	         data-pagefind-body={usePagefind}
 	>
 		<slot />
 	</article>
@@ -108,7 +108,9 @@
 							class="rounded-lg border bg-card text-card-foreground shadow-sm p-6 mx-2 mb-4 sm:mr-0 sm:mb-0 sm:w-60"
 						>
 							<div class="flex flex-row sm:block space-x-2 sm:space-x-0 justify-between">
-								<p class="sm:text-lg font-semibold leading-none tracking-tight flex flex-row items-center sm:mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap">
+								<p
+									class="sm:text-lg font-semibold leading-none tracking-tight flex flex-row items-center sm:mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap"
+								>
 									<ArrowLeft size="1em" class="mr-2" />
 									<span>Back</span>
 								</p>
@@ -125,8 +127,12 @@
 							</div>
 						</a>
 					{:else}
-						<div class="rounded-lg border bg-muted text-muted-foreground shadow-sm p-6 mx-2 mb-4 sm:mr-0 sm:mb-0 sm:w-60 cursor-not-allowed">
-							<p class="sm:text-lg font-semibold leading-none tracking-tight flex flex-row items-center sm:mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap">
+						<div
+							class="rounded-lg border bg-muted text-muted-foreground shadow-sm p-6 mx-2 mb-4 sm:mr-0 sm:mb-0 sm:w-60 cursor-not-allowed"
+						>
+							<p
+								class="sm:text-lg font-semibold leading-none tracking-tight flex flex-row items-center sm:mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap"
+							>
 								<ArrowLeft size="1em" class="mr-2" />
 								<span>Back</span>
 							</p>
@@ -139,7 +145,9 @@
 							class="rounded-lg border bg-card text-card-foreground shadow-sm p-6 mx-2 mb-0 sm:mr-0 sm:w-60"
 						>
 							<div class="flex flex-row sm:block space-x-2 sm:space-x-0 justify-between">
-								<p class="order-last sm:text-lg font-semibold leading-none tracking-tight justify-end text-right flex flex-row items-center mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap">
+								<p
+									class="order-last sm:text-lg font-semibold leading-none tracking-tight justify-end text-right flex flex-row items-center mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap"
+								>
 									<span>Next</span>
 									<ArrowRight size="1em" class="ml-2" />
 								</p>
@@ -156,8 +164,12 @@
 							</div>
 						</a>
 					{:else}
-						<div class="rounded-lg border bg-muted text-muted-foreground shadow-sm p-6 mx-2 mb-0 sm:mr-0 sm:w-60 cursor-not-allowed">
-							<p class="order-last sm:text-lg font-semibold leading-none tracking-tight justify-end text-right flex flex-row items-center mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap">
+						<div
+							class="rounded-lg border bg-muted text-muted-foreground shadow-sm p-6 mx-2 mb-0 sm:mr-0 sm:w-60 cursor-not-allowed"
+						>
+							<p
+								class="order-last sm:text-lg font-semibold leading-none tracking-tight justify-end text-right flex flex-row items-center mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap"
+							>
 								<span>Next</span>
 								<ArrowRight size="1em" class="ml-2" />
 							</p>
@@ -166,41 +178,41 @@
 				</div>
 			{/if}
 
-				<div class="ml-4 mb-2">
-					<Separator class="mb-2 mt-4" />
+			<div class="ml-4 mb-2">
+				<Separator class="mb-2 mt-4" />
 
-					{#if article && (article.createdDate)}
+				{#if article && (article.createdDate)}
+					<div class="text-muted-foreground flex flex-row items-center">
+						<CalendarPlus size="1rem" class="mr-1" />
+						<span class="font-medium mr-1">Created:</span>
+						<Time timestamp={article.createdDate} format="MMMM D, YYYY [at] HH:mm [(UTC)]" />
+					</div>
+
+					{#if article.modifiedDate && !(article.createdDate === article.modifiedDate)}
 						<div class="text-muted-foreground flex flex-row items-center">
-							<CalendarPlus size="1rem" class="mr-1" />
-							<span class="font-medium mr-1">Created:</span>
-							<Time timestamp={article.createdDate} format="MMMM D, YYYY [at] HH:mm [(UTC)]" />
+							<CalendarClock size="1rem" class="mr-1" />
+							<span class="font-medium mr-1">Last edited:</span>
+							<Time timestamp={article.modifiedDate} format="MMMM D, YYYY [at] HH:mm [(UTC)]" />
 						</div>
-
-						{#if article.modifiedDate && !(article.createdDate === article.modifiedDate)}
-							<div class="text-muted-foreground flex flex-row items-center">
-								<CalendarClock size="1rem" class="mr-1" />
-								<span class="font-medium mr-1">Last edited:</span>
-								<Time timestamp={article.modifiedDate} format="MMMM D, YYYY [at] HH:mm [(UTC)]" />
-							</div>
-						{:else}
-							<div class="text-muted-foreground">
-								&nbsp;
-							</div>
-						{/if}
 					{:else}
 						<div class="text-muted-foreground">
 							&nbsp;
 						</div>
 					{/if}
-
-					<div class="text-muted-foreground flex flex-row items-center">
-						<Scale size="1rem" class="mr-1"></Scale>
-						<span class="font-medium mr-1">License:</span>
-						<a class="underline" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-							Creative Commons BY-NC-SA 4.0
-						</a>
+				{:else}
+					<div class="text-muted-foreground">
+						&nbsp;
 					</div>
+				{/if}
+
+				<div class="text-muted-foreground flex flex-row items-center">
+					<Scale size="1rem" class="mr-1"></Scale>
+					<span class="font-medium mr-1">License:</span>
+					<a class="underline" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+						Creative Commons BY-NC-SA 4.0
+					</a>
 				</div>
+			</div>
 		</footer>
 	{/if}
 </div>

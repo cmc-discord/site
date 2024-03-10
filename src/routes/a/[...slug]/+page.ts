@@ -3,7 +3,7 @@ import type { Article } from "$lib/types/article";
 
 export async function load({ params, fetch }) {
 	const response = await fetch(`/api/article/${params.slug}.json`);
-	const serverMetadata: Article | undefined = await response.json()
+	const serverMetadata: Article | undefined = await response.json();
 
 	try {
 		// This is ludicrous, but it works around Vite's vile dynamic import requirements.
@@ -15,32 +15,32 @@ export async function load({ params, fetch }) {
 		const article = paths[`/src/articles/${params.slug}.svelte.md`];
 
 		// @ts-expect-error This is not properly typed.
-		const metadata = serverMetadata || article.metadata
+		const metadata = serverMetadata || article.metadata;
 
 		if (
 			metadata.createdDate &&
 			(metadata.createdDate instanceof String || typeof metadata.createdDate === "string")
 		) {
-			metadata.createdDate = new Date(metadata.createdDate)
+			metadata.createdDate = new Date(metadata.createdDate);
 		}
 
 		if (
 			metadata.modifiedDate &&
 			(metadata.modifiedDate instanceof String || typeof metadata.modifiedDate === "string")
 		) {
-			metadata.modifiedDate = new Date(metadata.modifiedDate)
+			metadata.modifiedDate = new Date(metadata.modifiedDate);
 		}
 
 		if (metadata.prev) {
 			// @ts-expect-error This is not properly typed.
 			metadata.prev_article = paths[`/src/articles/${metadata.prev}.svelte.md`].metadata as Article;
-			metadata.prev_article.slug = metadata.prev
+			metadata.prev_article.slug = metadata.prev;
 		}
 
 		if (metadata.next) {
 			// @ts-expect-error This is not properly typed.
 			metadata.next_article = paths[`/src/articles/${metadata.next}.svelte.md`].metadata as Article;
-			metadata.next_article.slug = metadata.next
+			metadata.next_article.slug = metadata.next;
 		}
 
 		return {

@@ -5,8 +5,8 @@
 
 	type $$Props = PaginationPrimitive.PageProps &
 		Props & {
-			isActive: boolean;
-		};
+		isActive: boolean;
+	};
 
 	type $$Events = PaginationPrimitive.PageEvents;
 

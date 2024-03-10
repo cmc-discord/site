@@ -1,15 +1,15 @@
 <script lang="ts">
 	import "../app.pcss";
 
-	import { page } from "$app/stores"
+	import { page } from "$app/stores";
 	import { afterNavigate } from "$app/navigation";
 
 	import Containers from "$lib/components/ui/containers";
 	import Navbar from "$lib/components/ui/navbar";
-	import Sidebar from "$lib/components/ui/sidebar"
+	import Sidebar from "$lib/components/ui/sidebar";
 	import * as Tooltip from "$lib/components/ui/tooltip";
 
-	import * as TocStore from "$lib/stores/tocStore"
+	import * as TocStore from "$lib/stores/tocStore";
 	import type { Heading } from "$lib/stores/tocStore";
 
 	import { ModeWatcher } from "mode-watcher";
@@ -20,8 +20,8 @@
 	let excerptMode: boolean = false;
 
 	page.subscribe((it) => {
-		excerptMode = !it.url.pathname.startsWith("/a/")
-	})
+		excerptMode = !it.url.pathname.startsWith("/a/");
+	});
 
 	/**
 	 * Inspired by Skeleton.
@@ -29,25 +29,25 @@
 	 */
 	afterNavigate(() => {
 		if (!mainElement) {
-			return
+			return;
 		}
 
-		const headings: Heading[] = []
+		const headings: Heading[] = [];
 
 		const elements = excerptMode
 			? mainElement.querySelectorAll("h1")
-			: mainElement.querySelectorAll("h2, h3, h4, h5, h6")
+			: mainElement.querySelectorAll("h2, h3, h4, h5, h6");
 
-		console.log(elements)
+		console.log(elements);
 
-		let previous: Heading | undefined
+		let previous: Heading | undefined;
 
 		elements.forEach((e) => {
 			if (e.hasAttribute("data-toc-ignore")) {
 				return;
 			}
 
-			const elem = e as HTMLHeadElement
+			const elem = e as HTMLHeadElement;
 			const id = elem.id || elem.firstChild?.textContent?.trim()
 				?.replaceAll(/[^a-zA-Z0-9 ]/g, "")
 				?.replaceAll(" ", "-")
@@ -58,22 +58,22 @@
 				level: parseInt(e.tagName.substring(1)),
 				id: id,
 				title: elem.firstChild?.textContent?.trim() || "",
-			}
+			};
 
-			console.log(current)
-			console.log(previous)
+			console.log(current);
+			console.log(previous);
 
 			if (previous) {
 				if (current.level > previous.level) {
 					// Child
-					current.parent = previous
-					previous.children.push(current)
+					current.parent = previous;
+					previous.children.push(current);
 				} else if (current.level == previous.level) {
 					// Sibling
 					if (previous.parent) {
-						previous = previous.parent
-						current.parent = previous
-						previous.children.push(current)
+						previous = previous.parent;
+						current.parent = previous;
+						previous.children.push(current);
 					}
 				} else {
 					// Sibling further up
@@ -83,32 +83,31 @@
 							break;
 						}
 
-						previous = previous.parent
+						previous = previous.parent;
 					}
 
 					if (previous.parent) {
 						// current level == previous level; store on parent as sibling
-						previous = previous.parent
-						current.parent = previous
-						previous.children.push(current)
+						previous = previous.parent;
+						current.parent = previous;
+						previous.children.push(current);
 					} else {
 						// current level == previous level; we're at the top, do nothing
-						previous.children.push(current)
 					}
 				}
 			}
 
 			if ((excerptMode && current.level == 1) || current.level == 2) {
-				headings.push(current)
+				headings.push(current);
 			}
 
-			previous = current
-		})
+			previous = current;
+		});
 
-		console.log(headings)
+		console.log(headings);
 
-		TocStore.set(headings)
-	})
+		TocStore.set(headings);
+	});
 </script>
 
 <div class="fixed right-4 top-20 z-50">

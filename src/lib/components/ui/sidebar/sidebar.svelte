@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Sidebar from "./"
+	import Sidebar from "./";
 
-	import { Divider } from "$lib/components/ui/divider"
+	import { Divider } from "$lib/components/ui/divider";
 	import { Separator } from "$lib/components/ui/separator";
 
 	import type { Heading } from "$lib/stores/tocStore";
-	import * as TocStore from "$lib/stores/tocStore"
-	import { store } from "$lib/stores/tocStore"
+	import * as TocStore from "$lib/stores/tocStore";
+	import { store } from "$lib/stores/tocStore";
 
 	import { Home, Info, MoreHorizontal, Tag } from "lucide-svelte";
 
@@ -15,8 +15,8 @@
 	let headings: Heading[] = [];
 
 	TocStore.store.subscribe((value) => {
-		headings = value
-	})
+		headings = value;
+	});
 </script>
 
 <div
@@ -54,7 +54,7 @@
 		Coming Soon...
 	</Sidebar.SectionPickerItem>
 
-	<slot name="content"/>
+	<slot name="content" />
 
 	{#if headings.length > 0}
 		<Separator class="!my-3" />

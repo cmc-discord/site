@@ -17,13 +17,13 @@
 </script>
 
 <Button {href}
-	variant={emphasis ? "secondary" : "ghost"}
-	class={cn(
+        variant={emphasis ? "secondary" : "ghost"}
+        class={cn(
 		"font-medium text-left transition-colors flex flex-row items-center content-center w-full self-start justify-start",
 		disabled ? "text-muted-foreground pointer-events-none" : "",
 		className
 	)}
-  on:click={() => disabled ? open = false : null}
+        on:click={() => disabled ? open = false : null}
 >
 	<span class="sidebar-link-icon"><slot name="icon"></slot></span>
 	<span><slot /></span>

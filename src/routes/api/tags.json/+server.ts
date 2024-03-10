@@ -34,15 +34,15 @@ async function getTags(): Promise<Tag[]> {
 		}
 	}
 
-	const tagArray: Tag[] = []
+	const tagArray: Tag[] = [];
 
 	for (const tag in tags) {
 		tagArray.push(
 			{
 				name: tag,
-				description: tags[tag]
-			}
-		)
+				description: tags[tag],
+			},
+		);
 	}
 
 	return tagArray.sort((first, second) =>

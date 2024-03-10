@@ -3,7 +3,7 @@
 
 	import { Button } from "$lib/components/ui/button";
 
-	import type { Heading } from "$lib/stores/tocStore"
+	import type { Heading } from "$lib/stores/tocStore";
 
 	import type { HTMLAttributes } from "svelte/elements";
 	import { Dot } from "lucide-svelte";

@@ -8,18 +8,18 @@ export type Heading = {
 	title: string,
 }
 
-const store = writable<Heading[]>([])
+const store = writable<Heading[]>([]);
 
 function clear() {
-	set([])
+	set([]);
 }
 
 function set(value: Heading[]) {
-	store.set(value)
+	store.set(value);
 }
 
 function update(updater: Updater<Heading[]>) {
-	store.update(updater)
+	store.update(updater);
 }
 
 export {
@@ -28,4 +28,4 @@ export {
 	clear,
 	set,
 	update,
-}
+};

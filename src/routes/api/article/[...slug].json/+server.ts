@@ -12,16 +12,16 @@ async function getArticle(slug: string): Promise<Article | null> {
 		{ eager: true },
 	);
 
-	const path = `/src/articles/${slug}.svelte.md`
+	const path = `/src/articles/${slug}.svelte.md`;
 
 	if (path in paths) {
 		// @ts-expect-error This is not properly typed.
-		const metadata = paths[path].metadata as Article
-		const times = await getGitTimes(path)
+		const metadata = paths[path].metadata as Article;
+		const times = await getGitTimes(path);
 
-		return {...metadata, ...times} satisfies Article
+		return { ...metadata, ...times } satisfies Article;
 	} else {
-		return null
+		return null;
 	}
 }
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Sidebar from "./"
+	import Sidebar from "./";
 
 	import { Button } from "$lib/components/ui/button";
 	import { ChevronRight, Home, Tag, Wrench } from "lucide-svelte";

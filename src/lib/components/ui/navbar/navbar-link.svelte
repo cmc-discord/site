@@ -4,7 +4,7 @@
 	export let emphasis: boolean = false;
 
 	export let href: string;
-	export let target: string = "_self"
+	export let target: string = "_self";
 </script>
 
 <a href={href}

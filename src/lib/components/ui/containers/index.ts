@@ -1,5 +1,5 @@
-import Sidebar from "./sidebar-container.svelte"
+import Sidebar from "./sidebar-container.svelte";
 
 export default {
 	Sidebar,
-}
+};

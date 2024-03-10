@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { Article } from "$lib/types/article";
-	import { tags as _tagInfo } from "$lib/../taginfo.json"
+	import { tags as _tagInfo } from "$lib/../taginfo.json";
 
 	import { setContext } from "svelte";
 
-	let tagInfo = _tagInfo as {[key: string] : string | undefined}
+	let tagInfo = _tagInfo as { [key: string]: string | undefined };
 
 	setContext("SHOW_ONLY_EXCERPT", true);
 

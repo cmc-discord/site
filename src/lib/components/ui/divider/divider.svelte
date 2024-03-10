@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Props } from "./";
 
-	export let orientation: Props["orientation"] = "horizontal"
+	export let orientation: Props["orientation"] = "horizontal";
 </script>
 
 <div class="flex items-center my-3 divider divider-{orientation}">

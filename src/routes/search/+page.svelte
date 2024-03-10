@@ -1,283 +1,289 @@
 <script lang="ts">
-	import { browser } from '$app/environment'
-	import { page } from '$app/stores';
-	import { onMount } from "svelte"
+	import { browser } from "$app/environment";
+	import { page } from "$app/stores";
+	import { onMount } from "svelte";
 	import { mediaQuery } from "svelte-legos";
 
 	import * as Accordion from "$lib/components/ui/accordion";
 	import * as DropdownMenu from "$lib//components/ui/dropdown-menu";
 	import * as Pagination from "$lib/components/ui/pagination";
 
-	import { Button } from "$lib/components/ui/button"
-	import { Checkbox } from "$lib/components/ui/checkbox"
-	import { Input } from "$lib/components/ui/input"
-	import { Label } from "$lib/components/ui/label"
-	import { Separator } from "$lib/components/ui/separator"
-	import { Switch } from "$lib/components/ui/switch"
+	import { Button } from "$lib/components/ui/button";
+	import { Checkbox } from "$lib/components/ui/checkbox";
+	import { Input } from "$lib/components/ui/input";
+	import { Label } from "$lib/components/ui/label";
+	import { Separator } from "$lib/components/ui/separator";
+	import { Switch } from "$lib/components/ui/switch";
 
 	import { ChevronLeft, ChevronRight, Tag, Search, User } from "lucide-svelte";
 
 	const isDesktop = mediaQuery("(min-width: 768px)");
 
 	type Filters = {
-		author? : { any: Array<string>} | Array<string>,
-		tag?: { any: Array<string>} | Array<string>
+		author?: { any: Array<string> } | Array<string>,
+		tag?: { any: Array<string> } | Array<string>
 	}
 
 	type SearchResult = { url: string, title: string, description: string }
 	type SearchResults = Array<SearchResult>
 
-	let queryParams: URLSearchParams = new URLSearchParams()
+	let queryParams: URLSearchParams = new URLSearchParams();
 
 	if (browser) {
-		queryParams = $page.url.searchParams
+		queryParams = $page.url.searchParams;
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let pagefind: any;
 
 	let authors: Array<string> = [];
-	let authorToggles: {[key: string]: boolean} = {}
-	let authorAnyToggle = false
+	let authorToggles: { [key: string]: boolean } = {};
+	let authorAnyToggle = false;
 
 	let tags: Array<string> = [];
-	let tagToggles: {[key: string]: boolean} = {}
-	let tagAnyToggle = false
+	let tagToggles: { [key: string]: boolean } = {};
+	let tagAnyToggle = false;
 
-	let authorsAccordionValue = ""
-	let tagsAccordionValue = ""
-	let searchQuery: string = ""
+	let authorsAccordionValue = "";
+	let tagsAccordionValue = "";
+	let searchQuery: string = "";
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	let promise: Promise<any> | null = null
+	let promise: Promise<any> | null = null;
 
-	let count = 0
-	let pageNumber = 1
+	let count = 0;
+	let pageNumber = 1;
 
 	$: perPage = $isDesktop ? 5 : 3;
 	$: siblingCount = $isDesktop ? 2 : 0;
 
-	$: startIndex = Math.max((pageNumber - 1) * perPage, 0)
-	$: endIndex = Math.min(pageNumber * perPage, count)
+	$: startIndex = Math.max((pageNumber - 1) * perPage, 0);
+	$: endIndex = Math.min(pageNumber * perPage, count);
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	function resultsForPage(results: Array<any>): Array<any> {
-		return results.slice(startIndex, endIndex)
+		return results.slice(startIndex, endIndex);
 	}
 
 	function updatePageNumber(newPageNumber: number) {
-		queryParams.set("page", String(newPageNumber))
+		queryParams.set("page", String(newPageNumber));
 
 		if (browser) {
-			let queryString: string | null = queryParams.toString()
+			let queryString: string | null = queryParams.toString();
 
 			if (queryString.length > 0) {
-				queryString = "?" + queryString
+				queryString = "?" + queryString;
 			}
 
-			window.history.pushState(null, "", "/search" + queryString)
+			window.history.pushState(null, "", "/search" + queryString);
 		}
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	async function search(): Promise<Array<any>> {
-		let query: string | null = searchQuery
-		pageNumber = 1
+		let query: string | null = searchQuery;
+		pageNumber = 1;
 
 		if (query.length == 0) {
-			query = null
+			query = null;
 		}
 
-		let authors = []
+		let authors = [];
 
 		for (const key in authorToggles) {
 			if (authorToggles[key] === true) {
-				authors.push(key)
+				authors.push(key);
 			}
 		}
 
-		let tags = []
+		let tags = [];
 
 		for (const key in tagToggles) {
 			if (tagToggles[key] === true) {
-				tags.push(key)
+				tags.push(key);
 			}
 		}
 
-		const filters: Filters = {}
+		const filters: Filters = {};
 
 		if (authors.length > 0) {
 			if (authorAnyToggle) {
 				filters["author"] = {
-					any: authors
-				}
+					any: authors,
+				};
 			} else {
-				filters["author"] = authors
+				filters["author"] = authors;
 			}
 		}
 
 		if (tags.length > 0) {
 			if (tagAnyToggle) {
 				filters["tag"] = {
-					any: tags
-				}
+					any: tags,
+				};
 			} else {
-				filters["tag"] = tags
+				filters["tag"] = tags;
 			}
 		}
 
 		const searchResults = await pagefind.search(
 			query,
-			{ filters: filters }
-		)
+			{ filters: filters },
+		);
 
-		const results: SearchResults = []
+		const results: SearchResults = [];
 
 		for (const v of searchResults.results) {
-			const data = await v.data()
+			const data = await v.data();
 
 			results.push({
 				url: data.url,
 				title: data.meta.title,
 				description: data.excerpt,
-			})
+			});
 		}
 
 		if (searchQuery.length > 0) {
-			queryParams.set("q", searchQuery)
+			queryParams.set("q", searchQuery);
 		} else {
-			queryParams.delete("q")
+			queryParams.delete("q");
 		}
 
 		if (tags.length > 0) {
-			queryParams.set("tags", tags.join(","))
+			queryParams.set("tags", tags.join(","));
 		} else {
-			queryParams.delete("tags")
+			queryParams.delete("tags");
 		}
 
 		if (authors.length > 0) {
-			queryParams.set("authors", authors.join(","))
+			queryParams.set("authors", authors.join(","));
 		} else {
-			queryParams.delete("authors")
+			queryParams.delete("authors");
 		}
 
 		if (tagAnyToggle) {
-			queryParams.set("anyTags", "true")
+			queryParams.set("anyTags", "true");
 		} else {
-			queryParams.delete("anyTags")
+			queryParams.delete("anyTags");
 		}
 
 		if (authorAnyToggle) {
-			queryParams.set("anyAuthors", "true")
+			queryParams.set("anyAuthors", "true");
 		} else {
-			queryParams.delete("anyAuthors")
+			queryParams.delete("anyAuthors");
 		}
 
-		queryParams.set("page", String(pageNumber))
+		queryParams.set("page", String(pageNumber));
 
 		if (browser) {
-			let queryString: string | null = queryParams.toString()
+			let queryString: string | null = queryParams.toString();
 
 			if (queryString.length > 0) {
-				queryString = "?" + queryString
+				queryString = "?" + queryString;
 			}
 
-			window.history.pushState(null, "", "/search" + queryString)
+			window.history.pushState(null, "", "/search" + queryString);
 		}
 
-		count = searchResults.results.length
+		count = searchResults.results.length;
 
-		return searchResults.results
+		return searchResults.results;
 	}
 
 	onMount(async () => {
-		pagefind = await import("/pagefind/pagefind.js")
+		pagefind = await import("/pagefind/pagefind.js");
 
-		pagefind.init()
+		pagefind.init();
 
-		const filters = await pagefind.filters()
+		const filters = await pagefind.filters();
 
 		if (filters?.author !== undefined) {
-			authors = Object.keys(filters.author)
+			authors = Object.keys(filters.author);
 		}
 
 		if (filters?.tag !== undefined) {
-			tags = Object.keys(filters.tag)
+			tags = Object.keys(filters.tag);
 		}
 
 		authors.forEach((author: string) => {
-			authorToggles[author] = false
-		})
+			authorToggles[author] = false;
+		});
 
 		tags.forEach((tag: string) => {
-			tagToggles[tag] = false
-		})
+			tagToggles[tag] = false;
+		});
 
-		let doSearch = false
+		let doSearch = false;
 
 		if (queryParams.has("q")) {
-			searchQuery = queryParams.get("q")!
+			searchQuery = queryParams.get("q")!;
 
-			doSearch = true
+			doSearch = true;
 		}
 
 		if (queryParams.has("authors")) {
-			const authorTags = queryParams.get("authors")!.split(",")
+			const authorTags = queryParams.get("authors")!.split(",");
 
 			authorTags.forEach((author) => {
 				if (authors.includes(author)) {
-					authorToggles[author] = true
+					authorToggles[author] = true;
 
-					doSearch = true
-					authorsAccordionValue = "authors"
+					doSearch = true;
+					authorsAccordionValue = "authors";
 				}
-			})
+			});
 		}
 
 		if (queryParams.has("tags")) {
-			const queryTags = queryParams.get("tags")!.split(",")
+			const queryTags = queryParams.get("tags")!.split(",");
 
 			queryTags.forEach((tag) => {
 				if (tags.includes(tag)) {
-					tagToggles[tag] = true
+					tagToggles[tag] = true;
 
-					doSearch = true
-					tagsAccordionValue = "tags"
+					doSearch = true;
+					tagsAccordionValue = "tags";
 				}
-			})
+			});
 		}
 
 		if (queryParams.has("anyAuthors")) {
-			authorAnyToggle = queryParams.get("anyAuthors")! !== "false"
+			authorAnyToggle = queryParams.get("anyAuthors")! !== "false";
 
-			tagsAccordionValue = "authors"
+			tagsAccordionValue = "authors";
 		}
 
 		if (queryParams.has("anyTags")) {
-			tagAnyToggle = queryParams.get("anyTags")! !== "false"
+			tagAnyToggle = queryParams.get("anyTags")! !== "false";
 
-			tagsAccordionValue = "tags"
+			tagsAccordionValue = "tags";
 		}
 
 		if (queryParams.has("page")) {
-			pageNumber = Number(queryParams.get("page")!)
+			pageNumber = Number(queryParams.get("page")!);
 		}
 
 		if (doSearch) {
-			promise = search()
+			promise = search();
 		}
-	})
+	});
 </script>
 
 <div class="m-4 md:flex md:flex-row md:h-full md:items-stretch" data-pagefind-ignore="all">
-	<div class="flex flex-col space-y-2 order-10 border-b pb-2 md:w-72 md:sticky md:border-b-0 md:pb-0 mb-4 md:mb-0 md:h-full md:items-stretch md:border-l md:pl-4">
+	<div
+		class="flex flex-col space-y-2 order-10 border-b pb-2 md:w-72 md:sticky md:border-b-0 md:pb-0 mb-4 md:mb-0 md:h-full md:items-stretch md:border-l md:pl-4">
 		<form class="flex flex-col w-full space-y-2">
 			<Input type="search" placeholder="Search" bind:value={searchQuery} class="mb-2" />
 
 			{#if authors.length > 0}
 				<Accordion.Root bind:value={authorsAccordionValue}>
 					<Accordion.Item value="authors">
-						<Accordion.Trigger><div class="flex flex-row flex-grow"><User size="1.5rem" class="mr-2" /> Authors</div></Accordion.Trigger>
+						<Accordion.Trigger>
+							<div class="flex flex-row flex-grow">
+								<User size="1.5rem" class="mr-2" />
+								Authors
+							</div>
+						</Accordion.Trigger>
 						<Accordion.Content>
 							{#each authors as author}
 								<div class="my-1 flex items-center space-x-2">
@@ -299,7 +305,12 @@
 			{#if tags.length > 0}
 				<Accordion.Root bind:value={tagsAccordionValue}>
 					<Accordion.Item value="tags">
-						<Accordion.Trigger><div class="flex flex-row flex-grow"><Tag size="1.5rem" class="mr-2" /> Tags</div></Accordion.Trigger>
+						<Accordion.Trigger>
+							<div class="flex flex-row flex-grow">
+								<Tag size="1.5rem" class="mr-2" />
+								Tags
+							</div>
+						</Accordion.Trigger>
 						<Accordion.Content>
 							{#each tags as tag}
 								<div class="my-1 flex items-center space-x-2">
@@ -361,7 +372,8 @@
 
 					{#if results.length > perPage}
 						<div class="border-t mt-4 pt-4">
-							<Pagination.Root onPageChange={updatePageNumber} count={count} {perPage} {siblingCount} bind:page={pageNumber} let:pages let:currentPage>
+							<Pagination.Root onPageChange={updatePageNumber} count={count} {perPage} {siblingCount}
+							                 bind:page={pageNumber} let:pages let:currentPage>
 								<Pagination.Content>
 									<Pagination.Item>
 										<Pagination.PrevButton>

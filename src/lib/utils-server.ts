@@ -4,13 +4,13 @@ import { trimString } from "$lib/utils";
 
 export const exec = promisify(syncExec);
 
-export async function getGitTimes(filePath: string):  Promise<{createdDate?: Date, modifiedDate?: Date}> {
+export async function getGitTimes(filePath: string): Promise<{ createdDate?: Date, modifiedDate?: Date }> {
 	const path = (await exec("git rev-parse --show-toplevel")).stdout;
 
 	const times = (
 		await exec(
 			`git log --all --pretty="format:%cI" -- "${path}/${trimString(filePath, "/")}"`
-				.replace("\n", "")
+				.replace("\n", ""),
 		)
 	).stdout
 		.trim()
@@ -20,7 +20,7 @@ export async function getGitTimes(filePath: string):  Promise<{createdDate?: Dat
 		);
 
 	if (times.length == 0) {
-		return {}
+		return {};
 	} else if (times.length == 1) {
 		return {
 			createdDate: times[0],
