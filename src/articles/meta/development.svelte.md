@@ -250,6 +250,18 @@ When working on the project, you should be aware of the following:
   mdsvex, which handles components and pages written in Markdown, doesn't support TypeScript.
   This means that you'll run into errors if you try to use type hints or `import type` in the `markdown-layout.svelte`
   file, you can do little about it.
+
+- When writing Remark and Rehype plugins, you should be aware of the following:
+
+  - It is best to use a Remark plugin when you want to work with the AST used to translate Markdown to HTML.
+  - It is best to use a Rehype plugin when you want to work with the HTML that was generated using the Markdown.
+  - If you want to modify the AST, you'll need to iterate over and modify the `tree` passed to your plugin's function,
+    instead of using the `visit` function from `unist-util-visit`.
+    However, the `visit` function is useful for filtering over the `tree` if you don't need to modify it.
+
+    A good example of a simple plugin that modifies the `tree` is the
+    [`rehype-color-chips`](https://github.com/shreshthmohan/rehype-color-chips/blob/main/src/index.ts#L10) plugin.
+
 - During development, the search index will quickly become out-of-date.
   To fix this, follow these steps:
 
