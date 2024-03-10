@@ -192,14 +192,14 @@ The project follows the following structure:
                    pages' `<head>`.
                 - `|lucide/folder| ui/` Components that make up the site's UI, mostly based on
                   [shadcn-svelte](https://www.shadcn-svelte.com/).
-                - `|lucide/file-code| markdown-layout.svelte` Layout file applied to all Markdown-based Svelte
+                - `|lucide/file| markdown-layout.svelte` Layout file applied to all Markdown-based Svelte
                   components.
 
             - `|lucide/folder| stores/` Svelte store definitions and their corresponding APIs.
             - `|lucide/folder| types/` TypeScript type definitions.
 
         - `|lucide/folder| routes/` Svelte API and page routes.
-        - `|lucide/file-code| taginfo.json` JSON file containing descriptions for article tags.
+        - `|lucide/file| taginfo.json` JSON file containing descriptions for article tags.
 
     - `|lucide/folder| static/` Static files to bundle with the project.
 
