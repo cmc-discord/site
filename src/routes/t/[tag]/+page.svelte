@@ -3,6 +3,7 @@
 	import { tags as _tagInfo } from "$lib/../taginfo.json";
 
 	import { setContext } from "svelte";
+	import ToTop from "$lib/components/ui/to-top";
 
 	let tagInfo = _tagInfo as { [key: string]: string | undefined };
 
@@ -12,6 +13,8 @@
 </script>
 
 <div data-pagefind-ignore>
+	<ToTop />
+
 	<h1 class="title font-semibold text-3xl" data-toc-ignore>
 		Tag: <span class="capitalize">{data.tag}</span>
 	</h1>

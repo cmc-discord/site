@@ -198,6 +198,7 @@ The project follows the following structure:
             - `|lucide/folder| stores/` Svelte store definitions and their corresponding APIs.
             - `|lucide/folder| types/` TypeScript type definitions.
 
+        - `|lucide/folder| plugins/` Custom Remark and Rehype plugins used by mdsvex.
         - `|lucide/folder| routes/` Svelte API and page routes.
         - `|lucide/file| taginfo.json` JSON file containing descriptions for article tags.
 

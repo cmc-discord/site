@@ -7,6 +7,7 @@
 	import { truncateString } from "$lib/utils";
 	import Metadata from "$lib/components/head/Metadata.svelte";
 	import { Separator } from "$lib/components/ui/separator";
+	import ToTop from "$lib/components/ui/to-top";
 	import { afterNavigate } from "$app/navigation";
 
 	export let authors = ["Unknown"];
@@ -45,6 +46,10 @@
 
 	{article}
 />
+
+{#if !excerptMode}
+	<ToTop />
+{/if}
 
 <div
 	class={excerptMode ? undefined : "flex flex-col box-border"}
