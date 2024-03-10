@@ -58,7 +58,7 @@ async function getIconNodes(value, matches) {
 			);
 
 			icon = iconToHTML(
-				replaceIDs((svgIcon.body)),
+				replaceIDs(svgIcon.body),
 				svgIcon.attributes,
 			);
 		} catch (e) {

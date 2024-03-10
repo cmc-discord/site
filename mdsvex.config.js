@@ -1,4 +1,10 @@
+import { promises as fs } from "fs";
+
 import { h } from "hastscript";
+
+import { locate } from "@iconify/json";
+import { getIconData, iconToHTML, iconToSVG, replaceIDs } from "@iconify/utils";
+
 import { defineMDSveXConfig } from "mdsvex";
 
 import remarkExcerpt from "mdsvex-excerpt";
@@ -13,7 +19,27 @@ import rehypeSlug from "rehype-slug";
 import remarkPresetLintConsistent from "remark-preset-lint-consistent";
 import remarkPresetLintRecommended from "remark-preset-lint-recommended";
 import remarkOembed from "remark-oembed";
+import { fromHtml } from "hast-util-from-html";
 
+const lucidePath = locate("lucide");
+const lucideData = JSON.parse(await fs.readFile(lucidePath, "utf8"));
+const iconData = getIconData(lucideData, "link");
+
+const linkIcon = iconToSVG(
+	iconData,
+	{ height: "1.1em", width: "1.1em" },
+);
+
+const link = iconToHTML(
+	replaceIDs(linkIcon.body),
+	linkIcon.attributes,
+);
+
+const linkElement = fromHtml(link, { fragment: true })
+const linkContainer = h(
+	"span.header-link-icon",
+	linkElement
+)
 
 export default defineMDSveXConfig({
 	extensions: [".svelte.md", ".md", ".svx"],
@@ -31,9 +57,14 @@ export default defineMDSveXConfig({
 		[
 			rehypeAutolinkHeadings,
 			{
-				content: h("span.header-link-icon", "🔗"),
+				content: linkContainer,
 				behavior: "append",
-				properties: { title: "Link to heading", ariaHidden: true, tabIndex: -1, dataPagefindIgnore: "" },
+				properties: {
+					title: "Link to heading",
+					ariaHidden: true,
+					tabIndex: -1,
+					dataPagefindIgnore: "",
+				},
 			},
 		],
 
