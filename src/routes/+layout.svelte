@@ -38,8 +38,6 @@
 			? mainElement.querySelectorAll("h1")
 			: mainElement.querySelectorAll("h2, h3, h4, h5, h6");
 
-		console.log(elements);
-
 		let previous: Heading | undefined;
 
 		elements.forEach((e) => {
@@ -59,9 +57,6 @@
 				id: id,
 				title: elem.firstChild?.textContent?.trim() || "",
 			};
-
-			console.log(current);
-			console.log(previous);
 
 			if (previous) {
 				if (current.level > previous.level) {
@@ -103,8 +98,6 @@
 
 			previous = current;
 		});
-
-		console.log(headings);
 
 		TocStore.set(headings);
 	});

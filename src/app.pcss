@@ -784,6 +784,12 @@ html {
 	@apply my-0 self-center;
 }
 
-.prose code:has(.emoji):not(:has(pre)) {
-	@apply inline-flex whitespace-pre flex-row items-baseline space-x-2;
+.prose {
+	code:has(.emoji):not(:has(pre)), code:has(.icon-wrapper):not(:has(pre)) {
+		@apply inline-flex whitespace-pre flex-row items-baseline space-x-2;
+	}
+
+	.icon-wrapper {
+		@apply inline-flex flex-row items-center space-x-1;
+	}
 }

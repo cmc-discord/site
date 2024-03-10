@@ -40,10 +40,12 @@
   "type": "module",
   "dependencies": {
     "@iconify/json": "^2.2.190",
+    "@iconify/utils": "^2.1.22",
     "@sveltejs/adapter-static": "^3.0.1",
     "@tailwindcss/typography": "^0.5.10",
     "bits-ui": "^0.19.5",
     "clsx": "^2.1.0",
+    "hast-util-from-html": "^2.0.1",
     "hastscript": "^9.0.0",
     "lucide-svelte": "^0.350.0",
     "mdsvex": "^0.11.0",
@@ -65,6 +67,8 @@
     "tailwind-scrollbar": "^3.1.0",
     "tailwind-variants": "^0.2.0",
     "twemoji": "^14.0.2",
+    "unist-util-is": "^6.0.0",
+    "unist-util-visit": "^5.0.0",
     "unplugin-icons": "^0.18.5",
     "vaul-svelte": "^0.2.4",
     "vite-plugin-pagefind": "^0.0.30"

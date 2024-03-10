@@ -8,6 +8,9 @@ dependencies:
   '@iconify/json':
     specifier: ^2.2.190
     version: 2.2.190
+  '@iconify/utils':
+    specifier: ^2.1.22
+    version: 2.1.22
   '@sveltejs/adapter-static':
     specifier: ^3.0.1
     version: 3.0.1(@sveltejs/kit@2.5.2)
@@ -20,6 +23,9 @@ dependencies:
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
+  hast-util-from-html:
+    specifier: ^2.0.1
+    version: 2.0.1
   hastscript:
     specifier: ^9.0.0
     version: 9.0.0
@@ -83,6 +89,12 @@ dependencies:
   twemoji:
     specifier: ^14.0.2
     version: 14.0.2
+  unist-util-is:
+    specifier: ^6.0.0
+    version: 6.0.0
+  unist-util-visit:
+    specifier: ^5.0.0
+    version: 5.0.0
   unplugin-icons:
     specifier: ^0.18.5
     version: 0.18.5
@@ -866,7 +878,7 @@ packages:
   /@types/hast@3.0.4:
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
     dependencies:
-      '@types/unist': 2.0.10
+      '@types/unist': 3.0.2
     dev: false
 
   /@types/http-cache-semantics@4.0.4:
