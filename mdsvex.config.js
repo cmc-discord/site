@@ -40,7 +40,7 @@ export default defineMDSveXConfig({
 		// Hex code colour chips
 		rehypeColorChips,
 
-		// Icon components
+		// Icon components via Iconify: |set/icon-name| in Markdown
 		rehypeIcons,
 
 		// TODO: msdvex provides its own Prism-based highlighting system, and it's impossible to disable it.
