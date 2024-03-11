@@ -12,7 +12,6 @@
 
 	import Metadata from "$lib/components/head/Metadata.svelte";
 	import { Separator } from "$lib/components/ui/separator";
-	import ToTop from "$lib/components/ui/to-top";
 
 	export let authors = ["Unknown"];
 	export let tags = ["untagged"];
@@ -52,13 +51,68 @@
 		{article}
 	/>
 
-	<ToTop
-		prev={article?.prev ? `/a/${article.prev}` : undefined}
-		prevText={article?.prev ? prev_article.title : undefined}
+	<div class="my-1 w-full sm:w-auto">
+		{#if prev_article || next_article}
+			<div class="block mx-auto left-0 right-0 mb-2 sm:mb-0 sm:space-x-4 sm:flex sm:flex-row sm:justify-center sm:items-start">
+				{#if prev_article}
+					<a
+						href="/a/{prev_article.slug}"
 
-		next={article?.next ? `/a/${article.next}` : undefined}
-		nextText={article?.next ? next_article.title : undefined}
-	/>
+						class="flex flex-row justify-start items-center shrink space-x-2
+									 py-2 px-4 mx-auto mb-4 w-full
+									 bg-card text-card-foreground text-lg font-semibold whitespace-nowrap
+									 border rounded-lg shadow-sm
+									 sm:mb-2 sm:w-1/2 sm:mx-2
+									 max-w-80"
+					>
+						<ArrowLeft size="1em" class="mr-2" />
+						<span class="text-muted-foreground">{prev_article.title}</span>
+					</a>
+				{:else}
+					<div
+						class="flex flex-row justify-start items-center shrink space-x-2
+									 py-2 px-4 mx-auto mb-4 w-full
+									 bg-card text-card-foreground text-lg font-semibold
+									 border rounded-lg shadow-sm
+									 sm:mb-2 sm:w-1/2 sm:mx-2
+									 max-w-80
+									 pointer-events-none cursor-not-allowed"
+					>
+						<ArrowLeft size="1em" class="mr-2" />
+						<span class="text-muted-foreground">Back</span>
+					</div>
+				{/if}
+
+				{#if next_article}
+					<a
+						href="/a/{next_article.slug}"
+						class="flex flex-row justify-end items-center shrink space-x-2
+									 py-2 px-4 mx-auto mb-0 w-full
+									 bg-card text-card-foreground text-lg font-semibold
+									 border rounded-lg shadow-sm
+									 sm:mb-2 sm:w-1/2 sm:mx-2
+									 max-w-80"
+					>
+						<span class="text-muted-foreground">{next_article.title}</span>
+						<ArrowRight size="1em" class="ml-2" />
+					</a>
+				{:else}
+					<div
+						class="flex flex-row justify-end items-center shrink space-x-2
+									 py-2 px-4 mx-auto mb-0 w-full
+									 bg-card text-card-foreground text-lg font-semibold
+									 border rounded-lg shadow-sm
+									 sm:mb-2 sm:w-1/2 sm:mx-2
+									 max-w-80
+									 pointer-events-none cursor-not-allowed"
+					>
+						<span>Next</span>
+						<ArrowRight size="1em" class="ml-2" />
+					</div>
+				{/if}
+			</div>
+		{/if}
+	</div>
 {/if}
 
 <div
@@ -114,80 +168,63 @@
 	</article>
 
 	{#if !excerptMode}
-		<footer class="mb-1 mt-4 w-full sm:w-auto grow-0 shrink-0">
+		<div class="mb-1 mt-4 w-full sm:w-auto grow-0 shrink-0">
 			{#if prev_article || next_article}
-				<div class="flex flex-col sm:flex-row sm:justify-center mx-auto sm:space-x-4 left-0 right-0 mb-2">
+				<div class="block mx-auto left-0 right-0 mb-2 sm:mb-0 sm:space-x-4 sm:flex sm:flex-row sm:justify-center sm:items-start">
 					{#if prev_article}
 						<a
 							href="/a/{prev_article.slug}"
-							class="rounded-lg border bg-card text-card-foreground shadow-sm p-6 mx-2 mb-4 sm:mr-0 sm:mb-0 sm:w-60"
+
+							class="flex flex-row justify-start items-center shrink space-x-2
+										 py-2 px-4 mx-auto mb-4 w-full
+										 bg-card text-card-foreground text-lg font-semibold whitespace-nowrap
+										 border rounded-lg shadow-sm
+										 sm:mb-2 sm:w-1/2 sm:mx-2
+										 max-w-80"
 						>
-							<div class="flex flex-row sm:block space-x-2 sm:space-x-0 justify-between">
-								<p
-									class="sm:text-lg font-semibold leading-none tracking-tight flex flex-row items-center sm:mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap"
-								>
-									<ArrowLeft size="1em" class="mr-2" />
-									<span>Back</span>
-								</p>
-
-								<div class="flex flex-col sm:block items-end">
-									<div class="font-semibold text-muted-foreground overflow-y-hidden">
-										{prev_article.title}
-									</div>
-
-									<div class="text-sm text-muted-foreground sm:h-10 overflow-y-hidden">
-										{truncateString(prev_article.summary)}
-									</div>
-								</div>
-							</div>
+							<ArrowLeft size="1em" class="mr-2" />
+							<span class="text-muted-foreground">{prev_article.title}</span>
 						</a>
 					{:else}
 						<div
-							class="rounded-lg border bg-muted text-muted-foreground shadow-sm p-6 mx-2 mb-4 sm:mr-0 sm:mb-0 sm:w-60 cursor-not-allowed"
+							class="flex flex-row justify-start items-center shrink space-x-2
+										 py-2 px-4 mx-auto mb-4 w-full
+										 bg-card text-card-foreground text-lg font-semibold
+										 border rounded-lg shadow-sm
+										 sm:mb-2 sm:w-1/2 sm:mx-2
+										 max-w-80
+										 pointer-events-none cursor-not-allowed"
 						>
-							<p
-								class="sm:text-lg font-semibold leading-none tracking-tight flex flex-row items-center sm:mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap"
-							>
-								<ArrowLeft size="1em" class="mr-2" />
-								<span>Back</span>
-							</p>
+							<ArrowLeft size="1em" class="mr-2" />
+							<span class="text-muted-foreground">Back</span>
 						</div>
 					{/if}
 
 					{#if next_article}
 						<a
 							href="/a/{next_article.slug}"
-							class="rounded-lg border bg-card text-card-foreground shadow-sm p-6 mx-2 mb-0 sm:mr-0 sm:w-60"
+							class="flex flex-row justify-end items-center shrink space-x-2
+										 py-2 px-4 mx-auto mb-0 w-full
+										 bg-card text-card-foreground text-lg font-semibold
+										 border rounded-lg shadow-sm
+										 sm:mb-2 sm:w-1/2 sm:mx-2
+										 max-w-80"
 						>
-							<div class="flex flex-row sm:block space-x-2 sm:space-x-0 justify-between">
-								<p
-									class="order-last sm:text-lg font-semibold leading-none tracking-tight justify-end text-right flex flex-row items-center mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap"
-								>
-									<span>Next</span>
-									<ArrowRight size="1em" class="ml-2" />
-								</p>
-
-								<div class="flex flex-col sm:block items-start">
-									<div class="font-semibold sm:text-right text-muted-foreground overflow-y-hidden">
-										{next_article.title}
-									</div>
-
-									<div class="text-sm sm:text-right text-muted-foreground sm:h-10 overflow-y-hidden">
-										{truncateString(next_article.summary)}
-									</div>
-								</div>
-							</div>
+							<span class="text-muted-foreground">{next_article.title}</span>
+							<ArrowRight size="1em" class="ml-2" />
 						</a>
 					{:else}
 						<div
-							class="rounded-lg border bg-muted text-muted-foreground shadow-sm p-6 mx-2 mb-0 sm:mr-0 sm:w-60 cursor-not-allowed"
+							class="flex flex-row justify-end items-center shrink space-x-2
+										 py-2 px-4 mx-auto mb-0 w-full
+										 bg-card text-card-foreground text-lg font-semibold
+										 border rounded-lg shadow-sm
+										 sm:mb-2 sm:w-1/2 sm:mx-2
+										 max-w-80
+										 pointer-events-none cursor-not-allowed"
 						>
-							<p
-								class="order-last sm:text-lg font-semibold leading-none tracking-tight justify-end text-right flex flex-row items-center mb-2 mt-1 sm:mt-0 text-ellipsis whitespace-nowrap"
-							>
-								<span>Next</span>
-								<ArrowRight size="1em" class="ml-2" />
-							</p>
+							<span>Next</span>
+							<ArrowRight size="1em" class="ml-2" />
 						</div>
 					{/if}
 				</div>
@@ -228,6 +265,6 @@
 					</a>
 				</div>
 			</div>
-		</footer>
+		</div>
 	{/if}
 </div>

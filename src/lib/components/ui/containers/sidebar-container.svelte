@@ -9,7 +9,7 @@
 		<slot name="sidebar" />
 	</div>
 
-	<div class="flex-grow w-full pt-2 !mx-4">
+	<div class="flex-grow w-full pt-2 !px-4">
 		<slot />
 	</div>
 </div>

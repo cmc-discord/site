@@ -3,13 +3,14 @@
 	import { Button } from "$lib/components/ui/button";
 	import { Separator } from "$lib/components/ui/separator";
 
-	import { X, Menu, Moon, RefreshCw, Search, Sun } from "lucide-svelte";
+	import { X, Menu, Moon, RefreshCw, Search, Sun, ArrowUpCircle } from "lucide-svelte";
 	import { setMode } from "mode-watcher";
 
 	import * as Drawer from "$lib/components/ui/drawer";
 	import GitHub from "virtual:icons/simple-icons/github";
 	import Navbar from "$lib/components/ui/navbar/index";
 	import Sidebar from "$lib/components/ui/sidebar/index";
+	import { page } from "$app/stores";
 
 	let drawer0pen = false;
 </script>
@@ -71,6 +72,14 @@
 			<Navbar.IconLink hideOnTinyScreens target="_blank" href="https://github.com/cmc-discord/">
 				<GitHub />
 			</Navbar.IconLink>
+
+			<Button on:click={() => scroll({top: 0})}
+			        variant="outline"
+			        size="icon"
+			        class="font-medium text-lg transition-colors"
+			>
+				<ArrowUpCircle />
+			</Button>
 
 			<DropdownMenu.Root>
 				<DropdownMenu.Trigger asChild let:builder>
