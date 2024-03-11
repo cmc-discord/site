@@ -1,14 +1,15 @@
 <script lang="ts">
-import * as Tooltip from "$lib/components/ui/tooltip";
+	import { page }  from "$app/stores"
+	import * as Tooltip from "$lib/components/ui/tooltip";
 
-import { ArrowLeft, ArrowLeftCircle, ArrowRight, ArrowRightCircle, ArrowUp, ArrowUpCircle } from "lucide-svelte";
-import { Button } from "$lib/components/ui/button";
-import Minus from "lucide-svelte/icons/minus";
+	import { ArrowLeft, ArrowLeftCircle, ArrowRight, ArrowRightCircle, ArrowUp, ArrowUpCircle } from "lucide-svelte";
+	import { Button } from "$lib/components/ui/button";
+	import Minus from "lucide-svelte/icons/minus";
 
-export let prev: string | undefined = undefined;
-export let prevText: string | undefined = undefined;
-export let next: string | undefined = undefined;
-export let nextText: string | undefined = undefined;
+	export let prev: string | undefined = undefined;
+	export let prevText: string | undefined = undefined;
+	export let next: string | undefined = undefined;
+	export let nextText: string | undefined = undefined;
 </script>
 
 <div class="fixed right-4 top-20 z-50 rounded-full p-2 border flex flex-row space-x-1 bg-background">
@@ -53,7 +54,7 @@ export let nextText: string | undefined = undefined;
 	<Tooltip.Root>
 		<Tooltip.Trigger>
 			<a on:click|preventDefault={() => scroll({top: 0})}
-			   href="/"
+			   href={$page.url.pathname}
 			>
 				<ArrowUpCircle
 					class="text-muted-foreground bg-background rounded-full"
