@@ -102,7 +102,6 @@
 
 <Navbar.Base />
 <ModeWatcher />
-
 <Containers.Sidebar>
 	<Sidebar.Base slot="sidebar"></Sidebar.Base>
 

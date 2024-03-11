@@ -1,14 +1,18 @@
 <script lang="ts">
+	/* eslint-disable no-import-assign */
+
 	import { User, Tag, ArrowLeft, ArrowRight, CalendarPlus, Scale, CalendarClock } from "lucide-svelte";
 	import { getContext } from "svelte";
 	import Time from "svelte-time";
 	import twemoji from "twemoji";
 
+	import { afterNavigate } from "$app/navigation";
+
 	import { truncateString } from "$lib/utils";
+
 	import Metadata from "$lib/components/head/Metadata.svelte";
 	import { Separator } from "$lib/components/ui/separator";
 	import ToTop from "$lib/components/ui/to-top";
-	import { afterNavigate } from "$app/navigation";
 
 	export let authors = ["Unknown"];
 	export let tags = ["untagged"];

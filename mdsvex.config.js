@@ -16,9 +16,11 @@ import rehypeIcons from "./src/plugins/rehype/icons/index.js";
 import rehypeShiftHeading from "rehype-shift-heading";
 import rehypeSlug from "rehype-slug";
 
+import remarkOembed from "remark-oembed";
+
 import remarkPresetLintConsistent from "remark-preset-lint-consistent";
 import remarkPresetLintRecommended from "remark-preset-lint-recommended";
-import remarkOembed from "remark-oembed";
+
 import { fromHtml } from "hast-util-from-html";
 
 const lucidePath = locate("lucide");
@@ -43,6 +45,7 @@ const linkContainer = h(
 
 export default defineMDSveXConfig({
 	extensions: [".svelte.md", ".md", ".svx"],
+	smartypants: false,
 
 	layout: {
 		"_": "/src/lib/markdown-layout.svelte",

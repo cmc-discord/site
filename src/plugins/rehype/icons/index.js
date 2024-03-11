@@ -25,6 +25,10 @@ async function processNodes(node) {
 					}
 				}
 			} else {
+				if (it.type === "element" && it.tagName === "pre") {
+					continue;
+				}
+
 				await processNodes(it);
 			}
 		}
@@ -48,7 +52,7 @@ async function getIconNodes(value, matches) {
 			const iconData = getIconData(setData, iconGroup);
 
 			if (!iconData) {
-				console.warn(`Unknown icon: ${str}`);
+				console.debug(`Unknown icon: "${setGroup}/${iconGroup}"`);
 				continue;
 			}
 
@@ -62,7 +66,7 @@ async function getIconNodes(value, matches) {
 				svgIcon.attributes,
 			);
 		} catch (e) {
-			console.warn(e, "Failed to import icon");
+			console.debug(`Failed to import icon "${setGroup}/${iconGroup}"\n  ${e.message}`);
 			continue;
 		}
 
