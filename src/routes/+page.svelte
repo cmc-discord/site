@@ -1,6 +1,12 @@
 <script lang="ts">
 
+import Metadata from "$lib/components/head/Metadata.svelte";
 </script>
+
+<Metadata
+	pageTitle="Home"
+	description="Welcome to the Moderation Wiki!"
+/>
 
 <div class="mb-4">
 	<h1 class="mb-0 font-semibold text-3xl">Moderation Wiki</h1>

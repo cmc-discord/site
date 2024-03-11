@@ -16,6 +16,7 @@
 	import { Switch } from "$lib/components/ui/switch";
 
 	import { ChevronLeft, ChevronRight, Tag, Search, User } from "lucide-svelte";
+	import Metadata from "$lib/components/head/Metadata.svelte";
 
 	const isDesktop = mediaQuery("(min-width: 768px)");
 
@@ -268,6 +269,11 @@
 		}
 	});
 </script>
+
+<Metadata
+	pageTitle="Search"
+	description="Search and filter through our content."
+/>
 
 <div class="m-4 md:flex md:flex-row md:h-full md:items-stretch" data-pagefind-ignore="all">
 	<div

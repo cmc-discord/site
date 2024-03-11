@@ -44,15 +44,21 @@
 	});
 </script>
 
-<Metadata
-	pageTitle={title}
-	description={summary}
-
-	{article}
-/>
-
 {#if !excerptMode}
-	<ToTop />
+	<Metadata
+		pageTitle={title}
+		description={summary}
+
+		{article}
+	/>
+
+	<ToTop
+		prev={article?.prev ? `/a/${article.prev}` : undefined}
+		prevText={article?.prev ? prev_article.title : undefined}
+
+		next={article?.next ? `/a/${article.next}` : undefined}
+		nextText={article?.next ? next_article.title : undefined}
+	/>
 {/if}
 
 <div

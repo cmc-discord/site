@@ -4,6 +4,7 @@
 
 	import { setContext } from "svelte";
 	import ToTop from "$lib/components/ui/to-top";
+	import Metadata from "$lib/components/head/Metadata.svelte";
 
 	let tagInfo = _tagInfo as { [key: string]: string | undefined };
 
@@ -11,6 +12,11 @@
 
 	export let data: { articles: Article[], tag: string };
 </script>
+
+<Metadata
+	pageTitle="Tag: {data.tag}"
+	description={tagInfo[data.tag] || "No tag description found."}
+/>
 
 <div data-pagefind-ignore>
 	<ToTop />
@@ -20,11 +26,7 @@
 	</h1>
 
 	<p class="mt-1">
-		{#if tagInfo[data.tag]}
-			{tagInfo[data.tag]}
-		{:else}
-			No tag description found.
-		{/if}
+		{tagInfo[data.tag] || "No tag description found."}
 	</p>
 
 	<p class="mt-1 mb-6">

@@ -3,9 +3,15 @@
 	import type { Tag } from "$lib/types/tag";
 	import { TagIcon } from "lucide-svelte";
 	import { truncateString } from "$lib/utils";
+	import Metadata from "$lib/components/head/Metadata.svelte";
 
 	export let data: { tags: Tag[] };
 </script>
+
+<Metadata
+	pageTitle="All Tags"
+	description="View and browse a full list of article tags."
+/>
 
 <div data-pagefind-ignore>
 	<h1 class="title font-semibold text-3xl">
