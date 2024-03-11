@@ -231,7 +231,7 @@
 			{/if}
 
 			<div class="ml-4 mb-2">
-				<Separator class="mb-2 mt-4" />
+				<Separator class="mb-2 mt-4 sm:mt-2" />
 
 				{#if article && (article.createdDate)}
 					<div class="text-muted-foreground flex flex-row items-center">
