@@ -2,9 +2,7 @@
 	import { page }  from "$app/stores"
 	import * as Tooltip from "$lib/components/ui/tooltip";
 
-	import { ArrowLeft, ArrowLeftCircle, ArrowRight, ArrowRightCircle, ArrowUp, ArrowUpCircle } from "lucide-svelte";
-	import { Button } from "$lib/components/ui/button";
-	import Minus from "lucide-svelte/icons/minus";
+	import { ArrowLeftCircle, ArrowRightCircle, ArrowUpCircle } from "lucide-svelte";
 
 	export let prev: string | undefined = undefined;
 	export let prevText: string | undefined = undefined;
