@@ -1,6 +1,9 @@
 /a/meta:
   - path: .
+    icon: lucide/info
 
     children:
       - path: writing
+        icon: lucide/pencil
       - path: development
+        icon: lucide/code

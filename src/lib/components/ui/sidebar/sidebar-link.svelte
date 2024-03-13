@@ -16,9 +16,10 @@
 	export { className as class };
 </script>
 
-<Button {href}
-        variant={emphasis ? "secondary" : "ghost"}
-        class={cn(
+<Button
+	{href}
+  variant={emphasis ? "secondary" : "ghost"}
+  class={cn(
 		"font-medium text-left transition-colors flex flex-row items-center content-center w-full self-start justify-start my-1",
 		disabled ? "text-muted-foreground pointer-events-none" : "",
 		className

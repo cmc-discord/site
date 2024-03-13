@@ -115,6 +115,7 @@ export function transformNavigationItem(
 		path: prefix,
 		article: module.metadata,
 		slug: `/${path}`,
+		icon: item.icon,
 
 		children
 	};

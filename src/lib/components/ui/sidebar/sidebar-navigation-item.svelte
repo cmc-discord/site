@@ -15,20 +15,54 @@
 	export let open: boolean = false;
 
 	export { className as class };
+
+	let iconPromise: Promise<string> | undefined;
+
+	async function getIcon(icon: string) {
+		const response = await fetch(`/api/icon/${icon}.svg`)
+
+		if (response.ok) {
+			return await response.text();
+		} else {
+			throw new Error("Icon not found.")
+		}
+	}
+
+	if (item.icon) {
+		iconPromise = getIcon(item.icon)
+	}
 </script>
 
 <Button
 	href={item.slug}
 	variant={$page.url.pathname === item.slug ? "secondary" : "ghost"}
 	class={cn(
-		"sidebar-item",
+		"sidebar-navigation-item",
 		"font-medium text-left transition-colors flex flex-row items-center content-center w-full self-start justify-start my-1",
 		className
 	)}
 
 	on:click={() => open = false}
 >
-	<span class="sidebar-link-icon sidebar-page-heading"><Dot strokeWidth="4" /></span>
+
+	{#if item.icon}
+		<a class="hidden" href="/api/icon/{item.icon}.svg" data-pagefind-ignore>/api/icon/{item.icon}.svg</a>
+	{/if}
+
+	{#if iconPromise }
+		{#await iconPromise}
+			<span class="sidebar-link-icon"><Dot strokeWidth="4" /></span>
+		{:then result}
+			<span class="sidebar-icon">
+				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+				{@html result }
+			</span>
+		{:catch _}
+			<span class="sidebar-link-icon"><Dot strokeWidth="4" /></span>
+		{/await}
+	{:else}
+		<span class="sidebar-link-icon"><Dot strokeWidth="4" /></span>
+	{/if}
 	<span>{ item.article.title }</span>
 </Button>
 

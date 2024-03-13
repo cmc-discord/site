@@ -21,14 +21,14 @@
 	href="#{heading.id}"
 	variant="ghost"
 	class={cn(
-		"sidebar-item",
+		"sidebar-heading-item",
 		"font-medium text-left transition-colors flex flex-row items-center content-center w-full self-start justify-start my-1",
 		className
 	)}
 
 	on:click={() => open = false}
 >
-	<span class="sidebar-link-icon sidebar-page-heading"><Dot strokeWidth="4" /></span>
+	<span class="sidebar-link-icon"><Dot strokeWidth="4" /></span>
 	<span>{ heading.title }</span>
 </Button>
 

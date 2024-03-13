@@ -367,7 +367,9 @@ Each navigation item contains the following keys:
 
 - `path` The path to the article to be linked to, relative to the prefix and any parent navigation items.
   If this is `.` then the parent's path will be used, whether that's the prefix or a parent navigation item.
-- `children` A list of navigation nodes to be displayed within this node.
+- `icon` An optional icon to display in the navigation tree.
+  Uses the same format as [Markdown icons](#icons), without the surrounding `|` characters.
+- `children` An optional list of navigation nodes to be displayed within this node.
 
 Navigation nodes must point to an article, and the navigation node displays the article's title.
 
@@ -382,14 +384,18 @@ To better understand this, see the following example.
 /a/meta:
   # This refers to the article at the prefix, /a/meta.
   - path: .
+    icon: lucide/info
 
     # Articles to display as children of this navigation node.
     children:
       # Refers to the article at /writing under the parent path,
       # so /a/meta/writing.
       - path: writing
+        icon: lucide/pencil
+
       # /a/meta/development.
       - path: development
+        icon: lucide/code
 ```
 
 </div>
@@ -402,9 +408,9 @@ To better understand this, see the following example.
 (Shown on all pages starting with <code>/a/meta</code>)
 </p>
 
-- `/a/meta` Site Information
-  - `/a/meta/writing` Writing
-  - `/a/meta/development` Development
+- `|lucide/info| /a/meta` Site Information
+  - `|lucide/pencil| /a/meta/writing` Writing
+  - `|lucide/code| /a/meta/development` Development
 
 </div>
 </div>
