@@ -89,8 +89,8 @@
 	}
 
 	.sidebar-page-heading {
-		@apply prose;
-		color: var(--tw-prose-bullets)
+		@apply prose transition-colors;
+		color: var(--tw-prose-bullets);
 	}
 
 	.dark {
@@ -177,7 +177,7 @@
 		/* endregion */
 
 		.sidebar-page-heading {
-			color: var(--tw-prose-invert-bullets) !important;
+			color: var(--tw-prose-invert-bullets);
 		}
 	}
 }
@@ -647,4 +647,8 @@ html {
 			}
 		}
 	}
+}
+
+.sidebar-item:hover .sidebar-page-heading {
+	color: var(--accent-foreground) !important;
 }

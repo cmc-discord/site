@@ -21,6 +21,7 @@
 	href="#{heading.id}"
 	variant="ghost"
 	class={cn(
+		"sidebar-item",
 		"font-medium text-left transition-colors flex flex-row items-center content-center w-full self-start justify-start",
 		className
 	)}
