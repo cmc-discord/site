@@ -17,6 +17,11 @@
 	export { className as class };
 
 	let iconPromise: Promise<string> | undefined;
+	let active: boolean = false
+
+	page.subscribe((value) => {
+		active = value.url.pathname === item.slug
+	})
 
 	async function getIcon(icon: string) {
 		const response = await fetch(`/api/icon/${icon}.svg`)
@@ -35,7 +40,7 @@
 
 <Button
 	href={item.slug}
-	variant={$page.url.pathname === item.slug ? "secondary" : "ghost"}
+	variant={active ? "secondary" : "ghost"}
 	class={cn(
 		"sidebar-navigation-item",
 		"font-medium text-left transition-colors flex flex-row items-center content-center w-full self-start justify-start my-1",
@@ -51,18 +56,19 @@
 
 	{#if iconPromise }
 		{#await iconPromise}
-			<span class="sidebar-link-icon"><Dot strokeWidth="4" /></span>
+			<span class={active ? "sidebar-icon" : "sidebar-link-icon"}><Dot strokeWidth="4" /></span>
 		{:then result}
-			<span class="sidebar-icon">
+			<span class={active ? "sidebar-icon" : "sidebar-link-icon"}>
 				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 				{@html result }
 			</span>
 		{:catch _}
-			<span class="sidebar-link-icon"><Dot strokeWidth="4" /></span>
+			<span class={active ? "sidebar-icon" : "sidebar-link-icon"}><Dot strokeWidth="4" /></span>
 		{/await}
 	{:else}
-		<span class="sidebar-link-icon"><Dot strokeWidth="4" /></span>
+		<span class={active ? "sidebar-icon" : "sidebar-link-icon"}><Dot strokeWidth="4" /></span>
 	{/if}
+
 	<span>{ item.article.title }</span>
 </Button>
 
