@@ -71,6 +71,7 @@
     "unist-util-visit": "^5.0.0",
     "unplugin-icons": "^0.18.5",
     "vaul-svelte": "^0.2.4",
-    "vite-plugin-pagefind": "^0.0.30"
+    "vite-plugin-pagefind": "^0.0.30",
+    "yaml": "^2.4.1"
   }
 }

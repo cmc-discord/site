@@ -1,0 +1,7 @@
+# Mapping of tag names to descriptions.
+# name: Description here.
+
+# Tag names are always lower-kebab-case.
+# Descriptions should be a single proper sentence.
+
+meta: Articles and content relating to this website.

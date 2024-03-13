@@ -200,7 +200,7 @@ The project follows the following structure:
 
         - `|lucide/folder| plugins/` Custom Remark and Rehype plugins used by mdsvex.
         - `|lucide/folder| routes/` Svelte API and page routes.
-        - `|lucide/file| taginfo.json` JSON file containing descriptions for article tags.
+        - `|lucide/file| tags.yaml` YAML file containing descriptions for article tags.
 
     - `|lucide/folder| static/` Static files to bundle with the project.
 

@@ -1,10 +1,17 @@
 import type { Article } from "$lib/types/article";
-import { json } from "@sveltejs/kit";
 import type { Tag } from "$lib/types/tag";
+
+import { json } from "@sveltejs/kit";
+
+import fs from "fs";
+import process from "process";
+import YAML from "yaml";
 
 export const prerender = true;
 
-const tagInfo: { [key: string]: string } = (await import("$lib/../taginfo.json")).tags;
+const tagInfo: { [key: string]: string } = YAML.parse(
+	fs.readFileSync(`${process.cwd()}/src/tags.yaml`, "utf8")
+)
 
 async function getTags(): Promise<Tag[]> {
 	const tags: { [key: string]: string } = {};

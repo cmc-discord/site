@@ -1,20 +1,17 @@
 <script lang="ts">
 	import type { Article } from "$lib/types/article";
-	import { tags as _tagInfo } from "$lib/../taginfo.json";
 
 	import { setContext } from "svelte";
 	import Metadata from "$lib/components/head/Metadata.svelte";
 
-	let tagInfo = _tagInfo as { [key: string]: string | undefined };
-
 	setContext("SHOW_ONLY_EXCERPT", true);
 
-	export let data: { articles: Article[], tag: string };
+	export let data: { articles: Article[], tag: string, tagDescription: string | undefined };
 </script>
 
 <Metadata
 	pageTitle="Tag: {data.tag}"
-	description={tagInfo[data.tag] || "No tag description found."}
+	description={data.tagDescription || "No tag description found."}
 />
 
 <div data-pagefind-ignore>
@@ -23,7 +20,7 @@
 	</h1>
 
 	<p class="mt-1">
-		{tagInfo[data.tag] || "No tag description found."}
+		{data.tagDescription || "No tag description found."}
 	</p>
 
 	<p class="mt-1 mb-6">

@@ -54,10 +54,10 @@ Make sure you add a blank line after the front matter, to visually separate it f
 - `|lucide/text| summary` A short, single-line summary of the article.
   - This will be visible at the top of every article page, as well as within link embeds.
 - `|lucide/tag| tags` List of tags to apply to this article.
-  - Check `|lucide/file| /src/taginfo.json` before applying tags,
+  - Check `|lucide/file| /src/tags.yaml` before applying tags,
     and try to use existing tags that best match your article.
 
-    If you feel like we need a new tag, make sure you add a description for it in `|lucide/file| /src/taginfo.json`
+    If you feel like we need a new tag, make sure you add a description for it in `|lucide/file| /src/tags.yaml`
 
 - `|lucide/heading-1| title` The article's title.
     - This will be visible at the top of every article page, the tag pages, as well as within link embeds.
