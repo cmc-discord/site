@@ -27,10 +27,18 @@
 	});
 
 	async function getNavigationTree() {
-		const response = await fetch(`/api/navigation${path}.json`)
-		const data: RichNavigationListWithPrefix | null = await response.json()
+		if (path.startsWith("/a/")) {
+			try {
+				const response = await fetch(`/api/navigation${path}.json`);
+				const data: RichNavigationListWithPrefix | null = await response.json();
 
-		NavigationStore.set(data)
+				NavigationStore.set(data);
+			} catch (e) {
+				NavigationStore.set(null);
+			}
+		} else {
+			NavigationStore.set(null);
+		}
 	}
 
 	function getPageHeaders() {
