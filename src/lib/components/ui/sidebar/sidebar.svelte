@@ -6,13 +6,11 @@
 	import { Separator } from "$lib/components/ui/separator";
 
 	import type { RichNavigationListWithPrefix } from "$lib/data";
-	import { transformNavigationList } from "$lib/data";
 
 	import { tocStore } from "$lib/stores/tocStore";
 	import { navigationStore } from "$lib/stores/navigationStore";
 
 	import { Home, Info, MoreHorizontal, Tag } from "lucide-svelte";
-	import { onMount } from "svelte";
 
 	export let open: boolean = false;
 

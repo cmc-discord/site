@@ -8,7 +8,7 @@
 	import Navbar from "$lib/components/ui/navbar";
 	import Sidebar from "$lib/components/ui/sidebar";
 
-	import { findNavigationForPath, type RichNavigationListWithPrefix } from "$lib/data";
+	import { type RichNavigationListWithPrefix } from "$lib/data";
 
 	import * as TocStore from "$lib/stores/tocStore";
 	import * as NavigationStore from "$lib/stores/navigationStore";

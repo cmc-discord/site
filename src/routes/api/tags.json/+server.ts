@@ -1,5 +1,5 @@
 import { json } from "@sveltejs/kit";
-import { getTagDescription } from "$lib/data";
+import { getTagDescription } from "$lib/data-server";
 
 import type { Article } from "$lib/types/article";
 import type { Tag } from "$lib/types/tag";
