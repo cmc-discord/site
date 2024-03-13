@@ -6,6 +6,7 @@
 	import Time from "svelte-time";
 	import twemoji from "twemoji";
 
+	import { page } from "$app/stores";
 	import { afterNavigate } from "$app/navigation";
 
 	import { truncateString } from "$lib/utils";
@@ -44,6 +45,10 @@
 </script>
 
 {#if !excerptMode}
+	<a href="/api/navigation{$page.url.pathname}.json" class="hidden" data-pagefind-ignore>
+		<!-- Included because Svelte won't generate API JSON files otherwise. -->
+	</a>
+
 	<Metadata
 		pageTitle={title}
 		description={summary}

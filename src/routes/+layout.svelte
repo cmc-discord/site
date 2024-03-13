@@ -27,7 +27,7 @@
 	});
 
 	async function getNavigationTree() {
-		const response = await fetch(`/api/navigation/${path}.json`)
+		const response = await fetch(`/api/navigation${path}.json`)
 		const data: RichNavigationListWithPrefix | null = await response.json()
 
 		console.log(data)
