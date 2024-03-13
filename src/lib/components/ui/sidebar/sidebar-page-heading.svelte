@@ -27,7 +27,7 @@
 
 	on:click={() => open = false}
 >
-	<span class="sidebar-link-icon"><Dot size="1.5em" /></span>
+	<span class="sidebar-link-icon sidebar-page-heading"><Dot strokeWidth="4" /></span>
 	<span>{ heading.title }</span>
 </Button>
 
@@ -36,4 +36,3 @@
 		<svelte:self heading={child} class={className} bind:open />
 	{/each}
 </div>
-

@@ -88,6 +88,11 @@
 		/* endregion */
 	}
 
+	.sidebar-page-heading {
+		@apply prose;
+		color: var(--tw-prose-bullets)
+	}
+
 	.dark {
 		--background: 222.2 84% 4.9%;
 		--foreground: 210 40% 98%;
@@ -170,6 +175,10 @@
 		--prism-token-variable: #ff6666;
 
 		/* endregion */
+
+		.sidebar-page-heading {
+			color: var(--tw-prose-invert-bullets) !important;
+		}
 	}
 }
 
