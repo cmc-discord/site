@@ -8,23 +8,34 @@
 	import Navbar from "$lib/components/ui/navbar";
 	import Sidebar from "$lib/components/ui/sidebar";
 
+	import { findNavigationForPath, type RichNavigationListWithPrefix } from "$lib/data";
+
 	import * as TocStore from "$lib/stores/tocStore";
+	import * as NavigationStore from "$lib/stores/navigationStore";
 	import type { Heading } from "$lib/stores/tocStore";
 
 	import { ModeWatcher } from "mode-watcher";
 
 	let mainElement: HTMLElement | undefined;
 	let excerptMode: boolean = false;
+	let path: string = ""
+
+	$: excerptMode = !path.startsWith("/a/");
 
 	page.subscribe((it) => {
-		excerptMode = !it.url.pathname.startsWith("/a/");
+		path = it.url.pathname
 	});
 
-	/**
-	 * Inspired by Skeleton.
-	 * https://github.com/skeletonlabs/skeleton/blob/dev/packages/skeleton/src/lib/utilities/TableOfContents/crawler.ts
-	 */
-	afterNavigate(() => {
+	async function getNavigationTree() {
+		const response = await fetch(`/api/navigation/${path}.json`)
+		const data: RichNavigationListWithPrefix | null = await response.json()
+
+		console.log(data)
+
+		NavigationStore.set(data)
+	}
+
+	function getPageHeaders() {
 		if (!mainElement) {
 			return;
 		}
@@ -97,6 +108,15 @@
 		});
 
 		TocStore.set(headings);
+	}
+
+	/**
+	 * Inspired by Skeleton.
+	 * https://github.com/skeletonlabs/skeleton/blob/dev/packages/skeleton/src/lib/utilities/TableOfContents/crawler.ts
+	 */
+	afterNavigate(async () => {
+		await getNavigationTree()
+		getPageHeaders()
 	});
 </script>
 

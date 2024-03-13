@@ -1,21 +1,25 @@
 <script lang="ts">
 	import Sidebar from "./";
 
-	import { Divider } from "$lib/components/ui/divider";
+	import { page } from "$app/stores";
+
 	import { Separator } from "$lib/components/ui/separator";
 
-	import type { Heading } from "$lib/stores/tocStore";
-	import * as TocStore from "$lib/stores/tocStore";
-	import { store } from "$lib/stores/tocStore";
+	import type { RichNavigationListWithPrefix } from "$lib/data";
+	import { transformNavigationList } from "$lib/data";
+
+	import { tocStore } from "$lib/stores/tocStore";
+	import { navigationStore } from "$lib/stores/navigationStore";
 
 	import { Home, Info, MoreHorizontal, Tag } from "lucide-svelte";
+	import { onMount } from "svelte";
 
 	export let open: boolean = false;
 
-	let headings: Heading[] = [];
+	let navigation: RichNavigationListWithPrefix | null = null
 
-	TocStore.store.subscribe((value) => {
-		headings = value;
+	navigationStore.subscribe((value) => {
+		navigation = value
 	});
 </script>
 
@@ -28,13 +32,13 @@
 		Home
 	</Sidebar.SectionPickerItem>
 
-	<Sidebar.SectionPickerItem href="/tags" bind:open>
+	<Sidebar.SectionPickerItem href="/tags" emphasis={$page.url.pathname === "/tags"} bind:open>
 		<Tag size="1.5rem" slot="icon" />
 
 		All Tags
 	</Sidebar.SectionPickerItem>
 
-	<Sidebar.SectionPickerItem href="/a/meta" bind:open>
+	<Sidebar.SectionPickerItem href="/a/meta" emphasis={$page.url.pathname.startsWith("/a/meta")} bind:open>
 		<Info size="1.5rem" slot="icon" />
 
 		Site Information
@@ -54,14 +58,24 @@
 		Coming Soon...
 	</Sidebar.SectionPickerItem>
 
+	{#if navigation && navigation.list.length > 0}
+		<Separator class="!my-3" />
+
+		<Sidebar.Header>Section Navigation</Sidebar.Header>
+
+		{#each navigation.list as navigationEntry}
+			<Sidebar.NavigationItem item={navigationEntry} bind:open />
+		{/each}
+	{/if}
+
 	<slot name="content" />
 
-	{#if headings.length > 0}
+	{#if $tocStore.length > 0}
 		<Separator class="!my-3" />
 
 		<Sidebar.Header>Page Contents</Sidebar.Header>
 
-		{#each $store as heading}
+		{#each $tocStore as heading}
 			<Sidebar.PageHeading {heading} bind:open />
 		{/each}
 	{/if}

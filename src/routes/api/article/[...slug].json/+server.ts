@@ -26,8 +26,8 @@ async function getArticle(slug: string): Promise<Article | null> {
 }
 
 export async function GET({ params }): Promise<Response> {
-	const article = await getArticle(params.slug);
-
-	return json(article);
+	return json(
+		await getArticle(params.slug)
+	);
 }
 

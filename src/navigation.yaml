@@ -1,0 +1,6 @@
+/a/meta:
+  - path: .
+
+    children:
+      - path: writing
+      - path: development

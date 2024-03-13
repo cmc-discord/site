@@ -353,6 +353,64 @@ https://www.youtube.com/watch?v=dQw4w9WgXcQ
 </div>
 </div>
 
+# Navigation Trees
+
+Sometimes, it may be useful to present articles as part of a tree of links.
+You can find the configuration for all navigation trees in `|lucide/file| /src/tags.yaml`.
+
+This file contains a set of navigation trees, stored under a prefix.
+This prefix refers to the start of a path, wherein all paths that start with the given prefix will show the navigation
+tree on the page.
+
+A navigation tree is a set of navigation items.
+Each navigation item contains the following keys:
+
+- `path` The path to the article to be linked to, relative to the prefix and any parent navigation items.
+  If this is `.` then the parent's path will be used, whether that's the prefix or a parent navigation item.
+- `children` A list of navigation nodes to be displayed within this node.
+
+Navigation nodes must point to an article, and the navigation node displays the article's title.
+
+To better understand this, see the following example.
+
+<div class="article-markdown-example">
+<div>
+<span class="text-lg mb-2 font-semibold">Example</span>
+
+```yaml
+# Prefix; all pages starting with /a/meta.
+/a/meta:
+  # This refers to the article at the prefix, /a/meta.
+  - path: .
+
+    # Articles to display as children of this navigation node.
+    children:
+      # Refers to the article at /writing under the parent path,
+      # so /a/meta/writing.
+      - path: writing
+      # /a/meta/development.
+      - path: development
+```
+
+</div>
+
+<div>
+<p class="text-lg font-semibold m-0 mr-1">Result</p>
+
+<p class="text-lg m-0 mr-1 mt-1">
+<span class="font-semibold">Section Navigation</span>
+(Shown on all pages starting with <code>/a/meta</code>)
+</p>
+
+- `/a/meta` Site Information
+  - `/a/meta/writing` Writing
+  - `/a/meta/development` Development
+
+</div>
+</div>
+
+
+
 # Recommended Tools
 
 We highly recommend you use the following tools:
