@@ -1,16 +1,19 @@
 <script lang="ts">
-	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+	import { page } from "$app/stores";
+
 	import { Button } from "$lib/components/ui/button";
+	import * as Drawer from "$lib/components/ui/drawer";
+	import * as DropdownMenu from "$lib/components/ui/dropdown-menu";
+	import * as Tooltip from "$lib/components/ui/tooltip";
 	import { Separator } from "$lib/components/ui/separator";
+
+	import Navbar from "$lib/components/ui/navbar/index";
+	import Sidebar from "$lib/components/ui/sidebar/index";
 
 	import { X, Menu, Moon, RefreshCw, Search, Sun, ArrowUpCircle } from "lucide-svelte";
 	import { setMode } from "mode-watcher";
 
-	import * as Drawer from "$lib/components/ui/drawer";
 	import GitHub from "virtual:icons/simple-icons/github";
-	import Navbar from "$lib/components/ui/navbar/index";
-	import Sidebar from "$lib/components/ui/sidebar/index";
-	import { page } from "$app/stores";
 
 	let drawer0pen = false;
 </script>
@@ -65,57 +68,89 @@
 		</div>
 
 		<div class="flex items-center space-x-2">
-			<Navbar.IconLink hideOnTinyScreens href="/search">
-				<Search />
-			</Navbar.IconLink>
+			<Tooltip.Root>
+				<Tooltip.Trigger>
+					<Navbar.IconLink hideOnTinyScreens href="/search">
+						<Search />
+					</Navbar.IconLink>
+				</Tooltip.Trigger>
 
-			<Navbar.IconLink hideOnTinyScreens target="_blank" href="https://github.com/cmc-discord/">
-				<GitHub />
-			</Navbar.IconLink>
+				<Tooltip.Content>
+					<p>Search</p>
+				</Tooltip.Content>
+			</Tooltip.Root>
 
-			<Button on:click={() => scroll({top: 0})}
-			        variant="outline"
-			        size="icon"
-			        class="font-medium text-lg transition-colors"
-			>
-				<ArrowUpCircle />
-			</Button>
+			<Tooltip.Root>
+				<Tooltip.Trigger>
+					<Navbar.IconLink hideOnTinyScreens target="_blank" href="https://github.com/cmc-discord/">
+						<GitHub />
+					</Navbar.IconLink>
+				</Tooltip.Trigger>
 
-			<DropdownMenu.Root>
-				<DropdownMenu.Trigger asChild let:builder>
-					<Button builders={[builder]} variant="outline" size="icon">
-						<Sun
-							class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
-						/>
+				<Tooltip.Content>
+					<p>GitHub</p>
+				</Tooltip.Content>
+			</Tooltip.Root>
 
-						<Moon
-							class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
-						/>
-
-						<span class="sr-only">Change theme</span>
+			<Tooltip.Root>
+				<Tooltip.Trigger>
+					<Button on:click={() => scroll({top: 0})}
+					        variant="outline"
+					        size="icon"
+					        class="font-medium text-lg transition-colors"
+					>
+						<ArrowUpCircle />
 					</Button>
-				</DropdownMenu.Trigger>
+				</Tooltip.Trigger>
 
-				<DropdownMenu.Content align="end">
-					<DropdownMenu.Item class="cursor-pointer" on:click={() => setMode("light")}>
-						<Sun class="mr-2 h-[1.2rem] w-[1.2rem]" />
+				<Tooltip.Content>
+					<p>Scroll to top</p>
+				</Tooltip.Content>
+			</Tooltip.Root>
 
-						Light
-					</DropdownMenu.Item>
+			<Tooltip.Root>
+				<Tooltip.Trigger>
+					<DropdownMenu.Root>
+						<DropdownMenu.Trigger asChild let:builder>
+							<Button builders={[builder]} variant="outline" size="icon">
+								<Sun
+									class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+								/>
 
-					<DropdownMenu.Item class="cursor-pointer" on:click={() => setMode("dark")}>
-						<Moon class="mr-2 h-[1.2rem] w-[1.2rem]" />
+								<Moon
+									class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+								/>
 
-						Dark
-					</DropdownMenu.Item>
+								<span class="sr-only">Change theme</span>
+							</Button>
+						</DropdownMenu.Trigger>
 
-					<DropdownMenu.Item class="cursor-pointer" on:click={() => setMode("system")}>
-						<RefreshCw class="mr-2 h-[1.2rem] w-[1.2rem]" />
+						<DropdownMenu.Content align="end">
+							<DropdownMenu.Item class="cursor-pointer" on:click={() => setMode("light")}>
+								<Sun class="mr-2 h-[1.2rem] w-[1.2rem]" />
 
-						System
-					</DropdownMenu.Item>
-				</DropdownMenu.Content>
-			</DropdownMenu.Root>
+								Light
+							</DropdownMenu.Item>
+
+							<DropdownMenu.Item class="cursor-pointer" on:click={() => setMode("dark")}>
+								<Moon class="mr-2 h-[1.2rem] w-[1.2rem]" />
+
+								Dark
+							</DropdownMenu.Item>
+
+							<DropdownMenu.Item class="cursor-pointer" on:click={() => setMode("system")}>
+								<RefreshCw class="mr-2 h-[1.2rem] w-[1.2rem]" />
+
+								System
+							</DropdownMenu.Item>
+						</DropdownMenu.Content>
+					</DropdownMenu.Root>
+				</Tooltip.Trigger>
+
+				<Tooltip.Content>
+					<p>Switch Theme</p>
+				</Tooltip.Content>
+			</Tooltip.Root>
 		</div>
 	</div>
 </div>
