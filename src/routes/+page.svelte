@@ -29,3 +29,16 @@ import Metadata from "$lib/components/head/Metadata.svelte";
 	</p>
 </section>
 
+<section class="mt-4">
+	<h2 class="font-semibold text-2xl">Sponsors</h2>
+
+	<p class="mb-4">
+		We'd like to thank the following organisations for sponsoring us.
+	</p>
+
+	<div class="flex flex-row flex-wrap items-center content-center justify-around">
+		<a href="https://sentry.io" style="height: 6em;" class="rounded-lg m-2 bg-accent">
+			<img style="height: 6em;" class="p-2" src="/sponsors/sentry.svg" alt="Wordmark logo for Sentry.io" />
+		</a>
+	</div>
+</section>
