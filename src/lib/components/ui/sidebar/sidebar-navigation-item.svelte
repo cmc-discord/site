@@ -18,9 +18,14 @@
 
 	let iconPromise: Promise<string> | undefined;
 	let active: boolean = false
+	let iconClass: string = "sidebar-link-icon"
 
 	page.subscribe((value) => {
 		active = value.url.pathname === item.slug
+
+		if (active) {
+			iconClass = "sidebar-icon"
+		}
 	})
 
 	async function getIcon(icon: string) {
@@ -56,17 +61,17 @@
 
 	{#if iconPromise }
 		{#await iconPromise}
-			<span class={active ? "sidebar-icon" : "sidebar-link-icon"}><Dot strokeWidth="4" /></span>
+			<span class={iconClass}><Dot strokeWidth="4" /></span>
 		{:then result}
-			<span class={active ? "sidebar-icon" : "sidebar-link-icon"}>
+			<span class={iconClass}>
 				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 				{@html result }
 			</span>
 		{:catch _}
-			<span class={active ? "sidebar-icon" : "sidebar-link-icon"}><Dot strokeWidth="4" /></span>
+			<span class={iconClass}><Dot strokeWidth="4" /></span>
 		{/await}
 	{:else}
-		<span class={active ? "sidebar-icon" : "sidebar-link-icon"}><Dot strokeWidth="4" /></span>
+		<span class={iconClass}><Dot strokeWidth="4" /></span>
 	{/if}
 
 	<span>{ item.article.title }</span>
