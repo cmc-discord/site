@@ -8,7 +8,6 @@ function clear() {
 }
 
 function set(value: RichNavigationListWithPrefix | null) {
-	console.log("Navigation store: setting value:", value)
 	navigationStore.set(value);
 }
 
