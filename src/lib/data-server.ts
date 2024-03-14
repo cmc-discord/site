@@ -1,7 +1,9 @@
 import fs from "fs";
 import process from "process";
 import YAML from "yaml";
+
 import { trimString } from "$lib/utils";
+
 import type {
 	ArticleModule, NavigationItem,
 	NavigationList,

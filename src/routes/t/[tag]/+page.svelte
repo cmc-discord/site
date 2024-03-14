@@ -31,14 +31,26 @@
 	<hr class="mb-2" />
 
 	<div class="flex flex-col space-y-4 mb-2">
-		{#each data.articles as article}
-			<a class="p-4 rounded-md hover:bg-secondary no-header-links" href="/a/{article.slug}">
-				<svelte:component this={article.content} />
+		{#if data.articles.length > 0}
+			{#each data.articles as article}
+				<a class="p-4 rounded-md hover:bg-secondary no-header-links" href="/a/{article.slug}">
+					<svelte:component this={article.content} />
 
-				<p class="mb-2">
-					<a class="underline" href="/a/{article.slug}">Read more...</a>
-				</p>
-			</a>
-		{/each}
+					<p class="mb-2">
+						<a class="underline" href="/a/{article.slug}">Read more...</a>
+					</p>
+				</a>
+			{/each}
+		{:else}
+			<div class="prose">
+				<div>
+					We couldn't find any articles tagged with "<span class="capitalize">{data.tag}</span>."
+				</div>
+
+				<div>
+					Please head to the <a href="/tags">All Tags page</a> for a full list of tags.
+				</div>
+			</div>
+		{/if}
 	</div>
 </div>

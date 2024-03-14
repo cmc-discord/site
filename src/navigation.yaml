@@ -2,8 +2,31 @@
   - path: .
     icon: lucide/info
 
+  - path: contributing
+    icon: lucide/heart
+
     children:
+      - path: guidelines
+        icon: lucide/book-check
+
+      - path: submission
+        icon: lucide/git-pull-request-create-arrow
+
+      - path: project-layout
+        icon: lucide/folder-tree
+
       - path: writing
         icon: lucide/pencil
+
+        children:
+          - path: formatting
+            icon: lucide/paintbrush
+
+      - path: tooling
+        icon: lucide/wrench
+
+      - path: configuration
+        icon: lucide/settings
+
       - path: development
         icon: lucide/code

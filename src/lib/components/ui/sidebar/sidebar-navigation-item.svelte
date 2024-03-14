@@ -72,7 +72,7 @@
 	<span>{ item.article.title }</span>
 </Button>
 
-<div class="flex flex-col pl-3 sidebar-children">
+<div class="flex flex-col ml-3 sidebar-children">
 	{#each item.children as child}
 		<svelte:self item={child} class={className} bind:open />
 	{/each}

@@ -7,9 +7,6 @@ authors: []
 
 title: Site Information
 summary: Learn about the site, why it exists and how to navigate it.
-
-next: meta/writing
-
 ---
 
 <script lang="ts">
