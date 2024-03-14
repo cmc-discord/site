@@ -19,7 +19,7 @@ the type of contributor.
 
 # Writers
 
-[`|lucide/book-check| Guidelines`](a/meta/contributing/guidelines)
+[`|lucide/book-check| Guidelines`](/a/meta/contributing/guidelines)
 
 We've come up with several ways to contribute articles, with varying levels of technical difficulty in mind.
 We're still working on making this easier, so you can expect that we'll update this section soon!
@@ -153,12 +153,11 @@ Information on how you join us will be provided later.
 
 # Developers
 
-[`|lucide/book-check| Guidelines`](a/meta/contributing/guidelines)
+[`|lucide/book-check| Guidelines`](/a/meta/contributing/guidelines)
 
 We recommend the following workflow to anyone that wishes to contribute as a developer:
 
-1. Start by forking [the site's repository](https://github.com/cmc-discord/site), and make sure you've done everything
-   mentioned in the [requirements section](#requirements).
+1. Start by forking [the site's repository](https://github.com/cmc-discord/site).
 2. Browse the [issues](https://github.com/cmc-discord/site/issues) and
    [Pull Requests](https://github.com/cmc-discord/site/pulls) to ensure you aren't duplicating someone else's work.
 3. If an issue exists regarding what you'd like to contribute, leave a comment on it so that others know you're working

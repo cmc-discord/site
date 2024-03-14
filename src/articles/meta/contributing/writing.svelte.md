@@ -164,5 +164,5 @@ As mentioned above, articles are written using [Markdown](https://www.markdowngu
 
 For more information on additional formatting and writing style, read the following articles:
 
-- [Additional Formatting](/a/contributing/writing/formatting)
-- [Writing Guidelines](/a/contributing/guidelines/#writing-style)
+- [Additional Formatting](/a/meta/contributing/writing/formatting)
+- [Writing Guidelines](/a/meta/contributing/guidelines/#writing-style)

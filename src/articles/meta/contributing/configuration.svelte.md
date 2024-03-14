@@ -45,7 +45,8 @@ Each navigation item contains the following keys:
 - `path` The path to the article to be linked to, relative to the prefix and any parent navigation items.
   If this is `.` then the parent's path will be used, whether that's the prefix or a parent navigation item.
 - `icon` An optional icon to display in the navigation tree.
-  Uses the same format as [Markdown icons](#icons), without the surrounding `|` characters.
+  Uses the same format as [Markdown icons](/a/meta/contributing/writing/formatting/#icons), without the surrounding `|`
+  characters.
 - `children` An optional list of navigation nodes to be displayed within this node.
 
 Navigation nodes must point to an article, and the navigation node displays the article's title.
