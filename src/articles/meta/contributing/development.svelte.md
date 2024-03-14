@@ -12,10 +12,8 @@ summary: Improve the site's structure, style and substance.
   import { Folder, File } from "lucide-svelte";
 </script>
 
-This website was primarily built using [SvelteKit](https://kit.svelte.dev/), itself built
-using [Svelte](https://svelte.dev/).
-Svelte is a component-based frontend framework, designed to compile its components to specialised code that manipulates
-the DOM directly, minimising the size of the client bundle and producing a more efficient result.
+You need to consider several things to think about before you can work on a code-based contribution.
+This article has the basics, but you should also read all the other articles in this section.
 
 <!--more-->
 
@@ -49,7 +47,7 @@ Once you've finished setting up the project requirements, please ensure the foll
 
 # Documentation
 
-Be sure to read the following documentation:
+Be sure to also read the following articles:
 
 - [Contribution Guidelines](/a/meta/contributing/guidelines)
 - [Submitting Work](/a/meta/contributing/submission)

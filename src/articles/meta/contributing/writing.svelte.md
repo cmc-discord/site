@@ -14,8 +14,8 @@ summary: Contribute articles and other written content.
     let tabValue = "one";
 </script>
 
-While we created this website using [Svelte](https://svelte.dev/), we realise that most people don't know how to create
-their own Svelte components and pages.
+While we created this site with a static site generator in mind, we understand that many people aren't developers,
+and thus wouldn't know how to create their own Svelte pages or components.
 For that reason, all articles on this site are written using a markup language known as
 [Markdown](https://www.markdownguide.org/basic-syntax/).
 
@@ -26,7 +26,7 @@ If you've ever used Slack, Discord or GitHub, then you likely already know how t
 
 # Documentation
 
-Be sure to read the following documentation:
+Be sure to also read the following articles:
 
 - [Contribution Guidelines](/a/meta/contributing/guidelines)
 - [Submitting Work](/a/meta/contributing/submission)
@@ -162,7 +162,7 @@ Place the article's content after the above sections.
 
 As mentioned above, articles are written using [Markdown](https://www.markdownguide.org/basic-syntax/).
 
-For more information on additional formatting and writing style, see the following:
+For more information on additional formatting and writing style, read the following articles:
 
 - [Additional Formatting](/a/contributing/writing/formatting)
 - [Writing Guidelines](/a/contributing/guidelines/#writing-style)
