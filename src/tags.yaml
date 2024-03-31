@@ -4,5 +4,8 @@
 # Tag names are always lower-kebab-case.
 # Descriptions should be a single proper sentence.
 
+disinformation: Articles about disinformation campaigns.
 meta: Articles and content relating to this website.
+queer: Articles relating to the queer/LGBT+ community.
+trans: Articles relating to the trans community.
 transcription: Transcriptions for audio files included in other articles.

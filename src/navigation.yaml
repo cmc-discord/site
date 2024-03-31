@@ -30,3 +30,11 @@
 
       - path: development
         icon: lucide/code
+
+/a/disinformation/trans:
+  - path: .
+    icon: lucide/info
+
+    children:
+    - path: sports
+      icon: lucide/trophy
