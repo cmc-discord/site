@@ -10,6 +10,7 @@ export type Article = {
 	summary: string,
 	slug: string,
 	title: string,
+	navigationTitle: string | undefined,
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	content: any | undefined,

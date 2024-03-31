@@ -66,7 +66,14 @@ Make sure you add a blank line after the front matter, to visually separate it f
     see [the Configuration page](/a/meta/contributing/configuration#tag-descriptions).
 
 - `|lucide/heading-1| title` The article's title.
-    - This will be visible at the top of every article page, the tag pages, as well as within link embeds.
+  - This will be visible at the top of every article page, the tag pages, as well as within link embeds.
+
+### Optional Keys
+
+- `|lucide/heading-1| navigationTitle` The title shown in the navigation sidebar.
+  - The title used to represent this article in the navigation sidebar,
+    [if configured](/a/meta/contributing/configuration#navigation-trees).
+    Useful when the sidebar title should be shorter than the article title.
 
 ### Example
 

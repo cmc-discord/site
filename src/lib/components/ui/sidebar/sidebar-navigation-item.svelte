@@ -69,7 +69,7 @@
 		<span class={active ? "sidebar-icon" : "sidebar-link-icon"}><Dot strokeWidth="4" /></span>
 	{/if}
 
-	<span>{ item.article.title }</span>
+	<span>{ item.article.navigationTitle || item.article.title }</span>
 </Button>
 
 <div class="flex flex-col ml-3 sidebar-children">
