@@ -11,23 +11,22 @@
 
 	let className: $$Props["class"] = undefined;
 	export let warning: boolean = false;
+	export let ignoreToc: boolean | undefined = undefined;
 	export { className as class };
 </script>
 
-<h5
-	class={cn("mb-1 font-medium text-xl leading-none tracking-tight ml-0 flex-row !items-center", className)}
-	data-toc-ignore
+<h2
+	class={cn("mb-1 !font-bold !text-xl leading-none tracking-tight ml-0 p-0 !mt-0 flex-row !items-center", className)}
+	data-toc-ignore={ignoreToc || warning}
 	{...$$restProps}
 >
 	{#if warning}
-		<MessageCircleWarning />
+		<MessageCircleWarning strokeWidth={2.5} class="mr-2" />
 
-		<span class="ml-2">
-			<slot />
-		</span>
+		<slot />
 	{:else}
 		<slot />
 	{/if}
 
 
-</h5>
+</h2>

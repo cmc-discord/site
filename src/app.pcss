@@ -433,16 +433,23 @@ pre[class*="language-"] {
 	border: 1px solid var(--border);
 }
 
-.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-	z-index: 10;
-
-	&:not([class*="language-"]) {
-		padding: 6px 10px;
-		border-radius: 6px;
+.prose {
+	hr {
+		margin-top: 1.5rem;
+		margin-bottom: 2rem;
 	}
 
-	&::before, &::after {
-		content: none;
+	:where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+		z-index: 10;
+
+		&:not([class*="language-"]) {
+			padding: 6px 10px;
+			border-radius: 6px;
+		}
+
+		&::before, &::after {
+			content: none;
+		}
 	}
 }
 
@@ -680,5 +687,9 @@ html {
 
 	&.bg-destructive {
 		background-color: hsl(var(--destructive-background));
+	}
+
+	&.text-destructive div {
+		color: hsl(var(--foreground));
 	}
 }
