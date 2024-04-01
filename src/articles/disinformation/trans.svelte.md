@@ -26,7 +26,7 @@ We believe the best way to combat this disinformation is through education.
 This article contains all our research on relevant disinformation to date.
 
 If you've found something that we should include here (or you have a correction), please contact us or submit a
-Pull Request as explained in [the Contributing section](http://localhost:5173/a/meta/contributing).
+Pull Request as explained in [the Contributing section](/a/meta/contributing/submission).
 
 ---
 

@@ -185,7 +185,7 @@ also seems that many advocates for that aren't arguing based on any reasonable o
 While it is impossible for any article to be absolutely inclusive of all possible information, we believe that the
 context we've provided above shows that there's no reasonable basis for excluding trans folks from sport.
 If you come across further studies or information that you feel should be included here, please contact us or submit a
-Pull Request as explained in [the Contributing section](http://localhost:5173/a/meta/contributing).
+Pull Request as explained in [the Contributing section](/a/meta/contributing/submission).
 
 # Sources
 - [Four Waves of Feminism](https://www.pacificu.edu/magazine/four-waves-feminism) by Martha Rampton
