@@ -134,7 +134,7 @@
 				{#if authors.length > 0}
 					{#each authors as author}
 						<a href="/search?authors={author}" class="!decoration-0 !no-underline border rounded-md">
-							<div class="flex flex-row text-sm items-center rounded bg-accent text-accent-foreground capitalize p-2">
+							<div class="flex flex-row text-sm items-center rounded bg-accent text-accent-foreground capitalize p-2 whitespace-nowrap">
 								<User size="1rem" class="mr-2" />
 
 								{#if excerptMode}
@@ -150,7 +150,7 @@
 				{#if tags.length > 0 }
 					{#each tags as tag}
 						<a href="/t/{tag}" class="!decoration-0 !no-underline border rounded-md">
-							<div class="flex flex-row text-sm items-center rounded bg-secondary capitalize p-2">
+							<div class="flex flex-row text-sm items-center rounded bg-secondary capitalize p-2 whitespace-nowrap">
 								<Tag size="1rem" class="mr-2" />
 
 								{#if excerptMode}

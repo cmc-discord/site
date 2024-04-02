@@ -11,7 +11,7 @@ title: "Trans Folks in Sports"
 navigationTitle: "Sports"
 
 summary: >-
-    Learn why there's no reason to exclude trans people from sports, and where gender segregation in sports comes from.
+    Learn why there's no reason to exclude trans folks from sports, and where gender segregation in sports comes from.
 ---
 
 <script lang="ts">
@@ -87,93 +87,167 @@ However, this only proves Müller's point — that this doesn't represent a mean
 Instead, it is simply an extension of institutions' wish to continue to segregate sports by sex, apparently in an appeal
 to traditional values.
 
-This train of thought also affects trans people, sometimes in contradictory ways.
-People who believe in
+This train of thought also affects trans folks, sometimes in contradictory ways.
+Those who believe in
 [biological essentialism](https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095507973) may state
 that one's biology defines much of their sporting ability, stating that trans-feminine folks have an innate
 physical advantage due to being born male.
 As the big sports organisations use testosterone as a measure of "maleness," it is unsurprising those who support
-excluding trans-feminine people from organised sports use the heightened testosterone levels of people assigned male at
+excluding trans-feminine folks from organised sports use the heightened testosterone levels of those assigned male at
 birth as a justification.
-These people also usually ignore trans-masculine people, a group that tends to contradict many of their arguments.
+They also usually ignore non-binary and trans-masculine folks, groups that tend to contradict many of their other
+arguments.
 
-Firstly, the assumption that testosterone has a measurable effect on the performance of an athlete has, as of this
-writing, no scientific basis whatsoever:
+1. **The assumption that testosterone has a measurable effect on the performance of an athlete has little scientific
+   basis:**
 
-- According to [this report published by Nature](https://www.nature.com/articles/s41598-021-89232-1), testosterone does
-  not affect lean mass or hand grip strength in women.
-- [This report commissioned by the Canadian Centre for Ethics in Sport](https://www.cces.ca/sites/default/files/content/docs/pdf/transgenderwomenathletesandelitesport-ascientificreview-e-final.pdf),
-  a comprehensive review of all relevant, English language scientific literature published between 2011 and 2021, states
-  that there's no evidence that including trans-feminine people in sport would be unfair.
-- [A 2019 investigation into the testosterone regulations](https://link.springer.com/article/10.1007/s40318-019-00143-w)
-  shows that the regulations were justified using significantly flawed data, and that the data, when corrected,
-  contradicts the conclusion that the IAAF put forward.
+   - According to [this report published by Nature](https://www.nature.com/articles/s41598-021-89232-1), testosterone
+     does not affect lean mass or hand grip strength in women.
 
-  It also points out that the IAAF neglected to have their research peer-reviewed, and it contained a significant
-  number of basic errors, such as duplicated athletes.
+   - [This report commissioned by the Canadian Centre for Ethics in Sport](https://www.cces.ca/sites/default/files/content/docs/pdf/transgenderwomenathletesandelitesport-ascientificreview-e-final.pdf),
+     a comprehensive review of all relevant, English language scientific literature published between 2011 and 2021,
+     states that there's no evidence that including trans-feminine folks in sport would be unfair.
 
-Secondly, while not all trans-feminine folks will, many of them do decide to undergo
-[hormone replacement therapy](https://en.wikipedia.org/wiki/Transgender_hormone_therapy), or HRT.
-HRT is a form of hormone therapy, which involves the administering of hormonal medications to help align trans folks'
-secondary sexual characteristics with their gender.
-This medication usually takes two forms, typically administered together:
+   - [A 2019 investigation into the testosterone regulations](https://link.springer.com/article/10.1007/s40318-019-00143-w)
+     shows that the regulations were justified using significantly flawed data, and that the data, when corrected,
+     contradicts the conclusion that the IAAF put forward.
 
-- Hormone blockers, which lower the production of a given hormone or inhibit the receptors for that hormone.
-- Medication providing supplemental hormones, matching the trans folk's gender and keeping their hormonal balance
-  healthy.
+     It also points out that the IAAF neglected to have their research peer-reviewed, and it contained a significant
+     number of basic errors, such as duplicated athletes.
 
-For pre-surgery trans-feminine folks, this medication will typically lower their testosterone levels and raise their
-oestrogen levels.
-This would imply that any potentially measurable benefits granted by their prior testosterone levels would become
-nullified through their medical treatment.
+   - [This report from 2021](https://www.scientificamerican.com/article/hormone-levels-are-being-used-to-discriminate-against-female-athletes/)
+     mentions the above statistical issue.
 
-Here's what the science has to say:
+     It also points out that the study used by the IAAF to justify its policies can only assert that raised testosterone
+     levels had a positive impact on athletic ability for a couple of events.
+     The data for 16 other events showed no impact, and for several other events, raised testosterone levels negatively
+     impacted the athletes' abilities.
 
-- [This report from 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8311086/) shows that feminizing HRT does lower
-  strength, haemoglobin levels, muscle area and lean body mass.
-  It suggests that trans-feminine people may have similar physical characteristics to cisgender women after three years,
-  but also recommends further research.
-- [This 2024 report](https://academic.oup.com/jcem/article/109/2/e455/7223439) shows that masculinising HRT in
-  non-athletic trans-masculine folks results in a performance level no different to cisgender men after 1 to 3 years.
-  It also shows that feminizing HRT results in bone density compromise, and after 4 years, their muscle and fat mass,
-  and performance is no different to that of cisgender women.
-  Like the previous study, it recommends further research.
+   - [This report from 2019](https://theconversation.com/testosterone-why-defining-a-normal-level-is-hard-to-do-113587)
+     points out that coming up with a definition of "normal" testosterone levels is hard, and that one's testosterone
+     levels naturally fluctuate constantly.
 
-While studies opine that trans-feminine people may generally retain some minor long-term advantages over cisgender
-women, competitive sports organisations already accept and account for similar deviations in abilities and advantages
-in cisgender women.
-[The report from the Canadian Centre for Ethics in Sport](https://www.cces.ca/sites/default/files/content/docs/pdf/transgenderwomenathletesandelitesport-ascientificreview-e-final.pdf)
-also points this out.
+     It also mentions that experts from different societies, countries, and even laboratories often don't agree on what a
+     "normal" level of testosterone is.
 
-Thirdly, while advocates for banning trans folks from sports often use children as a talking point, claims that banning
-trans children from sports is an issue of protecting other children seem nebulous at best:
+2. **While not all trans-feminine folks will, many of them do decide to undergo
+    [hormone replacement therapy](https://en.wikipedia.org/wiki/Transgender_hormone_therapy), or HRT.**
 
-- [According to the Associated Press](https://apnews.com/article/lawmakers-unable-to-cite-local-trans-girls-sports-914a982545e943ecc1e265e8c41042e7),
-  lawmakers have largely been unable to cite local examples of trans girls competing in sports.
-  Where examples are available, there appears to be no evidence that including trans children results in competitive
-  unfairness.
-- As Susanna Cassisa points out in [this Washington Post article](https://www.washingtonpost.com/made-by-history/2023/07/24/groomer-lgbtq-germany-children/),
-  the "protect the children" rhetoric has been used to demonise members of the LGBT+ community since the early 1900s,
-  and potentially even earlier than that.
+    HRT is a form of hormone therapy, which involves the administering of hormonal medications to help align trans
+    folks' secondary sexual characteristics with their gender.
+    This medication usually takes two forms, typically administered together:
 
-Finally, advocates for banning trans folks from sports often include non-physical sports, coming up with the same
+    - Hormone blockers, which lower the production of a given hormone or inhibit the receptors for that hormone.
+    - Medication providing supplemental hormones, matching the trans folk's gender and keeping their hormonal balance
+     healthy.
+
+    For pre-surgery trans-feminine folks, this medication will typically lower their testosterone levels and raise their
+    oestrogen levels.
+    This would imply that any potentially measurable benefits granted by their prior testosterone levels would become
+    nullified through their medical treatment.
+
+    Here's what the science has to say:
+
+    - [This report from 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8311086/) shows that feminizing HRT does
+      lower strength, haemoglobin levels, muscle area and lean body mass.
+      It suggests that trans-feminine folks may have similar physical characteristics to cisgender women after three
+      years, but also recommends further research.
+    - [This 2024 report](https://academic.oup.com/jcem/article/109/2/e455/7223439) shows that masculinising HRT in
+      non-athletic trans-masculine folks results in a performance level no different to cisgender men after 1 to 3
+      years.
+      It also shows that feminizing HRT results in bone density compromise, and after 4 years, their muscle and fat
+      mass, and performance is no different to that of cisgender women.
+      Like the previous study, it recommends further research.
+
+    While studies opine that trans-feminine folks may generally retain some minor long-term advantages over cisgender
+    women, competitive sports organisations already accept and account for similar deviations in abilities and advantages
+    in cisgender women.
+    [The report from the Canadian Centre for Ethics in Sport](https://www.cces.ca/sites/default/files/content/docs/pdf/transgenderwomenathletesandelitesport-ascientificreview-e-final.pdf)
+    also points this out.
+
+3. **While advocates for banning trans folks from sports often use children as a talking point, claims that banning
+trans children from sports is an issue of protecting other children seem nebulous at best:**
+
+   - [According to the Associated Press](https://apnews.com/article/lawmakers-unable-to-cite-local-trans-girls-sports-914a982545e943ecc1e265e8c41042e7),
+     lawmakers have largely been unable to cite local examples of trans girls competing in sports.
+     Where examples are available, there appears to be no evidence that including trans children results in competitive
+     unfairness.
+   - As Susanna Cassisa points out in [this Washington Post article](https://www.washingtonpost.com/made-by-history/2023/07/24/groomer-lgbtq-germany-children/),
+     the "protect the children" rhetoric has been used to demonise members of the LGBT+ community since the early 1900s,
+     and potentially even earlier than that.
+
+4. **Advocates for banning trans folks from sports often include non-physical sports, coming up with the same
 conclusions.
-This suggests that this is more about transphobia and misogyny than any idea of fairness:
+This suggests that this is more about transphobia and misogyny than any idea of fairness:**
 
-- [This report from 2022](https://www.bbc.com/sport/snooker/62821241) talks about a trans-feminine snooker player,
-  and the harassment she faced after her tournament win.
-  This included calls from former world number one Maria Catalano, who called for trans players to be banned from
-  women's tournaments.
-- [This report from 2023](https://www.npr.org/2023/08/18/1194593562/chess-transgender-fide-pushback) talks about how
-  the International Chess Federation (FIDE) effectively declared that women are less intelligent than men.
-  It effectively banned trans women from competing in women's competitions for up to two years, and decided to remove
-  some titles won by both trans men and women in their respective categories.
-- [This report from 2024](https://www.bbc.com/sport/wales/68183503) talks about how professional pool player
-  Lynne Pinches turned down her first ever professional contract, when the World Eightball Pool Federation reversed its
-  ban on trans players.
-- [This report from 2024](https://www.france24.com/en/live-news/20240325-dutch-women-s-darts-veterans-quit-over-transgender-team-mate)
-  talks about how several Dutch cisgendered women's darts veterans quit when they realised their team included a trans
-  woman, complaining about fairness in the sport.
+   - [This report from 2022](https://www.bbc.com/sport/snooker/62821241) talks about a trans-feminine snooker player,
+     and the harassment she faced after her tournament win.
+     This included calls from former world number one Maria Catalano, who called for trans players to be banned from
+     women's tournaments.
+   - [This report from 2023](https://www.npr.org/2023/08/18/1194593562/chess-transgender-fide-pushback) talks about how
+     the International Chess Federation (FIDE) effectively declared that women are less intelligent than men.
+     It effectively banned trans women from competing in women's competitions for up to two years, and decided to remove
+     some titles won by both trans men and women in their respective categories.
+   - [This report from 2024](https://www.bbc.com/sport/wales/68183503) talks about how professional pool player
+     Lynne Pinches turned down her first ever professional contract, when the World Eightball Pool Federation reversed its
+     ban on trans players.
+   - [This report from 2024](https://www.france24.com/en/live-news/20240325-dutch-women-s-darts-veterans-quit-over-transgender-team-mate)
+     talks about how several Dutch cisgendered women's darts veterans quit when they realised their team included a trans
+     woman, complaining about fairness in the sport.
+
+# Direct Impact
+
+It goes without saying that this page wouldn't exist, had there been no reason to discuss this disinformation.
+Unfortunately, the disinformation discussed above has had many real-world consequences.
+
+The following points are true as of April 2024:
+
+- In 2023,
+  [World Athletics introduced new regulations](https://worldathletics.org/news/press-releases/council-meeting-march-2023-russia-belarus-female-eligibility)
+  regarding the eligibility of transgender athletes and female athletes with "differences of sex development".
+
+  These regulations require female athletes with "differences of sexual development" to medicate for at least two
+  years, with the aim of reducing their testosterone levels.
+  This requirement applies to all events, including those that were previously unrestricted.
+
+  They also ban all trans-feminine athletes who had a male puberty from participating in female World
+  Rankings competitions.
+  Due to the current state of trans healthcare legislation, this impacts most trans-feminine individuals, and this
+  problem is likely to get worse due to the current political climate.
+
+  In what we can only describe as cruel irony, these regulations came into effect on the 31st of March 2023,
+  Transgender Day of Visibility.
+
+  As pointed out by [the Washington Blade](https://www.washingtonblade.com/2023/03/24/trans-women-banned-from-track-and-field-intersex-athletes-restricted/),
+  in a turn we find concerning, all cisgender athletes affected by these new regulations were women of colour.
+
+- According to The ACLU, government officials attempted to pass at least
+  [48 bills](https://www.aclu.org/legislative-attacks-on-lgbtq-rights-2024?impact=75144)
+  attempting to ban trans youth from participating in school sports or in teams that correspond with their gender.
+  It also shows [33 bills](https://www.aclu.org/legislative-attacks-on-lgbtq-rights-2024?impact=75143) restricting
+  access to school facilities for trans youth.
+
+  Four related bills have passed so far this year:
+  - [AL SB129](https://translegislation.com/bills/2024/AL/SB129)
+  - [ID H0455](https://translegislation.com/bills/2024/ID/H0455)
+  - [UT HB0172](https://translegislation.com/bills/2024/UT/HB0172)
+  - [WI AB377](https://translegislation.com/bills/2024/WI/AB377)
+
+- Excluding women based on their hormone levels does little to contribute to equal opportunities for them.
+
+  For example,
+  [this report from 2024](https://www.nytimes.com/2024/01/24/world/africa/olympic-intersex-maximila-imali.html)
+  points out that Maximila Imali, a top Kenyan runner disqualified due to her high testosterone levels, is struggling
+  to support her partner and family, feed her son and pay the rent.
+
+  Banning female athletes from their careers serves to make them poorer, and may prevent them from meeting an
+  acceptable quality of life.
+  We're unsure what mental gymnastics one needs to characterise this as "protecting women", but that's how
+  World Athletics puts it:
+  ["This is why we introduced the eligibility regulation and why it must be defended: to ensure fair competition for all women."](https://worldathletics.org/news/press-release/questions-answers-iaaf-female-eligibility-reg)
+
+  As mentioned above, this also
+  [seems to have a disproportionate effect on women of colour](https://www.washingtonblade.com/2023/03/24/trans-women-banned-from-track-and-field-intersex-athletes-restricted/).
 
 # Conclusion
 
@@ -209,6 +283,10 @@ Pull Request as explained in [the Contributing section](/a/meta/contributing/sub
   the Canadian Centre for Ethics in Sport
 - [Scientific integrity and the IAAF testosterone regulations](https://link.springer.com/article/10.1007/s40318-019-00143-w)
   by Roger Pielke Jr., Ross Tucker and Erik Boye
+- [Hormone Levels Are Being Used to Discriminate against Female Athletes](https://www.scientificamerican.com/article/hormone-levels-are-being-used-to-discriminate-against-female-athletes/)
+  by Grace Huckins
+- [Testosterone: why defining a ‘normal’ level is hard to do](https://theconversation.com/testosterone-why-defining-a-normal-level-is-hard-to-do-113587)
+  by Daniel Kelly
 - [Transgender hormone therapy](https://en.wikipedia.org/wiki/Transgender_hormone_therapy) from Wikipedia
 - [How does hormone transition in transgender women change body composition, muscle strength and haemoglobin? Systematic review with a focus on the implications for sport participation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8311086/)
   by Joanna Harper, Emma O'Donnell, Behzad Sorouri Khorashad, Hilary McDermott and Gemma L Witcomb
@@ -226,3 +304,13 @@ Pull Request as explained in [the Contributing section](/a/meta/contributing/sub
   published by the BBC
 - [Transgender snooker player Jamie Hunter criticised after winning US Women's Snooker Open](https://www.bbc.com/sport/snooker/62821241)
   published by the BBC
+- [World Athletics Council decides on Russia, Belarus and female eligibility](https://worldathletics.org/news/press-releases/council-meeting-march-2023-russia-belarus-female-eligibility),
+  by World Athletics
+- [Trans women banned from track and field, intersex athletes restricted](https://www.washingtonblade.com/2023/03/24/trans-women-banned-from-track-and-field-intersex-athletes-restricted/)
+  by Dawn Ennis
+- [ACLU: Mapping Attacks on LGBTQ Rights in U.S. State Legislatures in 2024](https://www.aclu.org/legislative-attacks-on-lgbtq-rights-2024)
+- [Trans Legislation Tracker](https://translegislation.com)
+- [An Olympic Dream Falters Amid Track's Shifting Rules](https://www.nytimes.com/2024/01/24/world/africa/olympic-intersex-maximila-imali.html)
+  by Jeré Longman
+- [IAAF publishes briefing notes and Q&A on Female Eligibility Regulations](https://worldathletics.org/news/press-release/questions-answers-iaaf-female-eligibility-reg)
+  by World Athletics

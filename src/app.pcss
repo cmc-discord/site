@@ -519,6 +519,16 @@ h1, h2, h3, h4, h5, h6 {
 			text-decoration-line: underline;
 		}
 	}
+
+	ul li, ol li {
+		p {
+			margin-top: 0.5em;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
 }
 
 html {
@@ -631,7 +641,6 @@ html {
 }
 
 .prose {
-
 	.article-markdown-example {
 		@apply grid grid-cols-1 gap-2;
 
