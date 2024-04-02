@@ -262,55 +262,223 @@ If you come across further studies or information that you feel should be includ
 Pull Request as explained in [the Contributing section](/a/meta/contributing/submission).
 
 # Sources
-- [Four Waves of Feminism](https://www.pacificu.edu/magazine/four-waves-feminism) by Martha Rampton
-- [What is First-Wave Feminism?](https://www.masterclass.com/articles/first-wave-feminism) by MasterClass
-- [Sex Segregation in Sports: Why Separate Is Not Equal](https://books.google.ie/books?id=-t3EEAAAQBAJ) (2016) by
-  Adrienne N. Milner, Jomills Henry Braddock II
-- [There's Nothing Worse than Losing to a Girl: An Analysis of Sex Segregation in American Youth Sports](https://www.repository.law.indiana.edu/ijlse/vol8/iss1/3/)
-  by Julia Konieczny
-- [Title IX](https://en.wikipedia.org/wiki/Title_IX) from Wikipedia
-- [Constructing Gender Incommensurability in Competitive Sport: Sex/Gender Testing and the New Regulations on Female Hyperandrogenism](https://www.jstor.org/stable/24757601)
-  by Marion Müller
-- [Human rights court rules in favor of Olympic champion Semenya, testosterone rules may persist](https://www.pbs.org/newshour/world/human-rights-court-rules-in-favor-of-olympic-champion-semenya-over-testosterone-rules)
-  by Gerald Imray, Associated Press
-- [White Fragility & the Ruling Against Caster Semenya](https://www.allure.com/story/caster-semenya-ruling-op-ed)
-  by Claire Rudy Foster
-- [Biological Essentialism](https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095507973),
-  definition by the Oxford Reference
-- [Total testosterone is not associated with lean mass or handgrip strength in pre-menopausal females](https://www.nature.com/articles/s41598-021-89232-1)
-  by Sarah E. Alexander, Gavin Abbott, Brad Aisbett, Glenn D. Wadley, Jill A. Hnatiuk and Séverine Lamon
-- [Transgender Women Athletes and Elite Sport: A Scientific Review](https://www.cces.ca/sites/default/files/content/docs/pdf/transgenderwomenathletesandelitesport-ascientificreview-e-final.pdf) by
-  the Canadian Centre for Ethics in Sport
-- [Scientific integrity and the IAAF testosterone regulations](https://link.springer.com/article/10.1007/s40318-019-00143-w)
-  by Roger Pielke Jr., Ross Tucker and Erik Boye
-- [Hormone Levels Are Being Used to Discriminate against Female Athletes](https://www.scientificamerican.com/article/hormone-levels-are-being-used-to-discriminate-against-female-athletes/)
-  by Grace Huckins
-- [Testosterone: why defining a ‘normal’ level is hard to do](https://theconversation.com/testosterone-why-defining-a-normal-level-is-hard-to-do-113587)
-  by Daniel Kelly
-- [Transgender hormone therapy](https://en.wikipedia.org/wiki/Transgender_hormone_therapy) from Wikipedia
-- [How does hormone transition in transgender women change body composition, muscle strength and haemoglobin? Systematic review with a focus on the implications for sport participation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8311086/)
-  by Joanna Harper, Emma O'Donnell, Behzad Sorouri Khorashad, Hilary McDermott and Gemma L Witcomb
-- [The Impact of Gender-Affirming Hormone Therapy on Physical Performance](https://academic.oup.com/jcem/article/109/2/e455/7223439)
-  by Ada S Cheung, Sav Zwickl, Kirsti Miller, Brendan J Nolan, Alex Fang Qi Wong, Patrice Jones and Nir Eynon
-- [Lawmakers can’t cite local examples of trans girls in sports](https://apnewscom/article/lawmakers-unable-to-cite-local-trans-girls-sports-914a982545e943ecc1e265e8c41042e7)
-  by David Crary and Lindsay Whitehurst
-- [The 'groomer' anti-LGBTQ+ panic is not new — and has caused immense harm](https://www.washingtonpost.com/made-by-history/2023/07/24/groomer-lgbtq-germany-children/)
-  by Susanna Cassisa
-- [World chess just placed restrictions on both trans women and trans men](https://www.npr.org/2023/08/18/1194593562/chess-transgender-fide-pushback)
-  by Juliana Kim
-- [Dutch women's darts veterans quit over transgender team-mate](https://www.france24.com/en/live-news/20240325-dutch-women-s-darts-veterans-quit-over-transgender-team-mate)
-  published by France 24
-- [Lynne Pinches: Pool player rejects professional contract after transgender policy U-turn](https://www.bbc.com/sport/wales/68183503)
-  published by the BBC
-- [Transgender snooker player Jamie Hunter criticised after winning US Women's Snooker Open](https://www.bbc.com/sport/snooker/62821241)
-  published by the BBC
-- [World Athletics Council decides on Russia, Belarus and female eligibility](https://worldathletics.org/news/press-releases/council-meeting-march-2023-russia-belarus-female-eligibility),
-  by World Athletics
-- [Trans women banned from track and field, intersex athletes restricted](https://www.washingtonblade.com/2023/03/24/trans-women-banned-from-track-and-field-intersex-athletes-restricted/)
-  by Dawn Ennis
-- [ACLU: Mapping Attacks on LGBTQ Rights in U.S. State Legislatures in 2024](https://www.aclu.org/legislative-attacks-on-lgbtq-rights-2024)
-- [Trans Legislation Tracker](https://translegislation.com)
-- [An Olympic Dream Falters Amid Track's Shifting Rules](https://www.nytimes.com/2024/01/24/world/africa/olympic-intersex-maximila-imali.html)
-  by Jeré Longman
-- [IAAF publishes briefing notes and Q&A on Female Eligibility Regulations](https://worldathletics.org/news/press-release/questions-answers-iaaf-female-eligibility-reg)
-  by World Athletics
+
+1. [Four Waves of Feminism](https://www.pacificu.edu/magazine/four-waves-feminism) by Martha Rampton
+
+   **Citation:** _Rampton, M. (n.d.).
+   Four Waves of Feminism.
+   Pacific University Oregon.
+   https://www.pacificu.edu/magazine/four-waves-feminism_
+
+2. [What is First-Wave Feminism?](https://www.masterclass.com/articles/first-wave-feminism) by MasterClass
+
+   **Citation:** _What is First-Wave Feminism?
+   (2022, October 11).
+   MasterClass.
+   https://www.masterclass.com/articles/first-wave-feminism_
+
+3. [Sex Segregation in Sports: Why Separate Is Not Equal](https://books.google.ie/books?id=-t3EEAAAQBAJ)
+   by Adrienne N. Milner, Jomills Henry Braddock II
+
+   **Citation:** _Milner, A. N., Braddock, H. (2016).
+    Sex Segregation in Sports: Why Separate Is Not Equal.
+    ABC-CLIO_
+
+4. [There's Nothing Worse than Losing to a Girl: An Analysis of Sex Segregation in American Youth Sports](https://www.repository.law.indiana.edu/ijlse/vol8/iss1/3/)
+   by Julia Konieczny
+
+   **Citation:** _Konieczny, J. (2022).
+   There's Nothing Worse than Losing to a Girl: An Analysis of Sex Segregation in American Youth Sports.
+   Ind. J.L. & Soc. Equality.
+   https://www.repository.law.indiana.edu/ijlse/vol8/iss1/3/_
+
+5. [Title IX](https://en.wikipedia.org/wiki/Title_IX) from Wikipedia
+
+   **Citation:** _Title IX. (n.d.).
+   In Wikipedia.
+   Retrieved April 2nd, 2024, from
+   https://en.wikipedia.org/wiki/Title_IX_
+
+6. [Constructing Gender Incommensurability in Competitive Sport: Sex/Gender Testing and the New Regulations on Female Hyperandrogenism](https://www.jstor.org/stable/24757601)
+   by Marion Müller
+
+   **Citation:** _Müller, M. (2016).
+   Constructing Gender Incommensurability in Competitive Sport: Sex/Gender Testing
+   and the New Regulations on Female Hyperandrogenism.
+   Human Studies, 39(3), 405–431.
+   http://www.jstor.org/stable/24757601_
+
+7. [Human rights court rules in favor of Olympic champion Semenya, testosterone rules may persist](https://www.pbs.org/newshour/world/human-rights-court-rules-in-favor-of-olympic-champion-semenya-over-testosterone-rules)
+   by Gerald Imray, Associated Press
+
+   **Citation:**
+   _Imray, G. (2023, July 11).
+   Human rights court rules in favor of Olympic champion Semenya, testosterone rules may persist.
+   PBS.
+   https://www.pbs.org/newshour/world/human-rights-court-rules-in-favor-of-olympic-champion-semenya-over-testosterone-rules_
+
+8. [White Fragility & the Ruling Against Caster Semenya](https://www.allure.com/story/caster-semenya-ruling-op-ed)
+   by Claire Rudy Foster
+
+   **Citation:** _Foster C.R. (2020, September 11).
+   White Fragility & the Ruling Against Caster Semenya.
+   Allure.
+   https://www.allure.com/story/caster-semenya-ruling-op-ed_
+
+9. [Biological Essentialism](https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095507973),
+   definition by the Oxford Reference
+
+   **Citation:** _biological essentialism (n.d.).
+   Oxford Reference.
+   https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095507973_
+
+10. [Total testosterone is not associated with lean mass or handgrip strength in pre-menopausal females](https://www.nature.com/articles/s41598-021-89232-1)
+    by Sarah E. Alexander, Gavin Abbott, Brad Aisbett, Glenn D. Wadley, Jill A. Hnatiuk and Séverine Lamon
+
+    **Citation:** _Alexander, S. E., Abbott, G., Aisbett, B., Wadley, G. D., Hnatiuk, J. A., Lamon, S. (2021).
+    Total testosterone is not associated with lean mass or handgrip strength in pre-menopausal females.
+    Scientific Reports, 11(1).
+    https://doi.org/10.1038/s41598-021-89232-1_
+
+11. [Transgender Women Athletes and Elite Sport: A Scientific Review](https://www.cces.ca/sites/default/files/content/docs/pdf/transgenderwomenathletesandelitesport-ascientificreview-e-final.pdf) by
+    the Canadian Centre for Ethics in Sport
+
+    **Citation:** _Transgender Women Athletes and Elite Sport: A Scientific Review (2022).
+    Canadian Centre for Ethics in Sport.
+    https://www.cces.ca/sites/default/files/content/docs/pdf/transgenderwomenathletesandelitesport-ascientificreview-e-final.pdf_
+
+12. [Scientific integrity and the IAAF testosterone regulations](https://link.springer.com/article/10.1007/s40318-019-00143-w)
+    by Roger Pielke Jr., Ross Tucker and Erik Boye
+
+    **Citation:** _Pielke, R., Tucker, R., Boye, E. (2019).
+    Scientific integrity and the IAAF testosterone regulations.
+    The International Sports Law Journal, 19(1-2), 18–26.
+    https://doi.org/10.1007/s40318-019-00143-w_
+
+13. [Hormone Levels Are Being Used to Discriminate against Female Athletes](https://www.scientificamerican.com/article/hormone-levels-are-being-used-to-discriminate-against-female-athletes/)
+    by Grace Huckins
+
+    **Citation:** _Huckins G. (2021, February 1).
+    Hormone Levels Are Being Used to Discriminate against Female Athletes.
+    Scientific American.
+    https://www.scientificamerican.com/article/hormone-levels-are-being-used-to-discriminate-against-female-athletes/_
+
+14. [Testosterone: why defining a ‘normal’ level is hard to do](https://theconversation.com/testosterone-why-defining-a-normal-level-is-hard-to-do-113587)
+    by Daniel Kelly
+
+    **Citation:** _Kelly D. (2019, April 16).
+    Testosterone: why defining a ‘normal’ level is hard to do.
+    The Conversation.
+    https://theconversation.com/testosterone-why-defining-a-normal-level-is-hard-to-do-113587_
+
+15. [Transgender hormone therapy](https://en.wikipedia.org/wiki/Transgender_hormone_therapy) from Wikipedia
+
+    **Citation:** _Transgender hormone therapy. (n.d.).
+    In Wikipedia.
+    Retrieved April 2nd, 2024, from
+    https://en.wikipedia.org/wiki/Transgender_hormone_therapy_
+
+16. [How does hormone transition in transgender women change body composition, muscle strength and haemoglobin? Systematic review with a focus on the implications for sport participation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8311086/)
+    by Joanna Harper, Emma O'Donnell, Behzad Sorouri Khorashad, Hilary McDermott and Gemma L Witcomb
+
+    **Citation:** _Harper, J., O’Donnell, E., Khorashad, B. S., McDermott, H., Witcomb, G. L. (2021).
+    How does hormone transition in transgender women change body composition, muscle strength and haemoglobin?
+    Systematic review with a focus on the implications for sport participation.
+    British Journal of Sports Medicine, 55(15).
+    https://doi.org/10.1136/bjsports-2020-103106_
+
+17. [The Impact of Gender-Affirming Hormone Therapy on Physical Performance](https://academic.oup.com/jcem/article/109/2/e455/7223439)
+    by Ada S Cheung, Sav Zwickl, Kirsti Miller, Brendan J Nolan, Alex Fang Qi Wong, Patrice Jones and Nir Eynon
+
+    **Citation:** _Cheung, A. S., Zwickl, S., Miller, K. L., Nolan, B. J., Fang, A., Jones, P., Eynon, N. (2023).
+    The Impact of Gender Affirming Hormone Therapy on Physical Performance.
+    The Journal of Clinical Endocrinology and Metabolism, 109(2).
+    https://doi.org/10.1210/clinem/dgad414_
+
+18. [Lawmakers can’t cite local examples of trans girls in sports](https://apnews.com/article/lawmakers-unable-to-cite-local-trans-girls-sports-914a982545e943ecc1e265e8c41042e7)
+    by David Crary and Lindsay Whitehurst
+
+    **Citation:** _Crary D., Whitehurst L. (2021, March 3).
+    Lawmakers can’t cite local examples of trans girls in sports.
+    Associated Press.
+    https://apnews.com/article/lawmakers-unable-to-cite-local-trans-girls-sports-914a982545e943ecc1e265e8c41042e7_
+
+19. [The 'groomer' anti-LGBTQ+ panic is not new — and has caused immense harm](https://www.washingtonpost.com/made-by-history/2023/07/24/groomer-lgbtq-germany-children/)
+    by Susanna Cassisa
+
+    **Citation:** _Cassisa S. (2023, July 24).
+    The 'groomer' anti-LGBTQ+ panic is not new — and has caused immense harm.
+    Washington Post.
+    https://www.washingtonpost.com/made-by-history/2023/07/24/groomer-lgbtq-germany-children/_
+
+20. [World chess just placed restrictions on both trans women and trans men](https://www.npr.org/2023/08/18/1194593562/chess-transgender-fide-pushback)
+    by Juliana Kim
+
+    **Citation:** _Kim J. (2023, August 18).
+    World chess just placed restrictions on both trans women and trans men.
+    NPR.
+    https://www.npr.org/2023/08/18/1194593562/chess-transgender-fide-pushback_
+
+21. [Dutch women's darts veterans quit over transgender team-mate](https://www.france24.com/en/live-news/20240325-dutch-women-s-darts-veterans-quit-over-transgender-team-mate)
+    published by France 24
+
+    **Citation:** _Dutch women's darts veterans quit over transgender team-mate. (2024, March 25).
+    France 24.
+    https://www.france24.com/en/live-news/20240325-dutch-women-s-darts-veterans-quit-over-transgender-team-mate_
+
+22. [Lynne Pinches: Pool player rejects professional contract after transgender policy U-turn](https://www.bbc.com/sport/wales/68183503)
+    published by the BBC
+
+    **Citation:** _Lynne Pinches: Pool player rejects professional contract after transgender policy U-turn (2024, February 3).
+    BBC.
+    https://www.bbc.com/sport/wales/68183503_
+
+23. [Transgender snooker player Jamie Hunter criticised after winning US Women's Snooker Open](https://www.bbc.com/sport/snooker/62821241)
+    published by the BBC
+
+    **Citation:** _Transgender snooker player Jamie Hunter criticised after winning US Women's Snooker Open (202, September 7).
+    BBC.
+    https://www.bbc.com/sport/snooker/62821241_
+
+24. [World Athletics Council decides on Russia, Belarus and female eligibility](https://worldathletics.org/news/press-releases/council-meeting-march-2023-russia-belarus-female-eligibility),
+    by World Athletics
+
+    **Citation:** _World Athletics Council decides on Russia, Belarus and female eligibility. (2023, March 23).
+    World Athletics.
+    https://worldathletics.org/news/press-releases/council-meeting-march-2023-russia-belarus-female-eligibility_
+
+25. [Trans women banned from track and field, intersex athletes restricted](https://www.washingtonblade.com/2023/03/24/trans-women-banned-from-track-and-field-intersex-athletes-restricted/)
+    by Dawn Ennis
+
+    **Citation:** _Ennis D. (2023, March 24).
+    Trans women banned from track and field, intersex athletes restricted.
+    Washington Blade.
+    https://www.washingtonblade.com/2023/03/24/trans-women-banned-from-track-and-field-intersex-athletes-restricted/_
+
+26. [Mapping Attacks on LGBTQ Rights in U.S. State Legislatures in 2024](https://www.aclu.org/legislative-attacks-on-lgbtq-rights-2024)
+    by the ALCU
+
+    **Citation:** _Mapping Attacks on LGBTQ Rights in U.S. State Legislatures in 2024. (2024).
+    American Civil Liberties Union.
+    https://www.aclu.org/legislative-attacks-on-lgbtq-rights-2024_
+
+27. [Trans Legislation Tracker](https://translegislation.com)
+
+    **Citation:** _Trans Legislation Tracker. (2024).
+    Trans Legislation Tracker.
+    https://translegislation.com_
+
+28. [An Olympic Dream Falters Amid Track's Shifting Rules](https://www.nytimes.com/2024/01/24/world/africa/olympic-intersex-maximila-imali.html)
+    by Jeré Longman
+
+    **Citation:** _Longman J. (2024, Jan 24).
+    An Olympic Dream Falters Amid Track's Shifting Rules.
+    New York Times.
+    https://www.nytimes.com/2024/01/24/world/africa/olympic-intersex-maximila-imali.html_
+
+29. [IAAF publishes briefing notes and Q&A on Female Eligibility Regulations](https://worldathletics.org/news/press-release/questions-answers-iaaf-female-eligibility-reg)
+    by World Athletics
+
+    **Citation:** _IAAF publishes briefing notes and Q&A on Female Eligibility Regulations. (2019).
+    World Athletics.
+    https://worldathletics.org/news/press-releases/council-meeting-march-2023-russia-belarus-female-eligibility_
