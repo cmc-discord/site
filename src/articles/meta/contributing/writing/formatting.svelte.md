@@ -22,13 +22,21 @@ that enable you to use more advanced formatting with minimal effort.
 We created a custom for articles that need formal citations.
 The plugin provides a simple way to add citations and a bibliography to your articles.
 
+All citations use [the APA style](https://apastyle.apa.org/).
+
 - Insert a citation: `|cite: identifier|`
+- Insert a bibliography: `|bibliography|`
 - Supported identifier types:
   - [DOIs (Digital Object Identifiers)](https://npmjs.com/@citation-js/plugin-doi)
   - [ISBNs](https://npmjs.com/@citation-js/plugin-isbn)
   - [Wikidata QIDs](https://npmjs.com/@citation-js/plugin-wikidata)
   - [GitHub repo URLs and npm package URLs](https://npmjs.com/@citation-js/plugin-software-formats)
-- All citations use the APA format.
+
+**Note:** We haven't finished making changes to this plugin.
+In particular, the following limitations exist:
+
+- It is impossible to cite arbitrary websites.
+  We plan to add support for this based on oEmbed data later.
 
 <div class="article-markdown-example">
 <div>

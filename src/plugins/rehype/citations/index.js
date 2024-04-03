@@ -88,7 +88,7 @@ class Processor {
 						}
 					}
 				} else {
-					if (it.type === "element" && it.tagName === "pre") {
+					if (it.type === "element" && (it.tagName === "pre" || it.tagName === "code")) {
 						continue;
 					}
 
@@ -112,14 +112,19 @@ class Processor {
 				const citation = await this.getCitation(identifier);
 
 				citationNode = h(
-					"a.footnote-link",
-					{ href: `#cite-${citation.index}`, title: citation.cite.format("citation", { template: "apa" }) },
-					`[${citation.index}]`,
+					"sup",
+					h(
+						"a.footnote-link",
+						{ href: `#cite-${citation.index}`, title: citation.cite.format("citation", { template: "apa" }) },
+						`[${citation.index}]`,
+					),
 				);
 			} catch (e) {
 				console.warn(
-					`Failed to parse citation for identifier: ${identifier}\n  ${e.message}`,
+					`Failed to parse citation for identifier "${identifier}"\n  ${e.message}`,
 				);
+
+				continue
 			}
 
 			const parts = currentValue.split(str, 2);
@@ -153,14 +158,14 @@ class Processor {
 
 		Object.values(this.citations)
 			.sort((a, b) =>
-				b.index - a.index
+				b.index - a.index,
 			)
 			.forEach((item) => {
 				children.push(
 					h(
 						`span.bibliography#cite-${item.index}`,
-						item.cite.format("bibliography", { template: "apa" })
-					)
+						item.cite.format("bibliography", { template: "apa" }),
+					),
 				);
 			});
 
@@ -179,8 +184,6 @@ class Processor {
 }
 
 export default function rehypeIcons() {
-	console.log("Register: ", register.list());
-
 	return async (tree) => {
 		const processor = new Processor();
 
