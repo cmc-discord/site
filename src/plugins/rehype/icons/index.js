@@ -9,7 +9,7 @@ import { locate } from "@iconify/json";
 import { getIconData, iconToHTML, iconToSVG, replaceIDs } from "@iconify/utils";
 import { h } from "hastscript";
 
-const iconRegex = /\|icon:\s?(?<set>[\w-]+)\/(?<icon>[\w-]+)\|/gi;
+const iconRegex = /\|icon:\s*(?<set>[\w-]+)\/(?<icon>[\w-]+)\|/gi;
 
 async function processNodes(node) {
 	if (node.children) {

@@ -8,10 +8,14 @@ import { getIconData, iconToHTML, iconToSVG, replaceIDs } from "@iconify/utils";
 import { defineMDSveXConfig } from "mdsvex";
 
 import remarkExcerpt from "mdsvex-excerpt";
+import remarkGfm from "remark-gfm";
 
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeColorChips from "rehype-color-chips";
+
+import rehypeCitations from "./src/plugins/rehype/citations/index.js";
 import rehypeIcons from "./src/plugins/rehype/icons/index.js";
+
 // import rehypePrism from "rehype-prism-plus"
 import rehypeShiftHeading from "rehype-shift-heading";
 import rehypeSlug from "rehype-slug";
@@ -74,7 +78,10 @@ export default defineMDSveXConfig({
 		// Hex code colour chips
 		rehypeColorChips,
 
-		// Icon components via Iconify: |set/icon-name| in Markdown
+		// Citations: |cite: identifier| in Markdown
+		rehypeCitations,
+
+		// Icon components via Iconify: |icon: set/icon-name| in Markdown
 		rehypeIcons,
 
 		// TODO: msdvex provides its own Prism-based highlighting system, and it's impossible to disable it.
@@ -93,7 +100,10 @@ export default defineMDSveXConfig({
 		remarkPresetLintConsistent,
 		remarkPresetLintRecommended,
 
-		// Excertps
+		// GFM
+		[remarkGfm, { singleTilde: false }],
+
+		// Excerpts
 		remarkExcerpt,
 	],
 });

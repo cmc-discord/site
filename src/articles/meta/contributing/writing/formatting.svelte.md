@@ -15,6 +15,52 @@ that enable you to use more advanced formatting with minimal effort.
 
 # Markdown Extensions
 
+## Citations
+
+[`|icon: simple-icons/github| Custom Plugin`](https://github.com/cmc-discord/site/blob/main/src/plugins/rehype/citations/index.js)
+
+We created a custom for articles that need formal citations.
+The plugin provides a simple way to add citations and a bibliography to your articles.
+
+- Insert a citation: `|cite: identifier|`
+- Supported identifier types:
+  - [DOIs (Digital Object Identifiers)](https://npmjs.com/@citation-js/plugin-doi)
+  - [ISBNs](https://npmjs.com/@citation-js/plugin-isbn)
+  - [Wikidata QIDs](https://npmjs.com/@citation-js/plugin-wikidata)
+  - [GitHub repo URLs and npm package URLs](https://npmjs.com/@citation-js/plugin-software-formats)
+- All citations use the APA format.
+
+<div class="article-markdown-example">
+<div>
+<span class="text-lg mb-2 font-semibold">Example</span>
+
+```md
+Book: |cite: 1440838119|
+
+DOI: |cite: 10.1038/s41598-021-89232-1|
+
+**Bibliography**
+
+|bibliography|
+```
+
+</div>
+
+<div>
+<span class="text-lg font-semibold mr-1">Result</span>
+
+Book: |cite: 1440838119|
+
+DOI: |cite: 10.1038/s41598-021-89232-1|
+
+**Bibliography**
+
+|bibliography|
+
+</div>
+</div>
+
+
 ## Color Chips
 
 [`|icon: simple-icons/github| rehype-color-chips`](https://github.com/shreshthmohan/rehype-color-chips)
