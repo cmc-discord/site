@@ -36,9 +36,10 @@ Be sure to also read the following articles:
 
 # Format and Structure
 
-You'll find all of this site's articles in the `|lucide/folder| src/articles` folder.
+You'll find all of this site's articles in the `|icon: lucide/folder| src/articles` folder.
 Each file represents a single article, and all article files must end with `.svelte.md`.
-You may place article files directly within `|lucide/folder| /src/articles` or nest them within any number of folders.
+You may place article files directly within `|icon: lucide/folder| /src/articles` or nest them within any number of
+folders.
 
 While each article is written using [Markdown](https://www.markdownguide.org/basic-syntax/), they're also valid Svelte
 components, supporting `<script>` tags, Svelte components and variable substitution.
@@ -54,23 +55,23 @@ Make sure you add a blank line after the front matter, to visually separate it f
 
 ### Required Keys
 
-- `|lucide/user| authors` List of authors who contributed to this article.
+- `|icon: lucide/user| authors` List of authors who contributed to this article.
   - You must format this according to the author's preference, matching the format used for any other articles.
-- `|lucide/text| summary` A short, single-line summary of the article.
+- `|icon: lucide/text| summary` A short, single-line summary of the article.
   - This will be visible at the top of every article page, as well as within link embeds.
-- `|lucide/tag| tags` List of tags to apply to this article.
-  - Check `|lucide/file| /src/tags.yaml` before applying tags,
+- `|icon: lucide/tag| tags` List of tags to apply to this article.
+  - Check `|icon: lucide/file| /src/tags.yaml` before applying tags,
     and try to use existing tags that best match your article.
 
     For more information on tag descriptions,
     see [the Configuration page](/a/meta/contributing/configuration#tag-descriptions).
 
-- `|lucide/heading-1| title` The article's title.
+- `|icon: lucide/heading-1| title` The article's title.
   - This will be visible at the top of every article page, the tag pages, as well as within link embeds.
 
 ### Optional Keys
 
-- `|lucide/heading-1| navigationTitle` The title shown in the navigation sidebar.
+- `|icon: lucide/heading-1| navigationTitle` The title shown in the navigation sidebar.
   - The title used to represent this article in the navigation sidebar,
     [if configured](/a/meta/contributing/configuration#navigation-trees).
     Useful when the sidebar title should be shorter than the article title.

@@ -36,7 +36,7 @@ We highly recommend you consider using the following tools:
   If you decide to use an external transcription tool, please understand that we won't accept links to
   transcriptions hosted on external sites.
   Instead, you must include the transcription in a dedicated article tagged with the
-  [`|lucide/tag| transcription`](/t/transcription)
+  [`|icon: lucide/tag| transcription`](/t/transcription)
   tag, and link to it alongside your file.
 
 - Defensive and offensive AI model poisoning concepts and tools.

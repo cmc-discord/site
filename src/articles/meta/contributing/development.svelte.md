@@ -81,7 +81,7 @@ When working on the project, you should be aware of the following:
     However, the `visit` function is useful for filtering over the `tree` if you don't need to modify it.
 
     A good example of a simple plugin that modifies the `tree` is the
-    [`|simple-icons/github| rehype-color-chips`](https://github.com/shreshthmohan/rehype-color-chips/blob/main/src/index.ts#L10)
+    [`|icon: simple-icons/github| rehype-color-chips`](https://github.com/shreshthmohan/rehype-color-chips/blob/main/src/index.ts#L10)
     plugin.
 
 - During development, the search index will quickly become out-of-date.
