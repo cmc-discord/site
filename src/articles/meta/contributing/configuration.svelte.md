@@ -15,10 +15,10 @@ All contributors should understand them, and how to edit them.
 
 # Tag Descriptions
 
-`|lucide/file| /src/tags.yaml`
+`|icon: lucide/file| /src/tags.yaml`
 
 To ensure it is clear what each tag is for, we require that all tags have a description.
-Tag descriptions are short and to-the-point, and you can find them in `|lucide/file| /src/tags.yaml`.
+Tag descriptions are short and to-the-point, and you can find them in `|icon: lucide/file| /src/tags.yaml`.
 
 This file is a simple mapping of tag names to their descriptions.
 
@@ -30,10 +30,10 @@ All descriptions must be written using proper English, and end with a full stop/
 
 # Navigation Trees
 
-`|lucide/file| /src/navigation.yaml`
+`|icon: lucide/file| /src/navigation.yaml`
 
 Sometimes, it may be useful to present articles as part of a tree of links.
-You can find the configuration for this in `|lucide/file| /src/navigation.yaml`.
+You can find the configuration for this in `|icon: lucide/file| /src/navigation.yaml`.
 
 This file contains a set of navigation trees, stored under a prefix.
 This prefix refers to the start of a path, wherein all paths that start with the given prefix will show the navigation
@@ -86,9 +86,9 @@ If multiple prefixes match the current URL, then the site will use the longest p
 (Shown on all pages starting with <code>/a/meta</code>)
 </p>
 
-- `|lucide/info| /a/meta` Site Information
-    - `|lucide/pencil| /a/meta/writing` Writing
-    - `|lucide/code| /a/meta/development` Development
+- `|icon: lucide/info| /a/meta` Site Information
+    - `|icon: lucide/pencil| /a/meta/writing` Writing
+    - `|icon: lucide/code| /a/meta/development` Development
 
 </div>
 </div>

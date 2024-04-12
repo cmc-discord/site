@@ -519,6 +519,27 @@ h1, h2, h3, h4, h5, h6 {
 			text-decoration-line: underline;
 		}
 	}
+
+	ul li, ol li {
+		margin-top: 1em;
+		margin-bottom: 1em;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		p {
+			margin-top: 0.5em;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
 }
 
 html {
@@ -631,7 +652,6 @@ html {
 }
 
 .prose {
-
 	.article-markdown-example {
 		@apply grid grid-cols-1 gap-2;
 
@@ -692,4 +712,55 @@ html {
 	&.text-destructive div {
 		color: hsl(var(--foreground));
 	}
+}
+
+.bibliographies {
+	display: block;
+	margin-top: 0;
+	margin-bottom: 1.25em;
+	padding-inline-start: 1.625em;
+
+	list-style: none;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+
+	.bibliography {
+		display: list-item;
+		list-style-type: decimal;
+
+		padding-inline-start: 0.375em;
+		text-align: -webkit-match-parent;
+
+		margin-top: 1em;
+		margin-bottom: 1em;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		p {
+			margin-top: 0.5em;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		&::marker {
+			font-weight: 400;
+			color: var(--tw-prose-counters);
+		}
+	}
+}
+
+.footnote-link {
+	@apply text-blue-400;
+	text-underline: none;
+	text-decoration: none;
 }

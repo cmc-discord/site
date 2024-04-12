@@ -15,9 +15,63 @@ that enable you to use more advanced formatting with minimal effort.
 
 # Markdown Extensions
 
+## Citations
+
+[`|icon: simple-icons/github| Custom Plugin`](https://github.com/cmc-discord/site/blob/main/src/plugins/rehype/citations/index.js)
+
+We created a custom for articles that need formal citations.
+The plugin provides a simple way to add citations and a bibliography to your articles.
+
+All citations use [the APA style](https://apastyle.apa.org/).
+
+- Insert a citation: `|cite: identifier|`
+- Insert a bibliography: `|bibliography|`
+- Supported identifier types:
+  - [DOIs (Digital Object Identifiers)](https://npmjs.com/@citation-js/plugin-doi)
+  - [ISBNs](https://npmjs.com/@citation-js/plugin-isbn)
+  - [Wikidata QIDs](https://npmjs.com/@citation-js/plugin-wikidata)
+  - [GitHub repo URLs and npm package URLs](https://npmjs.com/@citation-js/plugin-software-formats)
+
+**Note:** We haven't finished making changes to this plugin.
+In particular, the following limitations exist:
+
+- It is impossible to cite arbitrary websites.
+  We plan to add support for this based on oEmbed data later.
+
+<div class="article-markdown-example">
+<div>
+<span class="text-lg mb-2 font-semibold">Example</span>
+
+```md
+Book: |cite: 1440838119|
+
+DOI: |cite: 10.1038/s41598-021-89232-1|
+
+**Bibliography**
+
+|bibliography|
+```
+
+</div>
+
+<div>
+<span class="text-lg font-semibold mr-1">Result</span>
+
+Book: |cite: 1440838119|
+
+DOI: |cite: 10.1038/s41598-021-89232-1|
+
+**Bibliography**
+
+|bibliography|
+
+</div>
+</div>
+
+
 ## Color Chips
 
-[`|simple-icons/github| rehype-color-chips`](https://github.com/shreshthmohan/rehype-color-chips)
+[`|icon: simple-icons/github| rehype-color-chips`](https://github.com/shreshthmohan/rehype-color-chips)
 
 This feature renders a small colour chip alongside code elements containing hex codes, allowing readers to see the
 colour at a glance.
@@ -42,7 +96,7 @@ colour at a glance.
 
 ## Excerpts
 
-[`|simple-icons/github| mdsvex-excerpt`](https://github.com/Zielak/mdsvex-excerpt)
+[`|icon: simple-icons/github| mdsvex-excerpt`](https://github.com/Zielak/mdsvex-excerpt)
 
 Articles tend to contain a lot of information, and thus often end up getting long.
 However, on some pages, we don't want to display the entire article, such as on the tag pages.
@@ -96,8 +150,8 @@ Oh sure! Blame the wizards!**
 
 ## Header Links
 
-[`|simple-icons/github| rehype-autolink-headings`](https://github.com/rehypejs/rehype-autolink-headings)
-[`|simple-icons/github| rehype-slug`](https://github.com/rehypejs/rehype-slug)
+[`|icon: simple-icons/github| rehype-autolink-headings`](https://github.com/rehypejs/rehype-autolink-headings)
+[`|icon: simple-icons/github| rehype-slug`](https://github.com/rehypejs/rehype-slug)
 
 The site generates an ID for each header written within articles, adding a clickable link icon to them.
 The site's menu also contains links to each header, for easy navigation.
@@ -132,12 +186,12 @@ The site's menu also contains links to each header, for easy navigation.
 
 ## Icons
 
-[`|simple-icons/github| Custom Plugin`](https://github.com/cmc-discord/site/blob/main/src/plugins/rehype/icons/index.js)
+[`|icon: simple-icons/github| Custom Plugin`](https://github.com/cmc-discord/site/blob/main/src/plugins/rehype/icons/index.js)
 
 We created a custom plugin for this site that allows you to embed icons into your articles, instead of using Svelte
 components and potentially breaking your Markdown.
 
-- Insert an icon: `|set-name/icon-name|`
+- Insert an icon: `|icon: set-name/icon-name|`
 - For set names, [see here](https://iconify.design/docs/icons/icon-set-basics.html#naming).
 - For icon names, [see here](https://iconify.design/docs/icons/icon-basics.html#icon-names).
 - For a full list of supported sets and icons, [see here](https://icon-sets.iconify.design/).
@@ -155,13 +209,13 @@ In particular, the following limitations exist:
 <span class="text-lg mb-2 font-semibold">Example</span>
 
 ```md
-|lucide/air-vent|
-|twemoji/kite|
-|simple-icons/discord|
+|icon: lucide/air-vent|
+|icon: twemoji/kite|
+|icon: simple-icons/discord|
 
-`|lucide/tag| Tag`
-`|fa6-solid/user| User`
-`|mdi/alert-outline| Warning`
+`|icon: lucide/tag| Tag`
+`|icon: fa6-solid/user| User`
+`|icon: mdi/alert-outline| Warning`
 ```
 
 </div>
@@ -169,20 +223,20 @@ In particular, the following limitations exist:
 <div>
 <span class="text-lg font-semibold mr-1">Result</span>
 
-|lucide/air-vent|
-|twemoji/kite|
-|simple-icons/discord|
+|icon: lucide/air-vent|
+|icon: twemoji/kite|
+|icon: simple-icons/discord|
 
-`|lucide/tag| Tag`
-`|fa6-solid/user| User`
-`|mdi/alert-outline| Warning`
+`|icon: lucide/tag| Tag`
+`|icon: fa6-solid/user| User`
+`|icon: mdi/alert-outline| Warning`
 
 </div>
 </div>
 
 ## OEmbed
 
-[`|simple-icons/github| remark-oembed`](https://github.com/sergioramos/remark-oembed)
+[`|icon: simple-icons/github| remark-oembed`](https://github.com/sergioramos/remark-oembed)
 
 When pasted into an article on their own, the site will embed rich versions of some links.
 This only happens if the [OEmbed providers list](https://github.com/iamcal/oembed/tree/master/providers) includes the

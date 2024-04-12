@@ -19,7 +19,7 @@ the type of contributor.
 
 # Writers
 
-[`|lucide/book-check| Guidelines`](/a/meta/contributing/guidelines)
+[`|icon: lucide/book-check| Guidelines`](/a/meta/contributing/guidelines)
 
 We've come up with several ways to contribute articles, with varying levels of technical difficulty in mind.
 We're still working on making this easier, so you can expect that we'll update this section soon!
@@ -122,7 +122,7 @@ option.**
 12. A Cloudflare bot should leave a comment on your Pull Request with a link you can click to preview the site with
     your changes.
 13. Continue working on your article as needed, by navigating to the article file and clicking/tapping on the button
-    that looks like this: `|tabler/pencil|`
+    that looks like this: `|icon: tabler/pencil|`
 
     Your Pull Request will automatically update as you push commits to your fork.
 14. Keep an eye on your Pull Request, and address any comments and reviews people make.
@@ -153,7 +153,7 @@ Information on how you join us will be provided later.
 
 # Developers
 
-[`|lucide/book-check| Guidelines`](/a/meta/contributing/guidelines)
+[`|icon: lucide/book-check| Guidelines`](/a/meta/contributing/guidelines)
 
 We recommend the following workflow to anyone that wishes to contribute as a developer:
 
