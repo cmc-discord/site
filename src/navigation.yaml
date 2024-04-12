@@ -45,3 +45,7 @@
 /a/plurality:
   - path: .
     icon: lucide/users-round
+
+    children:
+      - path: tools
+        icon: lucide/wrench
