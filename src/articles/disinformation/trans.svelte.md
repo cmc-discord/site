@@ -25,6 +25,8 @@ Fuelling much of this hate is an ocean of disinformation, largely relying on a f
 We believe the best way to combat this disinformation is through education.
 This article contains all our research on relevant disinformation to date.
 
+<!--more-->
+
 If you've found something that we should include here (or you have a correction), please contact us or submit a
 Pull Request as explained in [the Contributing section](/a/meta/contributing/submission).
 

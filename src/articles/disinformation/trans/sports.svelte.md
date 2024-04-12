@@ -20,8 +20,11 @@ summary: >-
 
 The discussion regarding whether we should include trans folks in our sports (and how to categorise them) is
 long-running and divisive.
+
 Before we can get into the discussion proper, though, we'll need to talk about the history of sex-based segregation in
 sports.
+
+<!--more-->
 
 # Historical Segregation
 
@@ -33,7 +36,7 @@ In [What is First-Wave Feminism?](https://www.masterclass.com/articles/first-wav
 that the beginnings of this movement focused on a defined set of grievances, regarding suffrage, government
 representation, marriage and divorce laws, and employment.
 
-As explained in [Sex Segregation in Sports](https://books.google.ie/books?id=-t3EEAAAQBAJ), as late as the 1970s, there
+As explained in [Sex Segregation in Sports](https://books.google.com/books?id=-t3EEAAAQBAJ), as late as the 1970s, there
 were few roles considered "gender appropriate" for women and girls.
 Society expected them to focus on traditional (and low-wage if they were working) roles, such as cooking, cleaning,
 home-making and cosmetology.
@@ -41,7 +44,7 @@ When organised sports appeared in the US in the 19th century, we discouraged or 
 participating, resulting in sports largely being characterised as male-dominated and even hypermasculine, something
 that persists today.
 
-[Sex Segregation in Sports](https://books.google.ie/books?id=-t3EEAAAQBAJ) also explains that
+[Sex Segregation in Sports](https://books.google.com/books?id=-t3EEAAAQBAJ) also explains that
 [Title IX](https://en.wikipedia.org/wiki/Title_IX), which prohibits sex-based discrimination in all government-funded
 forms of education, was heavily contested by opponents who wished to restrict the rights of women in athletics,
 lobbying to exclude it.
@@ -277,7 +280,7 @@ Pull Request as explained in [the Contributing section](/a/meta/contributing/sub
    MasterClass.
    https://www.masterclass.com/articles/first-wave-feminism_
 
-3. [Sex Segregation in Sports: Why Separate Is Not Equal](https://books.google.ie/books?id=-t3EEAAAQBAJ)
+3. [Sex Segregation in Sports: Why Separate Is Not Equal](https://books.google.com/books?id=-t3EEAAAQBAJ)
    by Adrienne N. Milner, Jomills Henry Braddock II
 
    **Citation:** _Milner, A. N., Braddock, H. (2016).

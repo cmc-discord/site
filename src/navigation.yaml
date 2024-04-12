@@ -36,5 +36,8 @@
     icon: lucide/info
 
     children:
+    - path: recency
+      icon: lucide/clock-4
+
     - path: sports
       icon: lucide/trophy
