@@ -36,8 +36,12 @@
     icon: lucide/info
 
     children:
-    - path: recency
-      icon: lucide/clock-4
+      - path: recency
+        icon: lucide/clock-4
 
-    - path: sports
-      icon: lucide/trophy
+      - path: sports
+        icon: lucide/trophy
+
+/a/plurality:
+  - path: .
+    icon: lucide/users-round
