@@ -15,7 +15,7 @@ summary: >-
 ---
 
 <script lang="ts">
-
+    import * as Alert from "$lib/components/ui/alert";
 </script>
 
 A common talking point pushed by those who seek to limit trans folks' rights is the idea that transitioning is a new
@@ -23,6 +23,17 @@ concept.
 Often, they combine this rhetoric with claims of a "social contagion", and conspiracy theories about Big Pharma.
 
 <!--more-->
+
+<Alert.Root variant="destructive">
+<Alert.Title warning>Work in Progress!</Alert.Title>
+<Alert.Description>
+
+This page is a work in progress, and **should not be used as a primary source.**
+
+Please check back for the finalized version later.
+
+</Alert.Description>
+</Alert.Root>
 
 Trans people have existed in various forms, far longer than most folks realise.
 
@@ -34,9 +45,7 @@ Trans people have existed in various forms, far longer than most folks realise.
 
 # Affirming Care
 
-# Notes to Self
-
-(Remove for publication!)
+# Research Nodes
 
 - https://daily.jstor.org/gender-identity-in-weimar-germany/
 - https://en.wikipedia.org/wiki/Gender-affirming_surgery
