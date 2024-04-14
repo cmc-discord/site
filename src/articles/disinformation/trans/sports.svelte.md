@@ -197,6 +197,14 @@ This suggests that this is more about transphobia and misogyny than any idea of 
    - [This report from 2024](https://www.france24.com/en/live-news/20240325-dutch-women-s-darts-veterans-quit-over-transgender-team-mate)
      talks about how several Dutch cisgendered women's darts veterans quit when they realised their team included a trans
      woman, complaining about fairness in the sport.
+   - [SheWon.org](https://www.shewon.org/) ([Archived](https://web.archive.org/web/20240414133015/https://www.shewon.org/)),
+     which frames trans athletes as "males in women's sporting events" that stole cis women's achievements by
+     beating them, lists several non-physical sports, including billiards, darts, esports, poker, pool, and snooker.
+     It also lists numerous "non-athletic competitions", including Jeopardy game show wins, beauty competitions, scholarships, democratic elections, Forbes lists, and hot-dog-eating competitions.
+
+     The site also contains a list of trans-feminine athletes, including many of their deadnames.
+     Additionally, as is typical for those who would exclude trans folks from sports, the site pretends that
+     trans-masculine folks don't exist.
 
 # Direct Impact
 
@@ -429,28 +437,32 @@ Pull Request as explained in [the Contributing section](/a/meta/contributing/sub
     France 24.
     https://www.france24.com/en/live-news/20240325-dutch-women-s-darts-veterans-quit-over-transgender-team-mate_
 
-22. [Lynne Pinches: Pool player rejects professional contract after transgender policy U-turn](https://www.bbc.com/sport/wales/68183503)
+22. [SheWon.org](https://www.shewon.org/) ([Archived](https://web.archive.org/web/20240414133015/https://www.shewon.org/))
+
+    **Citation:** List of Female Athletes by Sport. (n.d.). She Won. Retrieved April 14, 2024, from https://www.shewon.org/
+
+23. [Lynne Pinches: Pool player rejects professional contract after transgender policy U-turn](https://www.bbc.com/sport/wales/68183503)
     published by the BBC
 
     **Citation:** _Lynne Pinches: Pool player rejects professional contract after transgender policy U-turn (2024, February 3).
     BBC.
     https://www.bbc.com/sport/wales/68183503_
 
-23. [Transgender snooker player Jamie Hunter criticised after winning US Women's Snooker Open](https://www.bbc.com/sport/snooker/62821241)
+24. [Transgender snooker player Jamie Hunter criticised after winning US Women's Snooker Open](https://www.bbc.com/sport/snooker/62821241)
     published by the BBC
 
     **Citation:** _Transgender snooker player Jamie Hunter criticised after winning US Women's Snooker Open (202, September 7).
     BBC.
     https://www.bbc.com/sport/snooker/62821241_
 
-24. [World Athletics Council decides on Russia, Belarus and female eligibility](https://worldathletics.org/news/press-releases/council-meeting-march-2023-russia-belarus-female-eligibility),
+25. [World Athletics Council decides on Russia, Belarus and female eligibility](https://worldathletics.org/news/press-releases/council-meeting-march-2023-russia-belarus-female-eligibility),
     by World Athletics
 
     **Citation:** _World Athletics Council decides on Russia, Belarus and female eligibility. (2023, March 23).
     World Athletics.
     https://worldathletics.org/news/press-releases/council-meeting-march-2023-russia-belarus-female-eligibility_
 
-25. [Trans women banned from track and field, intersex athletes restricted](https://www.washingtonblade.com/2023/03/24/trans-women-banned-from-track-and-field-intersex-athletes-restricted/)
+26. [Trans women banned from track and field, intersex athletes restricted](https://www.washingtonblade.com/2023/03/24/trans-women-banned-from-track-and-field-intersex-athletes-restricted/)
     by Dawn Ennis
 
     **Citation:** _Ennis D. (2023, March 24).
@@ -458,20 +470,20 @@ Pull Request as explained in [the Contributing section](/a/meta/contributing/sub
     Washington Blade.
     https://www.washingtonblade.com/2023/03/24/trans-women-banned-from-track-and-field-intersex-athletes-restricted/_
 
-26. [Mapping Attacks on LGBTQ Rights in U.S. State Legislatures in 2024](https://www.aclu.org/legislative-attacks-on-lgbtq-rights-2024)
+27. [Mapping Attacks on LGBTQ Rights in U.S. State Legislatures in 2024](https://www.aclu.org/legislative-attacks-on-lgbtq-rights-2024)
     by the ALCU
 
     **Citation:** _Mapping Attacks on LGBTQ Rights in U.S. State Legislatures in 2024. (2024).
     American Civil Liberties Union.
     https://www.aclu.org/legislative-attacks-on-lgbtq-rights-2024_
 
-27. [Trans Legislation Tracker](https://translegislation.com)
+28. [Trans Legislation Tracker](https://translegislation.com)
 
     **Citation:** _Trans Legislation Tracker. (2024).
     Trans Legislation Tracker.
     https://translegislation.com_
 
-28. [An Olympic Dream Falters Amid Track's Shifting Rules](https://www.nytimes.com/2024/01/24/world/africa/olympic-intersex-maximila-imali.html)
+29. [An Olympic Dream Falters Amid Track's Shifting Rules](https://www.nytimes.com/2024/01/24/world/africa/olympic-intersex-maximila-imali.html)
     by Jeré Longman
 
     **Citation:** _Longman J. (2024, Jan 24).
@@ -479,7 +491,7 @@ Pull Request as explained in [the Contributing section](/a/meta/contributing/sub
     New York Times.
     https://www.nytimes.com/2024/01/24/world/africa/olympic-intersex-maximila-imali.html_
 
-29. [IAAF publishes briefing notes and Q&A on Female Eligibility Regulations](https://worldathletics.org/news/press-release/questions-answers-iaaf-female-eligibility-reg)
+30. [IAAF publishes briefing notes and Q&A on Female Eligibility Regulations](https://worldathletics.org/news/press-release/questions-answers-iaaf-female-eligibility-reg)
     by World Athletics
 
     **Citation:** _IAAF publishes briefing notes and Q&A on Female Eligibility Regulations. (2019).
