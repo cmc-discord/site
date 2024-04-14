@@ -3,7 +3,10 @@ tags:
   - plurality
   - tooling
 authors: []
-title: Tooling
+
+title: Plurality Tooling
+navigationTitle: Tools
+
 summary: Common tools used in plural communities and quality of life features.
 ---
 

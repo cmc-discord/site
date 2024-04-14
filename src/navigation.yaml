@@ -47,5 +47,14 @@
     icon: lucide/users-round
 
     children:
+      - path: disinformation
+        icon: lucide/message-circle-warning
+
+      - path: moderation
+        icon: lucide/gavel
+
+      - path: resources
+        icon: lucide/book-text
+
       - path: tools
         icon: lucide/wrench

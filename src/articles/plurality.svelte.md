@@ -12,7 +12,7 @@ summary: Learn about the concept of plurality and dissassociative disorders.
 Plurality, also known as multiplicity, is the existence of multiple self-aware
 entities in a single brain. It's a concept that stems from dissassociative
 disorders such as Disassociative Identity Disorder (DID) and Other Specified
-Disassocitive Disorder (OSDD) as specified by the DSM 5 |cite: 10.1176/appi.books.9780890425787|
+Disassocitive Disorder (OSDD) as specified by the DSM 5
 but there are many other situations that can cause things like this to happen,
 the existence of plurality is in itself **not** problematic or negative.
 
@@ -37,5 +37,7 @@ systems are valid regardless of their origin, expression, or identity.
   articles and resources relating to disassociative disorders and systems.
 - [MoreThanOne](https://morethanone.info) for their helpful descriptions of the
   concepts and terms used in plural spaces and systems.
+
+<!-- |cite: 10.1176/appi.books.9780890425787| -->
 
 |bibliography|
