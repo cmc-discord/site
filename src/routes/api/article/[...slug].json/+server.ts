@@ -1,5 +1,4 @@
 import type { Article } from "$lib/types/article";
-import { equalsIgnoringCase } from "$lib/utils";
 import { getGitTimes } from "$lib/utils-server";
 
 import { json } from "@sveltejs/kit";
@@ -18,6 +17,12 @@ async function getArticle(slug: string): Promise<Article | null> {
 		// @ts-expect-error This is not properly typed.
 		const metadata = paths[path].metadata as Article;
 		const times = await getGitTimes(path);
+
+		if (metadata.tags) {
+			metadata.tags = metadata.tags.sort((first, second) =>
+				first.localeCompare(second),
+			)
+		}
 
 		return { ...metadata, ...times } satisfies Article;
 	} else {
