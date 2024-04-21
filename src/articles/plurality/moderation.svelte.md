@@ -63,9 +63,45 @@ In general:
   It is crucial you ensure plural systems in your spaces aren't afraid of judgement from other users for using these
   tools, and you will need to be vigilant about normalising their use.
 
-For a list of recommended tools, see [the tools page](/a/plurality/tools).
+For a list of recommended tools (and any relevant notes of caution), see [the tools page](/a/plurality/tools).
 
 # Infractions
 
 Moderating plural systems when things go wrong can be daunting, but it is less complicated than many people assume.
-There are several approaches you can take, depending on the needs of your community.
+Several workable approaches exist, depending on the needs of your community.
+
+## System Model
+
+Under the system model, your moderation team should work under the idea of system accountability.
+**This is the recommended model for most communities**, for reasons we'll get into below.
+
+System accountability means that you should hold plural systems accountable for the actions of their members.
+Essentially, you should log infractions against the system itself, while taking into account the nuances of the
+individual system and its members.
+
+### Downsides
+
+This approach isn't ideal for several reasons:
+
+- Plural systems with implicit hierarchies are rare; systems with explicit hierarchies even more so.
+  Most systems don't have a chain of authority or care, and this approach sacrifices nuance to lower moderator burden.
+- Plural systems are incredibly varied, and may need to deal with sudden changes, including the appearance of new
+  headmates.
+  This can make things unpredictable, and it is important to recognise when this causes problems to avoid
+  over-moderating the system.
+- System dynamics are complex, and system members are individuals with their own thoughts and wills.
+  For this reason, many systems will understandably find it unfair when you punish them for another headmate's actions.
+
+### Suitability
+
+This approach best matches communities with smaller staff teams and larger user bases, especially when you lack staff
+who have experience with plural systems, or when your moderation team regularly suffers from burn-out.
+
+However, it is a hard model to implement fairly, especially from the viewpoint of most plural systems.
+If you choose this model, you must ensure that your staff team is ready to engage in good faith when issues arise,
+and that they understand plurality, and the related challenges users may face.
+
+In particular, your staff should be ready to give plural systems the benefit of the doubt when appropriate.
+Moderating with empathy is always key.
+
+## Headmate Model
