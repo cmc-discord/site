@@ -102,6 +102,45 @@ If you choose this model, you must ensure that your staff team is ready to engag
 and that they understand plurality, and the related challenges users may face.
 
 In particular, your staff should be ready to give plural systems the benefit of the doubt when appropriate.
-Moderating with empathy is always key.
+Moderating with empathy is always key, and it is often helpful to remain active as a user in your spaces, so you can
+get to know plural systems in your community and learn what to expect from them.
 
 ## Headmate Model
+
+Under the headmate model, your moderation team should work under the idea of individual headmate accountability.
+This approach requires a moderation team deeply familiar with plurality and moderation tooling that can keep track of
+individual headmates.
+
+Headmate accountability means that you should hold individual headmates accountable for their actions, rather than
+treating plural systems as single units.
+
+### Downsides
+
+This can be a challenging approach to implement for several reasons:
+
+- You'll need dedicated tooling to properly action and keep track of infractions.
+  It will need to integrate with any other plurality tooling your community uses, and it will need to be able to keep
+  separate moderation logs for each headmate.
+- Your moderation team must be innately familiar with plurality and what it means to be part of a plural system.
+  Staff members that don't have a deep understanding of plurality will find it difficult to handle moderation under
+  this model.
+- This approach is a lot of work compared to the system model, and likely requires a large team of trained staff to
+  successfully pull off in all but the smallest communities.
+- You can't cover every eventuality with this approach — there will always be situations where moderating an
+  entire system becomes necessary.
+
+### Suitability
+
+This approach best matches small, plurality-focused communities with a dedicated and understanding staff team.
+It is challenging to implement at scale and requires an inordinate amount of work, especially when dealing with
+platforms that lack tooling for plural systems.
+
+We've included this model because it is the most system-friendly approach, validating headmates' individuality and
+respecting their individual wills.
+Whether it is the most suitable option for your community is down to its structure, needs, and the energy available
+to your staff team.
+
+We must again stress that **this is a challenging model to implement, and you should pick the system model if you have
+any doubts about this one.**
+"Perfect" is the enemy of "good", and it is important not to over-extend yourself or your team, especially if you
+lack experience with plural systems.
