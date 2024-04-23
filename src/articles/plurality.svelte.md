@@ -1,7 +1,6 @@
 ---
 tags:
   - plurality
-  - disinformation
 authors: []
 title: Plurality
 summary: Learn about the concept of plurality and dissassociative disorders.
