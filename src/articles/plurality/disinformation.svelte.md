@@ -112,11 +112,54 @@ forcing folks to be right-handed.
 As acceptance grew, left-handed folks felt safe to be themselves and stopped hiding.
 The same is true for many minority groups, including plural folk.
 
-# Roles
+# System Bucketing
+
+Every plural system is unique.
+Generalisations and attempts to sort systems into buckets are often rather harmful, especially given they're often used
+as an excuse to discriminate against "certain types" of systems.
+
+The most common example of this is through sorting systems into their origins:
+
+- "Traumagenic" refers to systems formed through trauma.
+- "Endogenic" refers to systems without traumatic origins, or with unknown origins.
+
+It is important to stress that all plural systems are unique and valid, and there's no reason whatsoever to
+discriminate against them, regardless of their origins or other factors.
+Discrimination is always harmful, but intra-community discrimination is infinitely more so, as it denies support,
+resources, and a feeling of community to systems that others feel don't "fit in".
+
+Unfortunately, this is a surprisingly common problem, and causes immeasurable damage to both plural systems and the
+plural community at large.
 
 # System Structure
 
-# System Origins
+Outside the basic concept of plurality, it is important to avoid making assumptions about how any plural system
+functions.
+Every system is unique, with its own approaches to structure, function, and form.
+For that reason, it is critical to avoid making assumptions about any systems you happen to encounter.
+
+Some examples of assumptions to avoid are:
+
+- **Emotional labour** — Many systems are open to talking about plurality, but it can be incredibly overwhelming to be
+  bombarded with questions and demands for information.
+  It is important to approach plurality from an educated viewpoint, so we recommend exploring online resources before
+  quizzing any systems.
+  You can find some recommended resources on the [resources page](/a/plurality/resources).
+- **Member archetypes** — While system members will be proficient at different things, they're still separate entities
+  with their own thoughts and wills, and it is important not to assign roles to them without permission.
+  You should also avoid treating them as if their roles and proficiencies fully define them.
+- **Suggestion consent** – Suggestions hold a lot of power for many plural systems, and you must be responsible when
+  trying to help out.
+  Do not assume that a system wants your help unless you confirm it with them, and try to avoid pushing systems or
+  headmates towards predetermined outcomes.
+  For example, if a system is looking for names for a new headmate, you should provide links to name lists rather than
+  pushing for or suggesting a specific name you like.
+- **System origins** — How or when the system formed, what the reason was, or if there's a known reason at all.
+  It is also worth noting that this is an uncomfortable topic for many systems, and you shouldn't ask about it unless
+  you're sure they'll be fine with it.
+
+Remember to treat plural systems with the same respect you'd give anyone else, and get to know their members as
+individuals in their own right.
 
 # Treatment
 
