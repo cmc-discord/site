@@ -18,12 +18,10 @@ This article contains several common pieces of disinformation, and explores the 
 
 <!--more-->
 
-# Disorder
-
 # Danger
 
 Popular media tends to portray various forms of plurality as inherently dangerous.
-While this trope isn't always harmful, seemingly many people have trouble separating fictional media from reality,
+While this trope isn't always harmful, seemingly many folks have trouble separating fictional media from reality,
 and this has resulted in discrimination aimed at real-life plural systems.
 
 Some examples of poor plural representation include:
@@ -49,17 +47,74 @@ Some examples of poor plural representation include:
 As is probably clear from the descriptions, these are examples of fictional representations.
 The reality is that most members of plural systems are just like anyone else.
 In fact, reports like [this one from 2017](https://bpded.biomedcentral.com/articles/10.1186/s40479-017-0053-9) show that
-one cannot correlate dissociative disorders with criminal behaviour, and people suffering from dissociative disorders
+one cannot correlate dissociative disorders with criminal behaviour, and folks suffering from dissociative disorders
 are often the subjects of violent crimes, rather than the perpetrators.
 
 It is important to recognise when you have an internalised bias based on this form of disinformation, and to avoid
-letting it cloud your judgement when working with plural systems.
+letting it cloud your judgement when interacting with plural systems.
+
+# Disorder
+
+While many folks only think of plurality in the context of mental disorders, many non-disordered systems exist.
+[The DSM-5](https://www.psychiatry.org/psychiatrists/practice/dsm) defines a disorder as follows:
+
+> A _mental disorder_ is a syndrome characterized by clinically significant disturbance in an individual's cognition,
+> emotion regulation, or behavior that reflects a dysfunction in the psychological, biological, or developmental
+> processes underlying mental functioning.
+> Mental disorders are usually associated with significant distress or disability in social, occupational, or other
+> important activities.
+
+Many systems simply don't meet this definition.
+Some don't experience negative effects from their plurality, while others experience positive effects through a
+symbiotic relationship with their headmates.
+
+It is important to avoid making assumptions about plural systems.
+Instead, you should talk with them and show an interest in learning about and understanding their unique experiences.
 
 # Medicalisation
 
-# Recency
+As with many psychological states, it is important not to medicalise plurality.
+While it is true some systems will need therapy and other support from medical professionals, this will not be the case
+for many.
+Indeed, many members of the plural community believe in self-diagnosis, and many approaches exist to aid with this.
+
+It is important to understand that you can’t force anyone into seeking therapy, even if you think they need it.
+This is not just rude — it is actively harmful, and will make the plural systems around you feel uncomfortable and
+unsafe.
+
+Above almost everything, finding community tends to be helpful and therapeutic for plural systems.
+[This report from 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5468408/) supports this, as does
+[this presentation on Power to the Plurals](https://powertotheplurals.com/how-they-took-the-multiple-out-of-multiplicity-understanding-the-history-of-dissociative-identity-disorder-did-terminology/).
+
+# Recency & Visibility
+
+A relatively common misconception is that the concept of plurality is new, and some blame the rise in self-identified
+plural systems on the so-called "TikTok generation".
+However, this couldn't be further from the truth.
+
+As pointed out by [this research paper](https://www.researchgate.net/profile/Richard-Loewenstein/publication/292985331_Dissociative_Disorders/links/56b41a3108ae5deb2657ec30/Dissociative-Disorders.pdf),
+a 1646 medical report of a potential plurality was the first known, written by Paracelsus.
+Eberhard Gmelin described another potential instance in 1791.
+By the early 19th century, such cases were becoming more common, with regular reports on both sides of the Atlantic.
+
+As acceptance for minority groups grows, those minorities feel more comfortable openly expressing themselves and
+talking about their experiences.
+The following graph often neatly illustrates this effect:
+
+<div class="mx-auto" style="max-width: 50rem;">
+
+[![Graph showing the reported rate of left-handedness grew alongside acceptance.](/images/graphs/left-handed.png)](/images/graphs/left-handed.png)
+
+</div>
+
+Left-handedness isn't a trend or "social contagion", left-handed folks have always existed, and we simply stopped
+forcing folks to be right-handed.
+As acceptance grew, left-handed folks felt safe to be themselves and stopped hiding.
+The same is true for many minority groups, including plural folk.
 
 # Roles
+
+# System Structure
 
 # System Origins
 
