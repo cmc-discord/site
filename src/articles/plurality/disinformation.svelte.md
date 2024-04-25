@@ -163,3 +163,24 @@ individuals in their own right.
 
 # Treatment
 
+Treatment approaches for plurality-related disorders are a challenging thing to talk about.
+As mentioned, many non-disordered systems exist, and many of those systems won't need any treatment.
+
+For systems that do need external help, therapists generally take one of several approaches:
+
+- The traditional/western approach, working with the plural system to merge all of its members into a single entity.
+  This approach can be traumatic, and some consider it a western-ism, rooted in the idea that every disorder is a
+  deviation from the idea of what a self is and does.
+  For more information on that,
+  take a look at [this article from 2023](https://www.scientificamerican.com/article/a-traumatized-woman-with-multiple-personalities-gets-better-as-her-parts-work-as-a-team/).
+- The modern/non-western approach, working with the plural system and individual headmates to find common ground and
+  stability.
+  The aim here is to encourage cooperation and help the headmates to create a symbiotic relationship, where they all
+  help each other and exist together.
+  This approach anecdotally seems rather successful, and is in line with common knowledge in the plural community.
+  Accepting and supportive spaces may also make this treatment approach more effective.
+
+It is worth stressing that plural systems of all types and from all walks of life exist, and your idea of "disordered"
+is unlikely to match others'.
+It is rude and harmful to push plural systems away based on that, or whether they're receiving treatment.
+Each plural system's journey is as unique as they are, and you'll gain nothing positive from judging them.
