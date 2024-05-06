@@ -39,10 +39,10 @@ All plural systems are valid, regardless of their origins, expression, or identi
 This section would not have been possible to write without the support of the plural community and several key
 resources:
 
-- [Pluralpedia](https://pluralpedia.org/w/Main_Page), for their list of research
-  articles and resources about dissociative disorders and systems.
-- [MoreThanOne](https://morethanone.info), for their helpful descriptions of the
-  concepts and terms used in plural spaces and systems.
+- [Pluralpedia](https://pluralpedia.org/w/Main_Page), for their list of research articles and resources about
+  dissociative disorders and systems.
+- [MoreThanOne](https://morethanone.info), for their helpful descriptions of the concepts and terms used in plural
+  spaces and systems.
 
 For more information on the sources used for articles covering this topic, see the attribution sections at the bottom of
 each.
