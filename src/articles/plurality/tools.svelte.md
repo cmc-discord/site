@@ -45,6 +45,10 @@ to allow them to be themselves.
 Plural systems commonly use the following tools to keep their systems organised, keep track of switches, create a
 public profile, and for other purposes.
 
+- [Lighthouse](https://www.writelighthouse.com/) is a journaling site designed for plural systems.
+  It allows systems to write system-accessible and private, password-protected journals, as well as providing trauma
+  worksheets and space to write about inner worlds.
+
 - [pronouns.cc](https://pronouns.cc) is one of several sites allowing users to display information about their gender
   and pronouns, along with preferred names and terms.
   This site includes support for adding "sub-members" to your profile, allowing plural systems to easily list their
