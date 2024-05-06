@@ -7,45 +7,49 @@ authors: []
 title: Plurality Tooling
 navigationTitle: Tools
 
-summary: Common tools used in plural communities and quality of life features.
+summary: Accessibility tooling for plural systems, and tools for system management.
 ---
 
-In plural communities tools such as bots, mobile apps and similar are often used
-for making their system easier to manage or allowing different members of systems
-to communicate easier. Below you can find some commonly used tools on platforms
-such as Discord, as well as apps some systems use to easier manage. These tools
-are fairly common place in plural-accepting communities, however their use in
-communities which are either unaware of plurality as a whole or don't cater to
-systems specifically usually lack the quality of life tools most use.
+Social media platforms rarely account for plural systems, and interacting authentically can be challenging.
+In many plural communities, accessibility tooling exists to help with plural system management or to allow individual
+system members to interact individually and authentically.
+
+There exists software and other tooling to help plural systems keep track of their switches, maintain member profiles,
+and otherwise keep their systems healthy.
 
 <!--more-->
 
-# Discord Bots
+# Social Tools
 
-- [PluralKit](http://pluralkit.me/) is the go-to Discord bot for plural systems,
-  allowing system members to interact as themselves via Discord webhooks,
-  however this can add some friction to discussions as messages move around,
-  this is the only realistic option for plural systems to interact
-  authentically.
-- [Proxyfox](https://proxyfox.dev/) was a Discord bot designed to specifically
-  tailor plural systems, it was created by a small team as an opwn source
-  alternative to PluralKit, however as of March 1st, 2024 the bot has since been
-  shut down. It should be noted it is possible to host the bot yourself.
-- [Tupperbox](https://tupperbox.app/) is a bot mainly tailored to roleplaying
-  communities. It also has a lot of problems such as a permissions system to
-  limit the use to "genuine" plural systems. It also doesn't allow more than one
-  account to be linked to the system at a time.
+Plural systems commonly use the following tools to enhance their social media experience, to feel more comfortable, and
+to allow them to be themselves.
 
-# Mobile Apps
+## Discord
 
-- [Simply Plural](https://app.apparyllis.com) is a mobile and web app that
-  allows systems to keep track of their members, who is fronting, how long each
-  member is fronting and more. It goes as in depth as allowing sub systems, and
-  is generally a useful tool to have outside of Discord communities.
+- [PluralKit](http://pluralkit.me/) is the most popular Discord bot for plural systems.
+  Designed to allow plural systems to interact authentically, this bot provides a full suite of tools for managing one's
+  system and interacting with others as an individual system member.
 
-# Other Tools
+  Due to Discord limitations, this bot uses webhooks, which may cause messages to jump around as the bot deletes and
+  reposts them.
 
-- [Pronouns.cc](https://pronouns.cc) is a pronoun page alternative to
-  pronouns.page which specifically has the option to add "sub members" to your
-  page, allowing plural systems to list their members, as well as information
-  about them with ease.
+  Some Discord communities use [Tupperbox](https://tupperbox.app/) instead of PluralKit, which can work in a pinch.
+  However, Tupperbox is a role-playing and RPG bot, and includes some features that are harmful to the plural community.
+  We recommend using PluralKit instead whenever possible.
+
+  [You may self-host PluralKit if required](https://github.com/PluralKit/PluralKit#running), but this is
+  inconvenient for systems in your spaces as they will need to duplicate their settings for your version.
+
+# Personal Tools
+
+Plural systems commonly use the following tools to keep their systems organised, keep track of switches, create a
+public profile, and for other purposes.
+
+- [pronouns.cc](https://pronouns.cc) is one of several sites allowing users to display information about their gender
+  and pronouns, along with preferred names and terms.
+  This site includes support for adding "sub-members" to your profile, allowing plural systems to easily list their
+  members and information about them.
+
+- [Simply Plural](https://apparyllis.com/) for Android, iOS and Web is a piece of software designed to allow systems
+  to keep track of their members and switches, who is fronting and for how long, and more.
+  It supports nested systems, sharing, and several other advanced features.
