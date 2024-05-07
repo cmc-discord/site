@@ -35,7 +35,12 @@ gathered here.
 - [r/plural on Reddit](https://www.reddit.com/r/plural/), a subreddit for those under the plurality umbrella, or who
   wish to learn more about it.
 
-# Deep Dives
+# Deeper Dives
 
+- [body et. al](https://www.youtube.com/@bodyetal/playlists) is a YouTube channel run by two plural systems, which often
+  posts discussions and educational videos about plurality and related subjects.
 - [Plural Respect](https://pluralrespect.neocities.org/) is a resource for those who want to understand plural systems
   more deeply, covering common community problems and pitfalls when interacting with systems.
+- [The Rings System](https://www.youtube.com/@TheRingsSystem) is a YouTube channel run by a plural system with 40+
+  members, which often posts educational content about plural systems, with a wide variety of useful dives into
+  specific subjects.

@@ -50,6 +50,9 @@
       - path: disinformation
         icon: lucide/message-circle-warning
 
+      - path: etiquette
+        icon: lucide/message-circle-heart
+
       - path: moderation
         icon: lucide/gavel
 
