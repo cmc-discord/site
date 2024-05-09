@@ -184,3 +184,24 @@ It is worth stressing that plural systems of all types and from all walks of lif
 is unlikely to match others'.
 It is rude and harmful to push plural systems away based on that, or whether they're receiving treatment.
 Each plural system's journey is as unique as they are, and you'll gain nothing positive from judging them.
+
+
+---
+
+# Attribution
+
+1. [The Two Faces of Dr. Jekyll](https://en.wikipedia.org/wiki/The_Two_Faces_of_Dr._Jekyll), Wikipedia
+2. [Split (2016 American Film)](https://en.wikipedia.org/wiki/Split_(2016_American_film), Wikipedia
+3. [Nightmare Reaper](https://www.pcgamingwiki.com/wiki/Nightmare_Reaper), PC Gaming Wiki
+4. Webermann, A. R., & Brand, B. L. (2017). Mental illness and violent behavior: the role of dissociation.
+   Borderline Personality Disorder and Emotion Dysregulation, 4(1).
+   [https://doi.org/10.1186/s40479-017-0053-9](https://doi.org/10.1186/s40479-017-0053-9)
+5. [DSM-5](https://www.psychiatry.org/psychiatrists/practice/dsm), American Psychiatric Association
+6. Ribáry, G., Lajtai, L., Demetrovics, Z., & Maraz, A. (2017). Multiplicity: An Explorative Interview Study on
+   Personal Experiences of People with Multiple Selves. Frontiers in Psychology, 8.
+   [https://doi.org/10.3389/fpsyg.2017.00938](https://doi.org/10.3389/fpsyg.2017.00938)
+7. [How they took the Multiple out of Multiplicity](https://powertotheplurals. com/how-they-took-the-multiple-out-of-multiplicity-understanding-the-history-of-dissociative-identity-disorder-did-terminology/),
+   The Plural Association
+8. [Dissociative Disorders](https://www.researchgate.net/profile/Richard-Loewenstein/publication/292985331_Dissociative_Disorders/links/56b41a3108ae5deb2657ec30/Dissociative-Disorders.pdf), Richard . Loewenstein and Frank W. Putnam
+9. [A New Therapy for Multiple Personality Disorder Helps a Woman with 12 Selves](https://www.scientificamerican.com/article/a-traumatized-woman-with-multiple-personalities-gets-better-as-her-parts-work-as-a-team/),
+   Scientific American
