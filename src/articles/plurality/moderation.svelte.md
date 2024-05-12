@@ -25,7 +25,8 @@ plural systems:
   "endogenic" and "traumagenic".
 - If you're able to find relevant accessibility tools, mention them and what they're intended for.
   Limit their use to accessibility purposes, but allow for users that are exploring themselves.
-  Some plurality tools may also be useful for folks exploring gender transition.
+  Some plurality tools may also be useful for therians, folks exploring gender transition, and others with changing
+  identities.
 - If your policies don't already include one, consider adding a rule that requires your users to respect other
   individuals' accessibility needs.
 - If possible, explain the basics of plurality, and provide links to resources about it.
