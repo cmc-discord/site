@@ -62,7 +62,6 @@ A few common assumptions are worth avoiding:
 - Don't assume that headmates follow the identity of the system's body, or each other.
   Headmates may have different sexual and romantic orientations and pronouns, or be different genders and even species.
 - If a system includes headmates that are "little" (younger than the body's age), treat them appropriately.
-  Don't
   However, don't infantilise or baby them without getting their permission first.
 
 # Humour
