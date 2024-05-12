@@ -9,8 +9,6 @@
 	import { page } from "$app/stores";
 	import { afterNavigate } from "$app/navigation";
 
-	import { truncateString } from "$lib/utils";
-
 	import Metadata from "$lib/components/head/Metadata.svelte";
 	import { Separator } from "$lib/components/ui/separator";
 
@@ -33,6 +31,14 @@
 
 	let mainElement;
 	let usePagefind = excerptMode ? undefined : true;
+
+	$: sortedTags = tags.sort((first, second) =>
+		first.localeCompare(second),
+	)
+
+	$: sortedAuthors = authors.sort((first, second) =>
+		first.localeCompare(second),
+	)
 
 	afterNavigate(() => {
 		twemoji.parse(mainElement, {
@@ -129,10 +135,10 @@
 		<h1 class="mb-0 font-semibold text-3xl">{title}</h1>
 		<h5 class="mb-4 text-muted-foreground" data-toc-ignore>{summary}</h5>
 
-		{#if tags.length > 0 || authors.length > 0}
+		{#if sortedTags.length > 0 || sortedAuthors.length > 0}
 			<div class="flex flex-row flex-nowrap overflow-x-auto space-x-2 mb-3 pb-2" data-pagefind-ignore>
-				{#if authors.length > 0}
-					{#each authors as author}
+				{#if sortedAuthors.length > 0}
+					{#each sortedAuthors as author}
 						<a href="/search?authors={author}" class="!decoration-0 !no-underline border rounded-md">
 							<div class="flex flex-row text-sm items-center rounded bg-accent text-accent-foreground capitalize p-2 whitespace-nowrap">
 								<User size="1rem" class="mr-2" />
@@ -147,8 +153,8 @@
 					{/each}
 				{/if}
 
-				{#if tags.length > 0 }
-					{#each tags as tag}
+				{#if sortedTags.length > 0 }
+					{#each sortedTags as tag}
 						<a href="/t/{tag}" class="!decoration-0 !no-underline border rounded-md">
 							<div class="flex flex-row text-sm items-center rounded bg-secondary capitalize p-2 whitespace-nowrap">
 								<Tag size="1rem" class="mr-2" />

@@ -27,6 +27,12 @@ async function getArticles(tag: string): Promise<Article[]> {
 				const times = await getGitTimes(path);
 				const article = { ...data, ...times, slug } satisfies Article;
 
+				if (article.tags) {
+					article.tags = article.tags.sort((first, second) =>
+						first.localeCompare(second),
+					)
+				}
+
 				const hasTag = (value: string) => equalsIgnoringCase(value, tag);
 
 				if (article.tags?.some(hasTag)) {
