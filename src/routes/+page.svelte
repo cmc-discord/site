@@ -3,42 +3,9 @@
 	import Metadata from "$lib/components/head/Metadata.svelte";
 	import { truncateString } from "$lib/utils";
 	import { LinkIcon } from "lucide-svelte";
-	import { afterNavigate } from "$app/navigation";
-	import type { NavigationRoot } from "$lib/data";
-	import type { Article } from "$lib/types/article";
 
-	let sections: Array<{path: string, title: string, description: string}> = [];
-
-	afterNavigate(async () => {
-		await getNavigationTree();
-	});
-
-	async function getNavigationTree() {
-		const response = await fetch("/api/navigation.json");
-		const allSections: NavigationRoot = await response.json();
-		const foundSections: Array<{path: string, title: string, description: string}> = [];
-
-		for (let [key,] of Object.entries(allSections)) {
-			const path = key.slice(2);
-			const articleResponse = await fetch(`/api/article${path}.json`);
-			const article: Article | null = await articleResponse.json();
-
-			console.log({path, article})
-
-			if (article === null) {
-				continue;
-			}
-
-			foundSections.push({
-				path: key,
-				title: article.title,
-				description: article.summary
-			});
-		}
-
-		sections = foundSections.sort((left, right) => {
-			return left.title.toLowerCase().localeCompare(right.title.toLowerCase(), undefined)
-		})
+	export let data: {
+		sections: Array<{path: string, title: string, description: string}>
 	}
 </script>
 
@@ -94,7 +61,7 @@
 	</p>
 
 	<div class="my-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 grid-flow-row gap-4">
-		{#each sections as section}
+		{#each data.sections as section}
 			<a class="h-32 w-full " href={section.path}>
 				<div class="rounded-lg border bg-card text-card-foreground shadow-sm w-full h-full p-6">
 					<p class="text-lg font-semibold leading-none tracking-tight flex flex-row mb-2">
