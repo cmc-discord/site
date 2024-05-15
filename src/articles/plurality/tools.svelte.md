@@ -70,4 +70,5 @@ public profile, and for other purposes.
 
 - [Simply Plural](https://apparyllis.com/) for Android, iOS and Web is a piece of software designed to allow systems
   to keep track of their members and switches, who is fronting and for how long, and more.
-  It supports nested systems, sharing, and several other advanced features.
+  It supports nested systems (also known as subsystems; plural systems within plural systems),
+- sharing, and several other advanced features.
