@@ -33,7 +33,7 @@
 	<div class="flex flex-col space-y-4 mb-2">
 		{#if data.articles.length > 0}
 			{#each data.articles as article}
-				<a class="p-4 rounded-md hover:bg-secondary no-header-links" href="/a/{article.slug}">
+				<a class="p-4 rounded-md hover:bg-accent no-header-links" href="/a/{article.slug}">
 					<svelte:component this={article.content} />
 
 					<p class="mb-2">

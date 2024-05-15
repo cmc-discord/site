@@ -359,7 +359,7 @@
 								Loading result...
 							{:then data}
 								<a href={data.url.replace(".html", "")}>
-									<div class="flex flex-col space-y-2 p-4 rounded-md hover:bg-secondary">
+									<div class="flex flex-col space-y-2 p-4 rounded-md hover:bg-accent">
 										<span class="text-lg font-medium">{data.meta.title}</span>
 
 										<span>

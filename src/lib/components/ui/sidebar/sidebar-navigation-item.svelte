@@ -40,7 +40,7 @@
 
 <Button
 	href={item.slug}
-	variant={active ? "secondary" : "ghost"}
+	variant={active ? "accent" : "ghost"}
 	class={cn(
 		"sidebar-navigation-item",
 		"font-medium text-left transition-colors flex flex-row items-center content-center w-full self-start justify-start my-1",

@@ -9,7 +9,7 @@
 </script>
 
 <Button {href} {target}
-        variant={emphasis ? "secondary" : "ghost"}
+        variant={emphasis ? "accent" : "ghost"}
         size="icon"
         class="font-medium text-lg transition-colors {hideOnTinyScreens ? 'hidden sm:flex' : 'sm:hidden'}"
 >

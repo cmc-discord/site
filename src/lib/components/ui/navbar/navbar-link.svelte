@@ -10,7 +10,7 @@
 <a href={href}
    {target}
 >
-	<Button variant={emphasis ? "secondary" : "ghost"} class="font-medium text-lg transition-colors">
+	<Button variant={emphasis ? "accent" : "ghost"} class="font-medium text-lg transition-colors">
 		<slot />
 	</Button>
 </a>

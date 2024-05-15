@@ -54,7 +54,7 @@
 	</Drawer.Portal>
 </Drawer.Root>
 
-<div class="border-b sticky top-0 bg-background z-50">
+<div class="border-b sticky top-0 bg-background z-50 navbar">
 	<div class="flex justify-between h-16 items-center px-4">
 		<!-- Add navigation items -->
 		<div class="flex">

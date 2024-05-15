@@ -35,6 +35,8 @@
 	</p>
 </section>
 
+<hr class="mt-5" />
+
 <section class="mt-4">
 	<h2 class="font-semibold text-2xl">Sponsors</h2>
 
@@ -49,7 +51,7 @@
 	</div>
 </section>
 
-<hr class="my-2" />
+<hr class="my-5" />
 
 <div data-pagefind-ignore>
 	<h2 class="title font-semibold text-2xl">
