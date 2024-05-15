@@ -11,8 +11,6 @@ export async function load({ fetch }) {const response = await fetch("/api/naviga
 		const articleResponse = await fetch(`/api/article${path}.json`);
 		const article: Article | null = await articleResponse.json();
 
-		console.log({path, article})
-
 		if (article === null) {
 			continue;
 		}
