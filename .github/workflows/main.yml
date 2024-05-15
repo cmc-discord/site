@@ -13,7 +13,7 @@ jobs:
       contents: read
       deployments: write
 
-    name: Deploy Preview to Cloudflare Pages
+    name: Deploy Prod
 
     steps:
       - uses: actions/checkout@v3
@@ -29,7 +29,7 @@ jobs:
           version: 8
 
       - name: Build site
-        run: pnpm build
+        run: pnpm install && pnpm build
 
       - name: Deploy to Cloudflare Pages
         uses: AdrianGonz97/refined-cf-pages-action@v1

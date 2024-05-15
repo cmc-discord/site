@@ -12,7 +12,7 @@ jobs:
       pull-requests: write
       deployments: write
 
-    name: Deploy Preview to Cloudflare Pages
+    name: Deploy Preview
 
     steps:
       - uses: actions/checkout@v3
@@ -31,7 +31,7 @@ jobs:
           version: 8
 
       - name: Build site
-        run: pnpm build
+        run: pnpm install && pnpm build
 
       - name: Deploy to Cloudflare Pages
         uses: AdrianGonz97/refined-cf-pages-action@v1
