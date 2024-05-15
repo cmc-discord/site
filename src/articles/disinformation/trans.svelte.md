@@ -9,8 +9,7 @@ authors:
 
 title: Trans Disinformation
 summary: >-
-    Learn about common disinformation campaigns targeting trans people, explore their origins, and understand how to
-    combat them.
+    Learn about disinformation campaigns targeting trans people.
 ---
 
 <script lang="ts">

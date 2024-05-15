@@ -28,9 +28,9 @@ Often, they combine this rhetoric with claims of a "social contagion", and consp
 <Alert.Title warning>Work in Progress!</Alert.Title>
 <Alert.Description>
 
-This page is a work in progress, and **should not be used as a primary source.**
+This page is a work in progress, and **you should not use it as a primary source** until it is ready.
 
-Please check back for the finalized version later.
+Please check back for the finalised version later.
 
 </Alert.Description>
 </Alert.Root>
@@ -45,7 +45,7 @@ Trans people have existed in various forms, far longer than most folks realise.
 
 # Affirming Care
 
-# Research Nodes
+# Research Notes
 
 - https://daily.jstor.org/gender-identity-in-weimar-germany/
 - https://en.wikipedia.org/wiki/Gender-affirming_surgery
