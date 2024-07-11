@@ -72,4 +72,4 @@ jobs:
           comment_tag: "preview-deployment"
 
           message: |
-            ✨ The preview for your Pull Request has been built, and may be found here: [${{steps.nodejs.outputs.url}}](${{steps.nodejs.outputs.url}})
+            ✨ The preview for your Pull Request has been built, and may be found here: [${{steps.deploy.outputs.url}}](${{steps.deploy.outputs.url}})
