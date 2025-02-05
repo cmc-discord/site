@@ -38,8 +38,8 @@ to allow them to be themselves.
 
   Some alternatives to PluralKit exist:
 
-  - [ProxyFox](https://proxyfox.dev/) is a PluralKit alternative, intended to provide a modern alternative experience
-    for plural systems, in a bot that's easier to self-host than PluralKit.
+  - [ProxyFox](https://github.com/The-ProxyFox-Group/ProxyFox) is a PluralKit alternative, intended to provide a modern
+    alternative experience for plural systems, in a bot that's easier to self-host than PluralKit.
 
     As of this writing, the ProxyFox maintainer has put the project on indefinite hold due to financial and health
     issues.
